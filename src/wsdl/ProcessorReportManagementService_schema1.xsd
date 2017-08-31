@@ -1,0 +1,2978 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://webservices.er.psmfc.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices.er.psmfc.org/">
+  <xs:element name="addUserToOperation" type="tns:addUserToOperation"/>
+  <xs:element name="addUserToOperationResponse" type="tns:addUserToOperationResponse"/>
+  <xs:element name="applyMixedSalmonPercentages" type="tns:applyMixedSalmonPercentages"/>
+  <xs:element name="applyMixedSalmonPercentagesResponse" type="tns:applyMixedSalmonPercentagesResponse"/>
+  <xs:element name="auditAndReserveNumbers" type="tns:auditAndReserveNumbers"/>
+  <xs:element name="auditAndReserveNumbersResponse" type="tns:auditAndReserveNumbersResponse"/>
+  <xs:element name="changePassword" type="tns:changePassword"/>
+  <xs:element name="changePasswordResponse" type="tns:changePasswordResponse"/>
+  <xs:element name="compress" type="tns:compress"/>
+  <xs:element name="compressResponse" type="tns:compressResponse"/>
+  <xs:element name="createOperation" type="tns:createOperation"/>
+  <xs:element name="createOperationResponse" type="tns:createOperationResponse"/>
+  <xs:element name="deleteTlandingsUser" type="tns:deleteTlandingsUser"/>
+  <xs:element name="deleteTlandingsUserResponse" type="tns:deleteTlandingsUserResponse"/>
+  <xs:element name="deleteUnsubmittedLandingReport" type="tns:deleteUnsubmittedLandingReport"/>
+  <xs:element name="deleteUnsubmittedLandingReportResponse" type="tns:deleteUnsubmittedLandingReportResponse"/>
+  <xs:element name="deleteUnsubmittedProductionReport" type="tns:deleteUnsubmittedProductionReport"/>
+  <xs:element name="deleteUnsubmittedProductionReportResponse" type="tns:deleteUnsubmittedProductionReportResponse"/>
+  <xs:element name="emailPassword" type="tns:emailPassword"/>
+  <xs:element name="emailPasswordResponse" type="tns:emailPasswordResponse"/>
+  <xs:element name="extractLandingReports" type="tns:extractLandingReports"/>
+  <xs:element name="extractLandingReportsResponse" type="tns:extractLandingReportsResponse"/>
+  <xs:element name="extractProductionReports" type="tns:extractProductionReports"/>
+  <xs:element name="extractProductionReportsResponse" type="tns:extractProductionReportsResponse"/>
+  <xs:element name="findCoarReport" type="tns:findCoarReport"/>
+  <xs:element name="findCoarReportResponse" type="tns:findCoarReportResponse"/>
+  <xs:element name="findCurrentAnnouncements" type="tns:findCurrentAnnouncements"/>
+  <xs:element name="findCurrentAnnouncementsResponse" type="tns:findCurrentAnnouncementsResponse"/>
+  <xs:element name="findUserFullLandingReports" type="tns:findUserFullLandingReports"/>
+  <xs:element name="findUserFullLandingReportsResponse" type="tns:findUserFullLandingReportsResponse"/>
+  <xs:element name="findUserLandingReports" type="tns:findUserLandingReports"/>
+  <xs:element name="findUserLandingReportsResponse" type="tns:findUserLandingReportsResponse"/>
+  <xs:element name="findUserProductionReports" type="tns:findUserProductionReports"/>
+  <xs:element name="findUserProductionReportsResponse" type="tns:findUserProductionReportsResponse"/>
+  <xs:element name="generateCoarReport" type="tns:generateCoarReport"/>
+  <xs:element name="generateCoarReportDetails" type="tns:generateCoarReportDetails"/>
+  <xs:element name="generateCoarReportDetailsResponse" type="tns:generateCoarReportDetailsResponse"/>
+  <xs:element name="generateCoarReportForInactiveOperation" type="tns:generateCoarReportForInactiveOperation"/>
+  <xs:element name="generateCoarReportForInactiveOperationResponse" type="tns:generateCoarReportForInactiveOperationResponse"/>
+  <xs:element name="generateCoarReportResponse" type="tns:generateCoarReportResponse"/>
+  <xs:element name="generateReport" type="tns:generateReport"/>
+  <xs:element name="generateReportResponse" type="tns:generateReportResponse"/>
+  <xs:element name="getAtSeaOperationUsers" type="tns:getAtSeaOperationUsers"/>
+  <xs:element name="getAtSeaOperationUsersResponse" type="tns:getAtSeaOperationUsersResponse"/>
+  <xs:element name="getCfecPermitInfo" type="tns:getCfecPermitInfo"/>
+  <xs:element name="getCfecPermitInfoResponse" type="tns:getCfecPermitInfoResponse"/>
+  <xs:element name="getDailyReport" type="tns:getDailyReport"/>
+  <xs:element name="getDailyReportInfo" type="tns:getDailyReportInfo"/>
+  <xs:element name="getDailyReportInfoResponse" type="tns:getDailyReportInfoResponse"/>
+  <xs:element name="getDailyReportResponse" type="tns:getDailyReportResponse"/>
+  <xs:element name="getFederalProcessorInfo" type="tns:getFederalProcessorInfo"/>
+  <xs:element name="getFederalProcessorInfoResponse" type="tns:getFederalProcessorInfoResponse"/>
+  <xs:element name="getImportableFishTicketNumbers" type="tns:getImportableFishTicketNumbers"/>
+  <xs:element name="getImportableFishTicketNumbersResponse" type="tns:getImportableFishTicketNumbersResponse"/>
+  <xs:element name="getLandingReport" type="tns:getLandingReport"/>
+  <xs:element name="getLandingReportResponse" type="tns:getLandingReportResponse"/>
+  <xs:element name="getLocationOfOffloads" type="tns:getLocationOfOffloads"/>
+  <xs:element name="getLocationOfOffloadsResponse" type="tns:getLocationOfOffloadsResponse"/>
+  <xs:element name="getLogbook" type="tns:getLogbook"/>
+  <xs:element name="getLogbookInfo" type="tns:getLogbookInfo"/>
+  <xs:element name="getLogbookInfoResponse" type="tns:getLogbookInfoResponse"/>
+  <xs:element name="getLogbookProfile" type="tns:getLogbookProfile"/>
+  <xs:element name="getLogbookProfileInfo" type="tns:getLogbookProfileInfo"/>
+  <xs:element name="getLogbookProfileInfoResponse" type="tns:getLogbookProfileInfoResponse"/>
+  <xs:element name="getLogbookProfileResponse" type="tns:getLogbookProfileResponse"/>
+  <xs:element name="getLogbookResponse" type="tns:getLogbookResponse"/>
+  <xs:element name="getLogbookTripInfo" type="tns:getLogbookTripInfo"/>
+  <xs:element name="getLogbookTripInfoResponse" type="tns:getLogbookTripInfoResponse"/>
+  <xs:element name="getLogger" type="tns:getLogger"/>
+  <xs:element name="getLoggerResponse" type="tns:getLoggerResponse"/>
+  <xs:element name="getNmfsPersonInfo" type="tns:getNmfsPersonInfo"/>
+  <xs:element name="getNmfsPersonInfoResponse" type="tns:getNmfsPersonInfoResponse"/>
+  <xs:element name="getObsfeeDetails" type="tns:getObsfeeDetails"/>
+  <xs:element name="getObsfeeDetailsResponse" type="tns:getObsfeeDetailsResponse"/>
+  <xs:element name="getObsfeeEstimateReportsByProcessorDateRange" type="tns:getObsfeeEstimateReportsByProcessorDateRange"/>
+  <xs:element name="getObsfeeEstimateReportsByProcessorDateRangeResponse" type="tns:getObsfeeEstimateReportsByProcessorDateRangeResponse"/>
+  <xs:element name="getOperationInfo" type="tns:getOperationInfo"/>
+  <xs:element name="getOperationInfoForPTI" type="tns:getOperationInfoForPTI"/>
+  <xs:element name="getOperationInfoForPTIResponse" type="tns:getOperationInfoForPTIResponse"/>
+  <xs:element name="getOperationInfoResponse" type="tns:getOperationInfoResponse"/>
+  <xs:element name="getOperationLite" type="tns:getOperationLite"/>
+  <xs:element name="getOperationLiteResponse" type="tns:getOperationLiteResponse"/>
+  <xs:element name="getOperationVesselDefaults" type="tns:getOperationVesselDefaults"/>
+  <xs:element name="getOperationVesselDefaultsResponse" type="tns:getOperationVesselDefaultsResponse"/>
+  <xs:element name="getOperations" type="tns:getOperations"/>
+  <xs:element name="getOperationsResponse" type="tns:getOperationsResponse"/>
+  <xs:element name="getProcessorInfo" type="tns:getProcessorInfo"/>
+  <xs:element name="getProcessorInfoResponse" type="tns:getProcessorInfoResponse"/>
+  <xs:element name="getProductionReport" type="tns:getProductionReport"/>
+  <xs:element name="getProductionReportResponse" type="tns:getProductionReportResponse"/>
+  <xs:element name="getQueries" type="tns:getQueries"/>
+  <xs:element name="getQueriesResponse" type="tns:getQueriesResponse"/>
+  <xs:element name="getRegisteredBuyerInfo" type="tns:getRegisteredBuyerInfo"/>
+  <xs:element name="getRegisteredBuyerInfoResponse" type="tns:getRegisteredBuyerInfoResponse"/>
+  <xs:element name="getRegisteredCrabReceiverInfo" type="tns:getRegisteredCrabReceiverInfo"/>
+  <xs:element name="getRegisteredCrabReceiverInfoResponse" type="tns:getRegisteredCrabReceiverInfoResponse"/>
+  <xs:element name="getRegistrationForUser" type="tns:getRegistrationForUser"/>
+  <xs:element name="getRegistrationForUserResponse" type="tns:getRegistrationForUserResponse"/>
+  <xs:element name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning" type="tns:getTenderBatchPreviouslyUsedForProcessorThisYearWarning"/>
+  <xs:element name="getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse" type="tns:getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse"/>
+  <xs:element name="getTenderBatchSummary" type="tns:getTenderBatchSummary"/>
+  <xs:element name="getTenderBatchSummaryResponse" type="tns:getTenderBatchSummaryResponse"/>
+  <xs:element name="getTlandingsUserArray" type="tns:getTlandingsUserArray"/>
+  <xs:element name="getTlandingsUserArrayResponse" type="tns:getTlandingsUserArrayResponse"/>
+  <xs:element name="getTripReport" type="tns:getTripReport"/>
+  <xs:element name="getTripReportInfo" type="tns:getTripReportInfo"/>
+  <xs:element name="getTripReportInfoResponse" type="tns:getTripReportInfoResponse"/>
+  <xs:element name="getTripReportResponse" type="tns:getTripReportResponse"/>
+  <xs:element name="getUserInfo" type="tns:getUserInfo"/>
+  <xs:element name="getUserInfoLite" type="tns:getUserInfoLite"/>
+  <xs:element name="getUserInfoLiteResponse" type="tns:getUserInfoLiteResponse"/>
+  <xs:element name="getUserInfoResponse" type="tns:getUserInfoResponse"/>
+  <xs:element name="getUserRegistration" type="tns:getUserRegistration"/>
+  <xs:element name="getUserRegistrationLite" type="tns:getUserRegistrationLite"/>
+  <xs:element name="getUserRegistrationLiteResponse" type="tns:getUserRegistrationLiteResponse"/>
+  <xs:element name="getUserRegistrationResponse" type="tns:getUserRegistrationResponse"/>
+  <xs:element name="getVesselDefaults" type="tns:getVesselDefaults"/>
+  <xs:element name="getVesselDefaultsList" type="tns:getVesselDefaultsList"/>
+  <xs:element name="getVesselDefaultsListResponse" type="tns:getVesselDefaultsListResponse"/>
+  <xs:element name="getVesselDefaultsResponse" type="tns:getVesselDefaultsResponse"/>
+  <xs:element name="getVesselInfo" type="tns:getVesselInfo"/>
+  <xs:element name="getVesselInfoResponse" type="tns:getVesselInfoResponse"/>
+  <xs:element name="incrementOperationVesselDefaultsEdition" type="tns:incrementOperationVesselDefaultsEdition"/>
+  <xs:element name="incrementOperationVesselDefaultsEditionResponse" type="tns:incrementOperationVesselDefaultsEditionResponse"/>
+  <xs:element name="isUseridInUse" type="tns:isUseridInUse"/>
+  <xs:element name="isUseridInUseResponse" type="tns:isUseridInUseResponse"/>
+  <xs:element name="logIersMonitorClosingApplication" type="tns:logIersMonitorClosingApplication"/>
+  <xs:element name="lookupOperationByCodes" type="tns:lookupOperationByCodes"/>
+  <xs:element name="lookupOperationByCodesResponse" type="tns:lookupOperationByCodesResponse"/>
+  <xs:element name="lookupOperationById" type="tns:lookupOperationById"/>
+  <xs:element name="lookupOperationByIdResponse" type="tns:lookupOperationByIdResponse"/>
+  <xs:element name="lookupUser" type="tns:lookupUser"/>
+  <xs:element name="lookupUserResponse" type="tns:lookupUserResponse"/>
+  <xs:element name="mApplyMixedSalmonPercentages" type="tns:mApplyMixedSalmonPercentages"/>
+  <xs:element name="mApplyMixedSalmonPercentagesResponse" type="tns:mApplyMixedSalmonPercentagesResponse"/>
+  <xs:element name="mAuditAndReserveNumbers" type="tns:mAuditAndReserveNumbers"/>
+  <xs:element name="mAuditAndReserveNumbersResponse" type="tns:mAuditAndReserveNumbersResponse"/>
+  <xs:element name="mChangePassword" type="tns:mChangePassword"/>
+  <xs:element name="mChangePasswordResponse" type="tns:mChangePasswordResponse"/>
+  <xs:element name="mDeleteUnsubmittedLandingReport" type="tns:mDeleteUnsubmittedLandingReport"/>
+  <xs:element name="mDeleteUnsubmittedLandingReportResponse" type="tns:mDeleteUnsubmittedLandingReportResponse"/>
+  <xs:element name="mDeleteUnsubmittedProductionReport" type="tns:mDeleteUnsubmittedProductionReport"/>
+  <xs:element name="mDeleteUnsubmittedProductionReportResponse" type="tns:mDeleteUnsubmittedProductionReportResponse"/>
+  <xs:element name="mEmailPassword" type="tns:mEmailPassword"/>
+  <xs:element name="mEmailPasswordResponse" type="tns:mEmailPasswordResponse"/>
+  <xs:element name="mExtractLandingReports" type="tns:mExtractLandingReports"/>
+  <xs:element name="mExtractLandingReportsResponse" type="tns:mExtractLandingReportsResponse"/>
+  <xs:element name="mExtractProductionReports" type="tns:mExtractProductionReports"/>
+  <xs:element name="mExtractProductionReportsResponse" type="tns:mExtractProductionReportsResponse"/>
+  <xs:element name="mFindCoarReport" type="tns:mFindCoarReport"/>
+  <xs:element name="mFindCoarReportResponse" type="tns:mFindCoarReportResponse"/>
+  <xs:element name="mFindCurrentAnnouncements" type="tns:mFindCurrentAnnouncements"/>
+  <xs:element name="mFindCurrentAnnouncementsResponse" type="tns:mFindCurrentAnnouncementsResponse"/>
+  <xs:element name="mFindUserFullLandingReports" type="tns:mFindUserFullLandingReports"/>
+  <xs:element name="mFindUserFullLandingReportsResponse" type="tns:mFindUserFullLandingReportsResponse"/>
+  <xs:element name="mFindUserLandingReports" type="tns:mFindUserLandingReports"/>
+  <xs:element name="mFindUserLandingReportsResponse" type="tns:mFindUserLandingReportsResponse"/>
+  <xs:element name="mFindUserProductionReports" type="tns:mFindUserProductionReports"/>
+  <xs:element name="mFindUserProductionReportsResponse" type="tns:mFindUserProductionReportsResponse"/>
+  <xs:element name="mGenerateCoarReport" type="tns:mGenerateCoarReport"/>
+  <xs:element name="mGenerateCoarReportDetails" type="tns:mGenerateCoarReportDetails"/>
+  <xs:element name="mGenerateCoarReportDetailsResponse" type="tns:mGenerateCoarReportDetailsResponse"/>
+  <xs:element name="mGenerateCoarReportForInactiveOperation" type="tns:mGenerateCoarReportForInactiveOperation"/>
+  <xs:element name="mGenerateCoarReportForInactiveOperationResponse" type="tns:mGenerateCoarReportForInactiveOperationResponse"/>
+  <xs:element name="mGenerateCoarReportResponse" type="tns:mGenerateCoarReportResponse"/>
+  <xs:element name="mGenerateReport" type="tns:mGenerateReport"/>
+  <xs:element name="mGenerateReportResponse" type="tns:mGenerateReportResponse"/>
+  <xs:element name="mGetAtSeaOperationUsers" type="tns:mGetAtSeaOperationUsers"/>
+  <xs:element name="mGetAtSeaOperationUsersResponse" type="tns:mGetAtSeaOperationUsersResponse"/>
+  <xs:element name="mGetCfecPermitInfo" type="tns:mGetCfecPermitInfo"/>
+  <xs:element name="mGetCfecPermitInfoResponse" type="tns:mGetCfecPermitInfoResponse"/>
+  <xs:element name="mGetFederalProcessorInfo" type="tns:mGetFederalProcessorInfo"/>
+  <xs:element name="mGetFederalProcessorInfoResponse" type="tns:mGetFederalProcessorInfoResponse"/>
+  <xs:element name="mGetImportableFishTicketNumbers" type="tns:mGetImportableFishTicketNumbers"/>
+  <xs:element name="mGetImportableFishTicketNumbersResponse" type="tns:mGetImportableFishTicketNumbersResponse"/>
+  <xs:element name="mGetLandingReport" type="tns:mGetLandingReport"/>
+  <xs:element name="mGetLandingReportResponse" type="tns:mGetLandingReportResponse"/>
+  <xs:element name="mGetLocationOfOffloads" type="tns:mGetLocationOfOffloads"/>
+  <xs:element name="mGetLocationOfOffloadsResponse" type="tns:mGetLocationOfOffloadsResponse"/>
+  <xs:element name="mGetLogbook" type="tns:mGetLogbook"/>
+  <xs:element name="mGetLogbookInfo" type="tns:mGetLogbookInfo"/>
+  <xs:element name="mGetLogbookInfoResponse" type="tns:mGetLogbookInfoResponse"/>
+  <xs:element name="mGetLogbookResponse" type="tns:mGetLogbookResponse"/>
+  <xs:element name="mGetLogbookTripInfo" type="tns:mGetLogbookTripInfo"/>
+  <xs:element name="mGetLogbookTripInfoResponse" type="tns:mGetLogbookTripInfoResponse"/>
+  <xs:element name="mGetNmfsPersonInfo" type="tns:mGetNmfsPersonInfo"/>
+  <xs:element name="mGetNmfsPersonInfoResponse" type="tns:mGetNmfsPersonInfoResponse"/>
+  <xs:element name="mGetObsfeeDetails" type="tns:mGetObsfeeDetails"/>
+  <xs:element name="mGetObsfeeDetailsResponse" type="tns:mGetObsfeeDetailsResponse"/>
+  <xs:element name="mGetObsfeeEstimateReportsByProcessorDateRange" type="tns:mGetObsfeeEstimateReportsByProcessorDateRange"/>
+  <xs:element name="mGetObsfeeEstimateReportsByProcessorDateRangeResponse" type="tns:mGetObsfeeEstimateReportsByProcessorDateRangeResponse"/>
+  <xs:element name="mGetOperationInfo" type="tns:mGetOperationInfo"/>
+  <xs:element name="mGetOperationInfoForPTI" type="tns:mGetOperationInfoForPTI"/>
+  <xs:element name="mGetOperationInfoForPTIResponse" type="tns:mGetOperationInfoForPTIResponse"/>
+  <xs:element name="mGetOperationInfoResponse" type="tns:mGetOperationInfoResponse"/>
+  <xs:element name="mGetOperationVesselDefaults" type="tns:mGetOperationVesselDefaults"/>
+  <xs:element name="mGetOperationVesselDefaultsResponse" type="tns:mGetOperationVesselDefaultsResponse"/>
+  <xs:element name="mGetProcessorInfo" type="tns:mGetProcessorInfo"/>
+  <xs:element name="mGetProcessorInfoResponse" type="tns:mGetProcessorInfoResponse"/>
+  <xs:element name="mGetProductionReport" type="tns:mGetProductionReport"/>
+  <xs:element name="mGetProductionReportResponse" type="tns:mGetProductionReportResponse"/>
+  <xs:element name="mGetQueries" type="tns:mGetQueries"/>
+  <xs:element name="mGetQueriesResponse" type="tns:mGetQueriesResponse"/>
+  <xs:element name="mGetRegisteredBuyerInfo" type="tns:mGetRegisteredBuyerInfo"/>
+  <xs:element name="mGetRegisteredBuyerInfoResponse" type="tns:mGetRegisteredBuyerInfoResponse"/>
+  <xs:element name="mGetRegisteredCrabReceiverInfo" type="tns:mGetRegisteredCrabReceiverInfo"/>
+  <xs:element name="mGetRegisteredCrabReceiverInfoResponse" type="tns:mGetRegisteredCrabReceiverInfoResponse"/>
+  <xs:element name="mGetRegistrationForUser" type="tns:mGetRegistrationForUser"/>
+  <xs:element name="mGetRegistrationForUserResponse" type="tns:mGetRegistrationForUserResponse"/>
+  <xs:element name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning" type="tns:mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning"/>
+  <xs:element name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse" type="tns:mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse"/>
+  <xs:element name="mGetTenderBatchSummary" type="tns:mGetTenderBatchSummary"/>
+  <xs:element name="mGetTenderBatchSummaryResponse" type="tns:mGetTenderBatchSummaryResponse"/>
+  <xs:element name="mGetUserInfo" type="tns:mGetUserInfo"/>
+  <xs:element name="mGetUserInfoResponse" type="tns:mGetUserInfoResponse"/>
+  <xs:element name="mGetUserRegistration" type="tns:mGetUserRegistration"/>
+  <xs:element name="mGetUserRegistrationResponse" type="tns:mGetUserRegistrationResponse"/>
+  <xs:element name="mGetVesselDefaults" type="tns:mGetVesselDefaults"/>
+  <xs:element name="mGetVesselDefaultsList" type="tns:mGetVesselDefaultsList"/>
+  <xs:element name="mGetVesselDefaultsListResponse" type="tns:mGetVesselDefaultsListResponse"/>
+  <xs:element name="mGetVesselDefaultsResponse" type="tns:mGetVesselDefaultsResponse"/>
+  <xs:element name="mGetVesselInfo" type="tns:mGetVesselInfo"/>
+  <xs:element name="mGetVesselInfoResponse" type="tns:mGetVesselInfoResponse"/>
+  <xs:element name="mIncrementOperationVesselDefaultsEdition" type="tns:mIncrementOperationVesselDefaultsEdition"/>
+  <xs:element name="mIncrementOperationVesselDefaultsEditionResponse" type="tns:mIncrementOperationVesselDefaultsEditionResponse"/>
+  <xs:element name="mInsertIersMonitorArrayWrapper" type="tns:mInsertIersMonitorArrayWrapper"/>
+  <xs:element name="mInsertIersMonitorArrayWrapperResponse" type="tns:mInsertIersMonitorArrayWrapperResponse"/>
+  <xs:element name="mIsUseridInUse" type="tns:mIsUseridInUse"/>
+  <xs:element name="mIsUseridInUseResponse" type="tns:mIsUseridInUseResponse"/>
+  <xs:element name="mLookupUser" type="tns:mLookupUser"/>
+  <xs:element name="mLookupUserResponse" type="tns:mLookupUserResponse"/>
+  <xs:element name="mOverwriteOperationVesselDefaults" type="tns:mOverwriteOperationVesselDefaults"/>
+  <xs:element name="mOverwriteOperationVesselDefaultsResponse" type="tns:mOverwriteOperationVesselDefaultsResponse"/>
+  <xs:element name="mRecordCoarReportDownload" type="tns:mRecordCoarReportDownload"/>
+  <xs:element name="mRecordCoarReportDownloadResponse" type="tns:mRecordCoarReportDownloadResponse"/>
+  <xs:element name="mRegisterLogbook" type="tns:mRegisterLogbook"/>
+  <xs:element name="mRegisterLogbookResponse" type="tns:mRegisterLogbookResponse"/>
+  <xs:element name="mRegisterOperation" type="tns:mRegisterOperation"/>
+  <xs:element name="mRegisterOperationResponse" type="tns:mRegisterOperationResponse"/>
+  <xs:element name="mRegisterUser" type="tns:mRegisterUser"/>
+  <xs:element name="mRegisterUserResponse" type="tns:mRegisterUserResponse"/>
+  <xs:element name="mReserveFishTicketNumbers" type="tns:mReserveFishTicketNumbers"/>
+  <xs:element name="mReserveFishTicketNumbersResponse" type="tns:mReserveFishTicketNumbersResponse"/>
+  <xs:element name="mReserveLandingReportNumbers" type="tns:mReserveLandingReportNumbers"/>
+  <xs:element name="mReserveLandingReportNumbersResponse" type="tns:mReserveLandingReportNumbersResponse"/>
+  <xs:element name="mRunQuery" type="tns:mRunQuery"/>
+  <xs:element name="mRunQueryResponse" type="tns:mRunQueryResponse"/>
+  <xs:element name="mRunReportExtract" type="tns:mRunReportExtract"/>
+  <xs:element name="mRunReportExtractResponse" type="tns:mRunReportExtractResponse"/>
+  <xs:element name="mRunTest" type="tns:mRunTest"/>
+  <xs:element name="mRunTestResponse" type="tns:mRunTestResponse"/>
+  <xs:element name="mSaveCoarReport" type="tns:mSaveCoarReport"/>
+  <xs:element name="mSaveCoarReportResponse" type="tns:mSaveCoarReportResponse"/>
+  <xs:element name="mSaveLandingReport" type="tns:mSaveLandingReport"/>
+  <xs:element name="mSaveLandingReportResponse" type="tns:mSaveLandingReportResponse"/>
+  <xs:element name="mSaveProductionReport" type="tns:mSaveProductionReport"/>
+  <xs:element name="mSaveProductionReportResponse" type="tns:mSaveProductionReportResponse"/>
+  <xs:element name="mSendSeaLandingsReturnReceipt" type="tns:mSendSeaLandingsReturnReceipt"/>
+  <xs:element name="mSendSeaLandingsReturnReceiptResponse" type="tns:mSendSeaLandingsReturnReceiptResponse"/>
+  <xs:element name="mSubmitCoarReport" type="tns:mSubmitCoarReport"/>
+  <xs:element name="mSubmitCoarReportResponse" type="tns:mSubmitCoarReportResponse"/>
+  <xs:element name="mSubmitFinalLandingReport" type="tns:mSubmitFinalLandingReport"/>
+  <xs:element name="mSubmitFinalLandingReportAndInsertNewVesselDefault" type="tns:mSubmitFinalLandingReportAndInsertNewVesselDefault"/>
+  <xs:element name="mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse" type="tns:mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse"/>
+  <xs:element name="mSubmitFinalLandingReportResponse" type="tns:mSubmitFinalLandingReportResponse"/>
+  <xs:element name="mSubmitIfqReports" type="tns:mSubmitIfqReports"/>
+  <xs:element name="mSubmitIfqReportsResponse" type="tns:mSubmitIfqReportsResponse"/>
+  <xs:element name="mSubmitInitialLandingReport" type="tns:mSubmitInitialLandingReport"/>
+  <xs:element name="mSubmitInitialLandingReportAndInsertNewVesselDefault" type="tns:mSubmitInitialLandingReportAndInsertNewVesselDefault"/>
+  <xs:element name="mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse" type="tns:mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse"/>
+  <xs:element name="mSubmitInitialLandingReportResponse" type="tns:mSubmitInitialLandingReportResponse"/>
+  <xs:element name="mSubmitLogbook" type="tns:mSubmitLogbook"/>
+  <xs:element name="mSubmitLogbookForTrip" type="tns:mSubmitLogbookForTrip"/>
+  <xs:element name="mSubmitLogbookForTripResponse" type="tns:mSubmitLogbookForTripResponse"/>
+  <xs:element name="mSubmitLogbookResponse" type="tns:mSubmitLogbookResponse"/>
+  <xs:element name="mSubmitProductionReport" type="tns:mSubmitProductionReport"/>
+  <xs:element name="mSubmitProductionReportResponse" type="tns:mSubmitProductionReportResponse"/>
+  <xs:element name="mUndoMixedSalmonPercentages" type="tns:mUndoMixedSalmonPercentages"/>
+  <xs:element name="mUndoMixedSalmonPercentagesResponse" type="tns:mUndoMixedSalmonPercentagesResponse"/>
+  <xs:element name="mUpdateOperationGradingAndPricing" type="tns:mUpdateOperationGradingAndPricing"/>
+  <xs:element name="mUpdateOperationGradingAndPricingResponse" type="tns:mUpdateOperationGradingAndPricingResponse"/>
+  <xs:element name="mUpdateUser" type="tns:mUpdateUser"/>
+  <xs:element name="mUpdateUserResponse" type="tns:mUpdateUserResponse"/>
+  <xs:element name="overwriteOperationVesselDefaults" type="tns:overwriteOperationVesselDefaults"/>
+  <xs:element name="overwriteOperationVesselDefaultsResponse" type="tns:overwriteOperationVesselDefaultsResponse"/>
+  <xs:element name="purgeUserFromCache" type="tns:purgeUserFromCache"/>
+  <xs:element name="purgeUserFromCacheResponse" type="tns:purgeUserFromCacheResponse"/>
+  <xs:element name="recordCoarReportDownload" type="tns:recordCoarReportDownload"/>
+  <xs:element name="recordCoarReportDownloadResponse" type="tns:recordCoarReportDownloadResponse"/>
+  <xs:element name="registerLogbook" type="tns:registerLogbook"/>
+  <xs:element name="registerLogbookResponse" type="tns:registerLogbookResponse"/>
+  <xs:element name="registerOperation" type="tns:registerOperation"/>
+  <xs:element name="registerOperationResponse" type="tns:registerOperationResponse"/>
+  <xs:element name="registerUser" type="tns:registerUser"/>
+  <xs:element name="registerUserResponse" type="tns:registerUserResponse"/>
+  <xs:element name="reserveFishTicketNumbers" type="tns:reserveFishTicketNumbers"/>
+  <xs:element name="reserveFishTicketNumbersResponse" type="tns:reserveFishTicketNumbersResponse"/>
+  <xs:element name="reserveLandingReportNumbers" type="tns:reserveLandingReportNumbers"/>
+  <xs:element name="reserveLandingReportNumbersResponse" type="tns:reserveLandingReportNumbersResponse"/>
+  <xs:element name="runQuery" type="tns:runQuery"/>
+  <xs:element name="runQueryResponse" type="tns:runQueryResponse"/>
+  <xs:element name="runReportExtract" type="tns:runReportExtract"/>
+  <xs:element name="runReportExtractResponse" type="tns:runReportExtractResponse"/>
+  <xs:element name="saveCoarReport" type="tns:saveCoarReport"/>
+  <xs:element name="saveCoarReportResponse" type="tns:saveCoarReportResponse"/>
+  <xs:element name="saveLandingReport" type="tns:saveLandingReport"/>
+  <xs:element name="saveLandingReportResponse" type="tns:saveLandingReportResponse"/>
+  <xs:element name="saveProductionReport" type="tns:saveProductionReport"/>
+  <xs:element name="saveProductionReportResponse" type="tns:saveProductionReportResponse"/>
+  <xs:element name="saveTlandingsUser" type="tns:saveTlandingsUser"/>
+  <xs:element name="saveTlandingsUserArray" type="tns:saveTlandingsUserArray"/>
+  <xs:element name="saveTlandingsUserArrayResponse" type="tns:saveTlandingsUserArrayResponse"/>
+  <xs:element name="saveTlandingsUserResponse" type="tns:saveTlandingsUserResponse"/>
+  <xs:element name="sendSeaLandingsReturnReceipt" type="tns:sendSeaLandingsReturnReceipt"/>
+  <xs:element name="sendSeaLandingsReturnReceiptResponse" type="tns:sendSeaLandingsReturnReceiptResponse"/>
+  <xs:element name="submitCoarReport" type="tns:submitCoarReport"/>
+  <xs:element name="submitCoarReportResponse" type="tns:submitCoarReportResponse"/>
+  <xs:element name="submitFinalLandingReport" type="tns:submitFinalLandingReport"/>
+  <xs:element name="submitFinalLandingReportAndInsertNewVesselDefault" type="tns:submitFinalLandingReportAndInsertNewVesselDefault"/>
+  <xs:element name="submitFinalLandingReportAndInsertNewVesselDefaultResponse" type="tns:submitFinalLandingReportAndInsertNewVesselDefaultResponse"/>
+  <xs:element name="submitFinalLandingReportResponse" type="tns:submitFinalLandingReportResponse"/>
+  <xs:element name="submitIfqReports" type="tns:submitIfqReports"/>
+  <xs:element name="submitIfqReportsResponse" type="tns:submitIfqReportsResponse"/>
+  <xs:element name="submitInitialLandingReport" type="tns:submitInitialLandingReport"/>
+  <xs:element name="submitInitialLandingReportAndInsertNewVesselDefault" type="tns:submitInitialLandingReportAndInsertNewVesselDefault"/>
+  <xs:element name="submitInitialLandingReportAndInsertNewVesselDefaultResponse" type="tns:submitInitialLandingReportAndInsertNewVesselDefaultResponse"/>
+  <xs:element name="submitInitialLandingReportResponse" type="tns:submitInitialLandingReportResponse"/>
+  <xs:element name="submitLogbook" type="tns:submitLogbook"/>
+  <xs:element name="submitLogbookForTrip" type="tns:submitLogbookForTrip"/>
+  <xs:element name="submitLogbookForTripResponse" type="tns:submitLogbookForTripResponse"/>
+  <xs:element name="submitLogbookResponse" type="tns:submitLogbookResponse"/>
+  <xs:element name="submitProductionReport" type="tns:submitProductionReport"/>
+  <xs:element name="submitProductionReportResponse" type="tns:submitProductionReportResponse"/>
+  <xs:element name="undoMixedSalmonPercentages" type="tns:undoMixedSalmonPercentages"/>
+  <xs:element name="undoMixedSalmonPercentagesResponse" type="tns:undoMixedSalmonPercentagesResponse"/>
+  <xs:element name="updateOperationGradingAndPricing" type="tns:updateOperationGradingAndPricing"/>
+  <xs:element name="updateOperationGradingAndPricingResponse" type="tns:updateOperationGradingAndPricingResponse"/>
+  <xs:element name="updateOperations" type="tns:updateOperations"/>
+  <xs:element name="updateOperationsResponse" type="tns:updateOperationsResponse"/>
+  <xs:element name="updateUser" type="tns:updateUser"/>
+  <xs:element name="updateUserResponse" type="tns:updateUserResponse"/>
+  <xs:element name="validateAndSubmitDailyReport" type="tns:validateAndSubmitDailyReport"/>
+  <xs:element name="validateAndSubmitDailyReportResponse" type="tns:validateAndSubmitDailyReportResponse"/>
+  <xs:element name="validateAndSubmitLogbookProfile" type="tns:validateAndSubmitLogbookProfile"/>
+  <xs:element name="validateAndSubmitLogbookProfileResponse" type="tns:validateAndSubmitLogbookProfileResponse"/>
+  <xs:element name="validateAndSubmitTripReport" type="tns:validateAndSubmitTripReport"/>
+  <xs:element name="validateAndSubmitTripReportResponse" type="tns:validateAndSubmitTripReportResponse"/>
+  <xs:complexType name="mGetRegisteredBuyerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetRegisteredBuyerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationLite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationLiteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogger">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getLoggerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:logger"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logger">
+    <xs:complexContent>
+      <xs:extension base="tns:category">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="category">
+    <xs:sequence>
+      <xs:element name="additivity" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="level" type="tns:level"/>
+      <xs:element minOccurs="0" name="resourceBundle" type="tns:resourceBundle"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="level">
+    <xs:complexContent>
+      <xs:extension base="tns:priority">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="priority">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType abstract="true" name="resourceBundle">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getOperationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateOperations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateOperationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auditAndReserveNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="auditAndReserveNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitLogbook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitLogbookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="overwriteOperationVesselDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="overwriteOperationVesselDefaultsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compress">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="compressResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mUpdateOperationGradingAndPricing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mUpdateOperationGradingAndPricingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findUserProductionReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg10" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg11" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg12" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg13" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg14" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findUserProductionReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLogbook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLogbookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateAndSubmitLogbookProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateAndSubmitLogbookProfileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetTenderBatchSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetTenderBatchSummaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitInitialLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitInitialLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLocationOfOffloads">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLocationOfOffloadsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getObsfeeDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getObsfeeDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRegisterOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRegisterOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitInitialLandingReportAndInsertNewVesselDefault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mExtractLandingReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mExtractLandingReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetRegisteredCrabReceiverInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetRegisteredCrabReceiverInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetUserRegistration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetUserRegistrationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetRegistrationForUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetRegistrationForUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findUserLandingReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="fTkt" type="xs:string"/>
+      <xs:element minOccurs="0" name="pCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="fedProc" type="xs:string"/>
+      <xs:element minOccurs="0" name="regBuyer" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcr" type="xs:string"/>
+      <xs:element minOccurs="0" name="adfg" type="xs:string"/>
+      <xs:element minOccurs="0" name="rType" type="xs:string"/>
+      <xs:element minOccurs="0" name="port" type="xs:string"/>
+      <xs:element minOccurs="0" name="cFishery" type="xs:string"/>
+      <xs:element minOccurs="0" name="cPermit" type="xs:string"/>
+      <xs:element minOccurs="0" name="gear" type="xs:string"/>
+      <xs:element minOccurs="0" name="nmfsPerId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ifq" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="from" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="to" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tender" type="xs:string"/>
+      <xs:element minOccurs="0" name="includeSummaries" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenderBatch" type="xs:string"/>
+      <xs:element minOccurs="0" name="tInvoice" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastUpdateFrom" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastUpdateTo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="operationId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findUserLandingReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAtSeaOperationUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAtSeaOperationUsersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recordCoarReportDownload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recordCoarReportDownloadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mUpdateUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mUpdateUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mChangePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mChangePasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="emailPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="emailPasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationInfoForPTI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationInfoForPTIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitFinalLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitFinalLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserveFishTicketNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserveFishTicketNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mLookupUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mLookupUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegisteredCrabReceiverInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegisteredCrabReceiverInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateCoarReportDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateCoarReportDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="runQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="runQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTlandingsUserArray">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTlandingsUserArrayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteTlandingsUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteTlandingsUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserInfoLite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserInfoLiteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isUseridInUse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isUseridInUseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lookupUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lookupUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateCoarReportForInactiveOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateCoarReportForInactiveOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getImportableFishTicketNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getImportableFishTicketNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTenderBatchSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTenderBatchSummaryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDailyReportInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="opId" type="xs:string"/>
+      <xs:element minOccurs="0" name="trId" type="xs:string"/>
+      <xs:element minOccurs="0" name="iersMonitorArray" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDailyReportInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFederalProcessorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFederalProcessorInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitIfqReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitIfqReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProcessorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProcessorInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTripReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTripReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getObsfeeEstimateReportsByProcessorDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getObsfeeEstimateReportsByProcessorDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="incrementOperationVesselDefaultsEdition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="incrementOperationVesselDefaultsEditionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateOperationGradingAndPricing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateOperationGradingAndPricingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitLogbook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitLogbookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetOperationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetOperationInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="logIersMonitorClosingApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetOperationVesselDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetOperationVesselDefaultsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mReserveFishTicketNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mReserveFishTicketNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetCfecPermitInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetCfecPermitInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegistrationForUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegistrationForUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetQueries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetQueriesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveTlandingsUserArray">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveTlandingsUserArrayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lookupOperationByCodes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg10" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lookupOperationByCodesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLogbookTripInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLogbookTripInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mReserveLandingReportNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mReserveLandingReportNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mUndoMixedSalmonPercentages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mUndoMixedSalmonPercentagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lookupOperationById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lookupOperationByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mAuditAndReserveNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mAuditAndReserveNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitFinalLandingReportAndInsertNewVesselDefault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateAndSubmitDailyReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateAndSubmitDailyReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRunQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRunQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitInitialLandingReportAndInsertNewVesselDefault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetImportableFishTicketNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetImportableFishTicketNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateCoarReportDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateCoarReportDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extractProductionReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extractProductionReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSaveLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSaveLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetFederalProcessorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetFederalProcessorInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindUserFullLandingReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="lrId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fTkt" type="xs:string"/>
+      <xs:element minOccurs="0" name="pCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="fedProc" type="xs:string"/>
+      <xs:element minOccurs="0" name="regBuyer" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcr" type="xs:string"/>
+      <xs:element minOccurs="0" name="adfg" type="xs:string"/>
+      <xs:element minOccurs="0" name="rType" type="xs:string"/>
+      <xs:element minOccurs="0" name="port" type="xs:string"/>
+      <xs:element minOccurs="0" name="cFishery" type="xs:string"/>
+      <xs:element minOccurs="0" name="cPermit" type="xs:string"/>
+      <xs:element minOccurs="0" name="cYearSeq" type="xs:string"/>
+      <xs:element minOccurs="0" name="mgmtProgram" type="xs:string"/>
+      <xs:element minOccurs="0" name="mgmtProgramId" type="xs:string"/>
+      <xs:element minOccurs="0" name="gear" type="xs:string"/>
+      <xs:element minOccurs="0" name="species" type="xs:string"/>
+      <xs:element minOccurs="0" name="nmfsPerId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ifq" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="from" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="to" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tSRecordCount" type="xs:string"/>
+      <xs:element minOccurs="0" name="tURecordCount" type="xs:string"/>
+      <xs:element minOccurs="0" name="sRecord" type="xs:string"/>
+      <xs:element minOccurs="0" name="eRecord" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenderAdfg" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenderBatch" type="xs:string"/>
+      <xs:element minOccurs="0" name="tInvoice" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastUpdateFrom" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastUpdateTo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="opId" type="xs:string"/>
+      <xs:element minOccurs="0" name="iersMonitor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindUserFullLandingReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserRegistration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserRegistrationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetVesselInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetVesselInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateAndSubmitTripReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validateAndSubmitTripReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mInsertIersMonitorArrayWrapper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mInsertIersMonitorArrayWrapperResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSaveProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSaveProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitFinalLandingReportAndInsertNewVesselDefault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveTlandingsUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveTlandingsUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetVesselDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg10" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetVesselDefaultsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVesselDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVesselDefaultsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="applyMixedSalmonPercentages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg10" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg11" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg12" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg13" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg14" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg15" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg16" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="applyMixedSalmonPercentagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUnsubmittedProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUnsubmittedProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerLogbook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerLogbookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTripReportInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="opId" type="xs:string"/>
+      <xs:element minOccurs="0" name="yr" type="xs:string"/>
+      <xs:element minOccurs="0" name="iersMonitorArray" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTripReportInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindUserProductionReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg10" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg11" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg12" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg13" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg14" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg15" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindUserProductionReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGenerateReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mIsUseridInUse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mIsUseridInUseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mDeleteUnsubmittedLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mDeleteUnsubmittedLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserRegistrationLite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserRegistrationLiteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saveProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetVesselDefaultsList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetVesselDefaultsListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="runReportExtract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="runReportExtractResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCfecPermitInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCfecPermitInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mEmailPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mEmailPasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRegisterLogbook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRegisterLogbookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLocationOfOffloads">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLocationOfOffloadsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetObsfeeDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetObsfeeDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mExtractProductionReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mExtractProductionReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="purgeUserFromCache">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="purgeUserFromCacheResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationVesselDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOperationVesselDefaultsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSendSeaLandingsReturnReceipt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSendSeaLandingsReturnReceiptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetObsfeeEstimateReportsByProcessorDateRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetObsfeeEstimateReportsByProcessorDateRangeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetOperationInfoForPTI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetOperationInfoForPTIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRunReportExtract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRunReportExtractResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="changePasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getQueries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getQueriesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitInitialLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitInitialLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetProcessorInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetProcessorInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mIncrementOperationVesselDefaultsEdition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mIncrementOperationVesselDefaultsEditionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRunTest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRunTestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDailyReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDailyReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVesselInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVesselInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetAtSeaOperationUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetAtSeaOperationUsersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitLogbookForTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitLogbookForTripResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetUserInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mOverwriteOperationVesselDefaults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mOverwriteOperationVesselDefaultsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendSeaLandingsReturnReceipt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendSeaLandingsReturnReceiptResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindCurrentAnnouncements">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindCurrentAnnouncementsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitFinalLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitFinalLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindUserLandingReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="fTkt" type="xs:string"/>
+      <xs:element minOccurs="0" name="pCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="fedProc" type="xs:string"/>
+      <xs:element minOccurs="0" name="regBuyer" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcr" type="xs:string"/>
+      <xs:element minOccurs="0" name="adfg" type="xs:string"/>
+      <xs:element minOccurs="0" name="rType" type="xs:string"/>
+      <xs:element minOccurs="0" name="port" type="xs:string"/>
+      <xs:element minOccurs="0" name="cFishery" type="xs:string"/>
+      <xs:element minOccurs="0" name="cPermit" type="xs:string"/>
+      <xs:element minOccurs="0" name="gear" type="xs:string"/>
+      <xs:element minOccurs="0" name="nmfsPerId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ifq" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="from" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="to" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tender" type="xs:string"/>
+      <xs:element minOccurs="0" name="includeSummaries" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenderBatch" type="xs:string"/>
+      <xs:element minOccurs="0" name="tInvoice" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastUpdateFrom" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastUpdateTo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="operationId" type="xs:string"/>
+      <xs:element minOccurs="0" name="iersMonitor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mFindUserLandingReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookProfileInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookProfileInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNmfsPersonInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNmfsPersonInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUnsubmittedLandingReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteUnsubmittedLandingReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mApplyMixedSalmonPercentages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="chumPercent" type="xs:string"/>
+      <xs:element minOccurs="0" name="cohoPercent" type="xs:string"/>
+      <xs:element minOccurs="0" name="pinkPercent" type="xs:string"/>
+      <xs:element minOccurs="0" name="sockeyeAverage" type="xs:string"/>
+      <xs:element minOccurs="0" name="chumAverage" type="xs:string"/>
+      <xs:element minOccurs="0" name="cohoAverage" type="xs:string"/>
+      <xs:element minOccurs="0" name="pinkAverage" type="xs:string"/>
+      <xs:element minOccurs="0" name="landingReports" type="xs:string"/>
+      <xs:element minOccurs="0" name="repringTickets" type="xs:string"/>
+      <xs:element minOccurs="0" name="opId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fromDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="toDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tenderBatch" type="xs:string"/>
+      <xs:element minOccurs="0" name="checkWarnings" type="xs:string"/>
+      <xs:element minOccurs="0" name="iersMonitor" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mApplyMixedSalmonPercentagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findUserFullLandingReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="lrId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fTkt" type="xs:string"/>
+      <xs:element minOccurs="0" name="pCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="fedProc" type="xs:string"/>
+      <xs:element minOccurs="0" name="regBuyer" type="xs:string"/>
+      <xs:element minOccurs="0" name="rcr" type="xs:string"/>
+      <xs:element minOccurs="0" name="adfg" type="xs:string"/>
+      <xs:element minOccurs="0" name="rType" type="xs:string"/>
+      <xs:element minOccurs="0" name="port" type="xs:string"/>
+      <xs:element minOccurs="0" name="cFishery" type="xs:string"/>
+      <xs:element minOccurs="0" name="cPermit" type="xs:string"/>
+      <xs:element minOccurs="0" name="cYearSeq" type="xs:string"/>
+      <xs:element minOccurs="0" name="mgmtProgram" type="xs:string"/>
+      <xs:element minOccurs="0" name="mgmtProgramId" type="xs:string"/>
+      <xs:element minOccurs="0" name="gear" type="xs:string"/>
+      <xs:element minOccurs="0" name="species" type="xs:string"/>
+      <xs:element minOccurs="0" name="nmfsPerId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ifq" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="from" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="to" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="tSRecordCount" type="xs:string"/>
+      <xs:element minOccurs="0" name="tURecordCount" type="xs:string"/>
+      <xs:element minOccurs="0" name="sRecord" type="xs:string"/>
+      <xs:element minOccurs="0" name="eRecord" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenderAdfg" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenderBatch" type="xs:string"/>
+      <xs:element minOccurs="0" name="tInvoice" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastUpdateFrom" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastUpdateTo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="opId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findUserFullLandingReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRecordCoarReportDownload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRecordCoarReportDownloadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetNmfsPersonInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetNmfsPersonInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLogbookInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mGetLogbookInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCurrentAnnouncements">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCurrentAnnouncementsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateCoarReportForInactiveOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generateCoarReportForInactiveOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitLogbookForTrip">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="submitLogbookForTripResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegisteredBuyerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRegisteredBuyerInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSaveCoarReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSaveCoarReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookTripInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookTripInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extractLandingReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extractLandingReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mDeleteUnsubmittedProductionReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg9" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mDeleteUnsubmittedProductionReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="undoMixedSalmonPercentages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg7" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="arg8" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="undoMixedSalmonPercentagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addUserToOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addUserToOperationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="pswd" type="xs:string"/>
+      <xs:element minOccurs="0" name="ver" type="xs:string"/>
+      <xs:element minOccurs="0" name="logbookProfileReportId" type="xs:string"/>
+      <xs:element minOccurs="0" name="logbookProfileReportVersion" type="xs:string"/>
+      <xs:element minOccurs="0" name="iersMonitorArray" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLogbookProfileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitIfqReports">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mSubmitIfqReportsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRegisterUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mRegisterUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVesselDefaultsList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getVesselDefaultsListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserveLandingReportNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserveLandingReportNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IOException" type="tns:IOException"/>
+  <xs:complexType name="IOException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

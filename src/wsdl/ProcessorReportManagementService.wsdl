@@ -1,0 +1,4020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ProcessorReportManagementService" targetNamespace="http://webservices.er.psmfc.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.er.psmfc.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://webservices.er.psmfc.org/" schemaLocation="ProcessorReportManagementService_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getOperationLiteResponse">
+    <wsdl:part name="parameters" element="tns:getOperationLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogger">
+    <wsdl:part name="parameters" element="tns:getLogger">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lookupOperationByCodesResponse">
+    <wsdl:part name="parameters" element="tns:lookupOperationByCodesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselDefaultsResponse">
+    <wsdl:part name="parameters" element="tns:getVesselDefaultsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="auditAndReserveNumbers">
+    <wsdl:part name="parameters" element="tns:auditAndReserveNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitLogbook">
+    <wsdl:part name="parameters" element="tns:mSubmitLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="compress">
+    <wsdl:part name="parameters" element="tns:compress">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCurrentAnnouncementsResponse">
+    <wsdl:part name="parameters" element="tns:findCurrentAnnouncementsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitLogbookResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recordCoarReportDownloadResponse">
+    <wsdl:part name="parameters" element="tns:recordCoarReportDownloadResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndSubmitLogbookProfile">
+    <wsdl:part name="parameters" element="tns:validateAndSubmitLogbookProfile">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUserLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:findUserLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitInitialLandingReportAndInsertNewVesselDefault">
+    <wsdl:part name="parameters" element="tns:submitInitialLandingReportAndInsertNewVesselDefault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerUser">
+    <wsdl:part name="parameters" element="tns:registerUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookTripInfoResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookTripInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getObsfeeDetailsResponse">
+    <wsdl:part name="parameters" element="tns:getObsfeeDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetRegisteredCrabReceiverInfo">
+    <wsdl:part name="parameters" element="tns:mGetRegisteredCrabReceiverInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetOperationVesselDefaultsResponse">
+    <wsdl:part name="parameters" element="tns:mGetOperationVesselDefaultsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfoResponse">
+    <wsdl:part name="parameters" element="tns:getOperationInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateCoarReportDetailsResponse">
+    <wsdl:part name="parameters" element="tns:mGenerateCoarReportDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="compressResponse">
+    <wsdl:part name="parameters" element="tns:compressResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRegisterLogbookResponse">
+    <wsdl:part name="parameters" element="tns:mRegisterLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:mGetProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mApplyMixedSalmonPercentagesResponse">
+    <wsdl:part name="parameters" element="tns:mApplyMixedSalmonPercentagesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFinalLandingReport">
+    <wsdl:part name="parameters" element="tns:submitFinalLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateReportResponse">
+    <wsdl:part name="parameters" element="tns:mGenerateReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mLookupUser">
+    <wsdl:part name="parameters" element="tns:mLookupUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateCoarReportDetails">
+    <wsdl:part name="parameters" element="tns:mGenerateCoarReportDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runQuery">
+    <wsdl:part name="parameters" element="tns:runQuery">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserRegistrationLiteResponse">
+    <wsdl:part name="parameters" element="tns:getUserRegistrationLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerOperationResponse">
+    <wsdl:part name="parameters" element="tns:registerOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRunReportExtractResponse">
+    <wsdl:part name="parameters" element="tns:mRunReportExtractResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookProfileResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookProfileResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lookupUser">
+    <wsdl:part name="parameters" element="tns:lookupUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLogbookInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetLogbookInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTlandingsUserArrayResponse">
+    <wsdl:part name="parameters" element="tns:getTlandingsUserArrayResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetQueriesResponse">
+    <wsdl:part name="parameters" element="tns:mGetQueriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLogbookTripInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetLogbookTripInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyReportInfo">
+    <wsdl:part name="parameters" element="tns:getDailyReportInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mReserveFishTicketNumbersResponse">
+    <wsdl:part name="parameters" element="tns:mReserveFishTicketNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetNmfsPersonInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetNmfsPersonInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitIfqReports">
+    <wsdl:part name="parameters" element="tns:submitIfqReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitLogbookForTripResponse">
+    <wsdl:part name="parameters" element="tns:submitLogbookForTripResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorInfo">
+    <wsdl:part name="parameters" element="tns:getProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mDeleteUnsubmittedProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:mDeleteUnsubmittedProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getObsfeeEstimateReportsByProcessorDateRange">
+    <wsdl:part name="parameters" element="tns:getObsfeeEstimateReportsByProcessorDateRange">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mAuditAndReserveNumbersResponse">
+    <wsdl:part name="parameters" element="tns:mAuditAndReserveNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateCoarReportForInactiveOperationResponse">
+    <wsdl:part name="parameters" element="tns:generateCoarReportForInactiveOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRegisterUserResponse">
+    <wsdl:part name="parameters" element="tns:mRegisterUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredCrabReceiverInfoResponse">
+    <wsdl:part name="parameters" element="tns:getRegisteredCrabReceiverInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLandingReport">
+    <wsdl:part name="parameters" element="tns:getLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="incrementOperationVesselDefaultsEdition">
+    <wsdl:part name="parameters" element="tns:incrementOperationVesselDefaultsEdition">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndSubmitLogbookProfileResponse">
+    <wsdl:part name="parameters" element="tns:validateAndSubmitLogbookProfileResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:generateCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateCoarReportForInactiveOperationResponse">
+    <wsdl:part name="parameters" element="tns:mGenerateCoarReportForInactiveOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitLogbook">
+    <wsdl:part name="parameters" element="tns:submitLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:saveCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUnsubmittedProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:deleteUnsubmittedProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperations">
+    <wsdl:part name="parameters" element="tns:getOperations">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetOperationInfo">
+    <wsdl:part name="parameters" element="tns:mGetOperationInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserInfo">
+    <wsdl:part name="parameters" element="tns:getUserInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mReserveFishTicketNumbers">
+    <wsdl:part name="parameters" element="tns:mReserveFishTicketNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:saveProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetCfecPermitInfo">
+    <wsdl:part name="parameters" element="tns:mGetCfecPermitInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitLogbookForTripResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitLogbookForTripResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTlandingsUserArray">
+    <wsdl:part name="parameters" element="tns:saveTlandingsUserArray">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLogbookTripInfo">
+    <wsdl:part name="parameters" element="tns:mGetLogbookTripInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mUndoMixedSalmonPercentagesResponse">
+    <wsdl:part name="parameters" element="tns:mUndoMixedSalmonPercentagesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mUndoMixedSalmonPercentages">
+    <wsdl:part name="parameters" element="tns:mUndoMixedSalmonPercentages">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeUserFromCacheResponse">
+    <wsdl:part name="parameters" element="tns:purgeUserFromCacheResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitIfqReportsResponse">
+    <wsdl:part name="parameters" element="tns:submitIfqReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLocationOfOffloadsResponse">
+    <wsdl:part name="parameters" element="tns:getLocationOfOffloadsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSaveProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:mSaveProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetAtSeaOperationUsersResponse">
+    <wsdl:part name="parameters" element="tns:mGetAtSeaOperationUsersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveCoarReport">
+    <wsdl:part name="parameters" element="tns:saveCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mEmailPasswordResponse">
+    <wsdl:part name="parameters" element="tns:mEmailPasswordResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mUpdateOperationGradingAndPricingResponse">
+    <wsdl:part name="parameters" element="tns:mUpdateOperationGradingAndPricingResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mAuditAndReserveNumbers">
+    <wsdl:part name="parameters" element="tns:mAuditAndReserveNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetTenderBatchSummaryResponse">
+    <wsdl:part name="parameters" element="tns:mGetTenderBatchSummaryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselDefaultsListResponse">
+    <wsdl:part name="parameters" element="tns:getVesselDefaultsListResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTlandingsUserArrayResponse">
+    <wsdl:part name="parameters" element="tns:saveTlandingsUserArrayResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetFederalProcessorInfo">
+    <wsdl:part name="parameters" element="tns:mGetFederalProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserInfoResponse">
+    <wsdl:part name="parameters" element="tns:getUserInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindUserFullLandingReports">
+    <wsdl:part name="parameters" element="tns:mFindUserFullLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredBuyerInfoResponse">
+    <wsdl:part name="parameters" element="tns:getRegisteredBuyerInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addUserToOperationResponse">
+    <wsdl:part name="parameters" element="tns:addUserToOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateReportResponse">
+    <wsdl:part name="parameters" element="tns:generateReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndSubmitTripReport">
+    <wsdl:part name="parameters" element="tns:validateAndSubmitTripReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="auditAndReserveNumbersResponse">
+    <wsdl:part name="parameters" element="tns:auditAndReserveNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSaveProductionReport">
+    <wsdl:part name="parameters" element="tns:mSaveProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:getProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetVesselDefaults">
+    <wsdl:part name="parameters" element="tns:mGetVesselDefaults">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselDefaults">
+    <wsdl:part name="parameters" element="tns:getVesselDefaults">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerLogbook">
+    <wsdl:part name="parameters" element="tns:registerLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripReportInfo">
+    <wsdl:part name="parameters" element="tns:getTripReportInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindUserProductionReports">
+    <wsdl:part name="parameters" element="tns:mFindUserProductionReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselInfoResponse">
+    <wsdl:part name="parameters" element="tns:getVesselInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteTlandingsUserResponse">
+    <wsdl:part name="parameters" element="tns:deleteTlandingsUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mIsUseridInUse">
+    <wsdl:part name="parameters" element="tns:mIsUseridInUse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserRegistrationLite">
+    <wsdl:part name="parameters" element="tns:getUserRegistrationLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitIfqReportsResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitIfqReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetVesselDefaultsList">
+    <wsdl:part name="parameters" element="tns:mGetVesselDefaultsList">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runReportExtract">
+    <wsdl:part name="parameters" element="tns:runReportExtract">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAtSeaOperationUsersResponse">
+    <wsdl:part name="parameters" element="tns:getAtSeaOperationUsersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mEmailPassword">
+    <wsdl:part name="parameters" element="tns:mEmailPassword">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetObsfeeEstimateReportsByProcessorDateRangeResponse">
+    <wsdl:part name="parameters" element="tns:mGetObsfeeEstimateReportsByProcessorDateRangeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeUserFromCache">
+    <wsdl:part name="parameters" element="tns:purgeUserFromCache">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationVesselDefaults">
+    <wsdl:part name="parameters" element="tns:getOperationVesselDefaults">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTlandingsUserResponse">
+    <wsdl:part name="parameters" element="tns:saveTlandingsUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetOperationInfoForPTI">
+    <wsdl:part name="parameters" element="tns:mGetOperationInfoForPTI">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQueriesResponse">
+    <wsdl:part name="parameters" element="tns:getQueriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changePassword">
+    <wsdl:part name="parameters" element="tns:changePassword">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQueries">
+    <wsdl:part name="parameters" element="tns:getQueries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mIncrementOperationVesselDefaultsEdition">
+    <wsdl:part name="parameters" element="tns:mIncrementOperationVesselDefaultsEdition">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyReport">
+    <wsdl:part name="parameters" element="tns:getDailyReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitLogbookForTrip">
+    <wsdl:part name="parameters" element="tns:mSubmitLogbookForTrip">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetUserRegistrationResponse">
+    <wsdl:part name="parameters" element="tns:mGetUserRegistrationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindCurrentAnnouncementsResponse">
+    <wsdl:part name="parameters" element="tns:mFindCurrentAnnouncementsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetUserInfo">
+    <wsdl:part name="parameters" element="tns:mGetUserInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="emailPasswordResponse">
+    <wsdl:part name="parameters" element="tns:emailPasswordResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindCurrentAnnouncements">
+    <wsdl:part name="parameters" element="tns:mFindCurrentAnnouncements">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitFinalLandingReport">
+    <wsdl:part name="parameters" element="tns:mSubmitFinalLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerLogbookResponse">
+    <wsdl:part name="parameters" element="tns:registerLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSaveLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:mSaveLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendSeaLandingsReturnReceiptResponse">
+    <wsdl:part name="parameters" element="tns:sendSeaLandingsReturnReceiptResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperationsResponse">
+    <wsdl:part name="parameters" element="tns:updateOperationsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLogbookResponse">
+    <wsdl:part name="parameters" element="tns:mGetLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mLookupUserResponse">
+    <wsdl:part name="parameters" element="tns:mLookupUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUnsubmittedLandingReport">
+    <wsdl:part name="parameters" element="tns:deleteUnsubmittedLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveLandingReportNumbersResponse">
+    <wsdl:part name="parameters" element="tns:reserveLandingReportNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRecordCoarReportDownload">
+    <wsdl:part name="parameters" element="tns:mRecordCoarReportDownload">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetFederalProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetFederalProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetRegisteredCrabReceiverInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetRegisteredCrabReceiverInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetOperationInfoForPTIResponse">
+    <wsdl:part name="parameters" element="tns:mGetOperationInfoForPTIResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    <wsdl:part name="parameters" element="tns:mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCurrentAnnouncements">
+    <wsdl:part name="parameters" element="tns:findCurrentAnnouncements">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetVesselDefaultsListResponse">
+    <wsdl:part name="parameters" element="tns:mGetVesselDefaultsListResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripReportResponse">
+    <wsdl:part name="parameters" element="tns:getTripReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateCoarReportForInactiveOperation">
+    <wsdl:part name="parameters" element="tns:generateCoarReportForInactiveOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbook">
+    <wsdl:part name="parameters" element="tns:getLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetRegistrationForUserResponse">
+    <wsdl:part name="parameters" element="tns:mGetRegistrationForUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:mFindCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="changePasswordResponse">
+    <wsdl:part name="parameters" element="tns:changePasswordResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitProductionReport">
+    <wsdl:part name="parameters" element="tns:mSubmitProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookTripInfo">
+    <wsdl:part name="parameters" element="tns:getLogbookTripInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mDeleteUnsubmittedProductionReport">
+    <wsdl:part name="parameters" element="tns:mDeleteUnsubmittedProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookProfile">
+    <wsdl:part name="parameters" element="tns:getLogbookProfile">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitIfqReports">
+    <wsdl:part name="parameters" element="tns:mSubmitIfqReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRegisterUser">
+    <wsdl:part name="parameters" element="tns:mRegisterUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetRegisteredBuyerInfo">
+    <wsdl:part name="parameters" element="tns:mGetRegisteredBuyerInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mReserveLandingReportNumbersResponse">
+    <wsdl:part name="parameters" element="tns:mReserveLandingReportNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationLite">
+    <wsdl:part name="parameters" element="tns:getOperationLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runReportExtractResponse">
+    <wsdl:part name="parameters" element="tns:runReportExtractResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfo">
+    <wsdl:part name="parameters" element="tns:getOperationInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveLandingReport">
+    <wsdl:part name="parameters" element="tns:saveLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperations">
+    <wsdl:part name="parameters" element="tns:updateOperations">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLandingReport">
+    <wsdl:part name="parameters" element="tns:mGetLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserRegistrationResponse">
+    <wsdl:part name="parameters" element="tns:getUserRegistrationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mDeleteUnsubmittedLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:mDeleteUnsubmittedLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="overwriteOperationVesselDefaults">
+    <wsdl:part name="parameters" element="tns:overwriteOperationVesselDefaults">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mUpdateOperationGradingAndPricing">
+    <wsdl:part name="parameters" element="tns:mUpdateOperationGradingAndPricing">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isUseridInUseResponse">
+    <wsdl:part name="parameters" element="tns:isUseridInUseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUserProductionReports">
+    <wsdl:part name="parameters" element="tns:findUserProductionReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUnsubmittedLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:deleteUnsubmittedLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLogbook">
+    <wsdl:part name="parameters" element="tns:mGetLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mIsUseridInUseResponse">
+    <wsdl:part name="parameters" element="tns:mIsUseridInUseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetTenderBatchSummary">
+    <wsdl:part name="parameters" element="tns:mGetTenderBatchSummary">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitInitialLandingReport">
+    <wsdl:part name="parameters" element="tns:mSubmitInitialLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUserFullLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:findUserFullLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUserProductionReportsResponse">
+    <wsdl:part name="parameters" element="tns:findUserProductionReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLocationOfOffloads">
+    <wsdl:part name="parameters" element="tns:getLocationOfOffloads">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getObsfeeDetails">
+    <wsdl:part name="parameters" element="tns:getObsfeeDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRegisterOperation">
+    <wsdl:part name="parameters" element="tns:mRegisterOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationsResponse">
+    <wsdl:part name="parameters" element="tns:getOperationsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mExtractLandingReports">
+    <wsdl:part name="parameters" element="tns:mExtractLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetUserRegistration">
+    <wsdl:part name="parameters" element="tns:mGetUserRegistration">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetRegistrationForUser">
+    <wsdl:part name="parameters" element="tns:mGetRegistrationForUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductionReport">
+    <wsdl:part name="parameters" element="tns:getProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUserLandingReports">
+    <wsdl:part name="parameters" element="tns:findUserLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:submitCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAtSeaOperationUsers">
+    <wsdl:part name="parameters" element="tns:getAtSeaOperationUsers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="recordCoarReportDownload">
+    <wsdl:part name="parameters" element="tns:recordCoarReportDownload">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegistrationForUserResponse">
+    <wsdl:part name="parameters" element="tns:getRegistrationForUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOperation">
+    <wsdl:part name="parameters" element="tns:createOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyReportResponse">
+    <wsdl:part name="parameters" element="tns:getDailyReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mUpdateUser">
+    <wsdl:part name="parameters" element="tns:mUpdateUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mChangePassword">
+    <wsdl:part name="parameters" element="tns:mChangePassword">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="emailPassword">
+    <wsdl:part name="parameters" element="tns:emailPassword">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetObsfeeDetailsResponse">
+    <wsdl:part name="parameters" element="tns:mGetObsfeeDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfoForPTI">
+    <wsdl:part name="parameters" element="tns:getOperationInfoForPTI">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:getProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateCoarReport">
+    <wsdl:part name="parameters" element="tns:mGenerateCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveFishTicketNumbers">
+    <wsdl:part name="parameters" element="tns:reserveFishTicketNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitCoarReport">
+    <wsdl:part name="parameters" element="tns:submitCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateCoarReport">
+    <wsdl:part name="parameters" element="tns:generateCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredCrabReceiverInfo">
+    <wsdl:part name="parameters" element="tns:getRegisteredCrabReceiverInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTlandingsUserArray">
+    <wsdl:part name="parameters" element="tns:getTlandingsUserArray">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteTlandingsUser">
+    <wsdl:part name="parameters" element="tns:deleteTlandingsUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserInfoLite">
+    <wsdl:part name="parameters" element="tns:getUserInfoLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isUseridInUse">
+    <wsdl:part name="parameters" element="tns:isUseridInUse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateCoarReportForInactiveOperation">
+    <wsdl:part name="parameters" element="tns:mGenerateCoarReportForInactiveOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCfecPermitInfoResponse">
+    <wsdl:part name="parameters" element="tns:getCfecPermitInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getImportableFishTicketNumbers">
+    <wsdl:part name="parameters" element="tns:getImportableFishTicketNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTenderBatchSummary">
+    <wsdl:part name="parameters" element="tns:getTenderBatchSummary">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFederalProcessorInfo">
+    <wsdl:part name="parameters" element="tns:getFederalProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationVesselDefaultsResponse">
+    <wsdl:part name="parameters" element="tns:getOperationVesselDefaultsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookInfo">
+    <wsdl:part name="parameters" element="tns:getLogbookInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    <wsdl:part name="parameters" element="tns:submitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripReport">
+    <wsdl:part name="parameters" element="tns:getTripReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateUser">
+    <wsdl:part name="parameters" element="tns:updateUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetImportableFishTicketNumbersResponse">
+    <wsdl:part name="parameters" element="tns:mGetImportableFishTicketNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mIncrementOperationVesselDefaultsEditionResponse">
+    <wsdl:part name="parameters" element="tns:mIncrementOperationVesselDefaultsEditionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IOException">
+    <wsdl:part name="IOException" element="tns:IOException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperationGradingAndPricing">
+    <wsdl:part name="parameters" element="tns:updateOperationGradingAndPricing">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetRegisteredBuyerInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetRegisteredBuyerInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    <wsdl:part name="parameters" element="tns:submitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logIersMonitorClosingApplication">
+    <wsdl:part name="parameters" element="tns:logIersMonitorClosingApplication">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetOperationVesselDefaults">
+    <wsdl:part name="parameters" element="tns:mGetOperationVesselDefaults">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTenderBatchSummaryResponse">
+    <wsdl:part name="parameters" element="tns:getTenderBatchSummaryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindCoarReport">
+    <wsdl:part name="parameters" element="tns:mFindCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegistrationForUser">
+    <wsdl:part name="parameters" element="tns:getRegistrationForUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyMixedSalmonPercentagesResponse">
+    <wsdl:part name="parameters" element="tns:applyMixedSalmonPercentagesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitCoarReport">
+    <wsdl:part name="parameters" element="tns:mSubmitCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetQueries">
+    <wsdl:part name="parameters" element="tns:mGetQueries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitFinalLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitFinalLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lookupOperationByCodes">
+    <wsdl:part name="parameters" element="tns:lookupOperationByCodes">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mReserveLandingReportNumbers">
+    <wsdl:part name="parameters" element="tns:mReserveLandingReportNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="incrementOperationVesselDefaultsEditionResponse">
+    <wsdl:part name="parameters" element="tns:incrementOperationVesselDefaultsEditionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="undoMixedSalmonPercentagesResponse">
+    <wsdl:part name="parameters" element="tns:undoMixedSalmonPercentagesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mInsertIersMonitorArrayWrapperResponse">
+    <wsdl:part name="parameters" element="tns:mInsertIersMonitorArrayWrapperResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSaveCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:mSaveCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetVesselDefaultsResponse">
+    <wsdl:part name="parameters" element="tns:mGetVesselDefaultsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerOperation">
+    <wsdl:part name="parameters" element="tns:registerOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lookupOperationById">
+    <wsdl:part name="parameters" element="tns:lookupOperationById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLocationOfOffloadsResponse">
+    <wsdl:part name="parameters" element="tns:mGetLocationOfOffloadsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerUserResponse">
+    <wsdl:part name="parameters" element="tns:registerUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperationGradingAndPricingResponse">
+    <wsdl:part name="parameters" element="tns:updateOperationGradingAndPricingResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetOperationInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetOperationInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runQueryResponse">
+    <wsdl:part name="parameters" element="tns:runQueryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitFinalLandingReportAndInsertNewVesselDefault">
+    <wsdl:part name="parameters" element="tns:mSubmitFinalLandingReportAndInsertNewVesselDefault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndSubmitDailyReport">
+    <wsdl:part name="parameters" element="tns:validateAndSubmitDailyReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lookupUserResponse">
+    <wsdl:part name="parameters" element="tns:lookupUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRunQuery">
+    <wsdl:part name="parameters" element="tns:mRunQuery">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitInitialLandingReportAndInsertNewVesselDefault">
+    <wsdl:part name="parameters" element="tns:mSubmitInitialLandingReportAndInsertNewVesselDefault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOperationResponse">
+    <wsdl:part name="parameters" element="tns:createOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:saveLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetImportableFishTicketNumbers">
+    <wsdl:part name="parameters" element="tns:mGetImportableFishTicketNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extractProductionReportsResponse">
+    <wsdl:part name="parameters" element="tns:extractProductionReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetVesselInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetVesselInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitProductionReport">
+    <wsdl:part name="parameters" element="tns:submitProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateCoarReportDetails">
+    <wsdl:part name="parameters" element="tns:generateCoarReportDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extractProductionReports">
+    <wsdl:part name="parameters" element="tns:extractProductionReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSaveLandingReport">
+    <wsdl:part name="parameters" element="tns:mSaveLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitLogbookResponse">
+    <wsdl:part name="parameters" element="tns:submitLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookInfoResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserRegistration">
+    <wsdl:part name="parameters" element="tns:getUserRegistration">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateReport">
+    <wsdl:part name="parameters" element="tns:generateReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetVesselInfo">
+    <wsdl:part name="parameters" element="tns:mGetVesselInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitInitialLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitInitialLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mExtractLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:mExtractLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mInsertIersMonitorArrayWrapper">
+    <wsdl:part name="parameters" element="tns:mInsertIersMonitorArrayWrapper">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFinalLandingReportAndInsertNewVesselDefault">
+    <wsdl:part name="parameters" element="tns:submitFinalLandingReportAndInsertNewVesselDefault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveTlandingsUser">
+    <wsdl:part name="parameters" element="tns:saveTlandingsUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndSubmitTripReportResponse">
+    <wsdl:part name="parameters" element="tns:validateAndSubmitTripReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mUpdateUserResponse">
+    <wsdl:part name="parameters" element="tns:mUpdateUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyMixedSalmonPercentages">
+    <wsdl:part name="parameters" element="tns:applyMixedSalmonPercentages">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUnsubmittedProductionReport">
+    <wsdl:part name="parameters" element="tns:deleteUnsubmittedProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFederalProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:getFederalProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetUserInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetUserInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateReport">
+    <wsdl:part name="parameters" element="tns:mGenerateReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getImportableFishTicketNumbersResponse">
+    <wsdl:part name="parameters" element="tns:getImportableFishTicketNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mDeleteUnsubmittedLandingReport">
+    <wsdl:part name="parameters" element="tns:mDeleteUnsubmittedLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndSubmitDailyReportResponse">
+    <wsdl:part name="parameters" element="tns:validateAndSubmitDailyReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveProductionReport">
+    <wsdl:part name="parameters" element="tns:saveProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCfecPermitInfo">
+    <wsdl:part name="parameters" element="tns:getCfecPermitInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getObsfeeEstimateReportsByProcessorDateRangeResponse">
+    <wsdl:part name="parameters" element="tns:getObsfeeEstimateReportsByProcessorDateRangeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="overwriteOperationVesselDefaultsResponse">
+    <wsdl:part name="parameters" element="tns:overwriteOperationVesselDefaultsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetCfecPermitInfoResponse">
+    <wsdl:part name="parameters" element="tns:mGetCfecPermitInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRegisterLogbook">
+    <wsdl:part name="parameters" element="tns:mRegisterLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRegisterOperationResponse">
+    <wsdl:part name="parameters" element="tns:mRegisterOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfoForPTIResponse">
+    <wsdl:part name="parameters" element="tns:getOperationInfoForPTIResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLocationOfOffloads">
+    <wsdl:part name="parameters" element="tns:mGetLocationOfOffloads">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetObsfeeDetails">
+    <wsdl:part name="parameters" element="tns:mGetObsfeeDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateUserResponse">
+    <wsdl:part name="parameters" element="tns:updateUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLoggerResponse">
+    <wsdl:part name="parameters" element="tns:getLoggerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mExtractProductionReports">
+    <wsdl:part name="parameters" element="tns:mExtractProductionReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSendSeaLandingsReturnReceiptResponse">
+    <wsdl:part name="parameters" element="tns:mSendSeaLandingsReturnReceiptResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetProductionReport">
+    <wsdl:part name="parameters" element="tns:mGetProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindUserProductionReportsResponse">
+    <wsdl:part name="parameters" element="tns:mFindUserProductionReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSendSeaLandingsReturnReceipt">
+    <wsdl:part name="parameters" element="tns:mSendSeaLandingsReturnReceipt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNmfsPersonInfoResponse">
+    <wsdl:part name="parameters" element="tns:getNmfsPersonInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetObsfeeEstimateReportsByProcessorDateRange">
+    <wsdl:part name="parameters" element="tns:mGetObsfeeEstimateReportsByProcessorDateRange">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lookupOperationByIdResponse">
+    <wsdl:part name="parameters" element="tns:lookupOperationByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    <wsdl:part name="parameters" element="tns:getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mChangePasswordResponse">
+    <wsdl:part name="parameters" element="tns:mChangePasswordResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripReportInfoResponse">
+    <wsdl:part name="parameters" element="tns:getTripReportInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRunReportExtract">
+    <wsdl:part name="parameters" element="tns:mRunReportExtract">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindUserLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:mFindUserLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGenerateCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:mGenerateCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:getLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitInitialLandingReport">
+    <wsdl:part name="parameters" element="tns:submitInitialLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookProfileInfoResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookProfileInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetProcessorInfo">
+    <wsdl:part name="parameters" element="tns:mGetProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateCoarReportDetailsResponse">
+    <wsdl:part name="parameters" element="tns:generateCoarReportDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRunTest">
+    <wsdl:part name="parameters" element="tns:mRunTest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mOverwriteOperationVesselDefaultsResponse">
+    <wsdl:part name="parameters" element="tns:mOverwriteOperationVesselDefaultsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:submitProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselInfo">
+    <wsdl:part name="parameters" element="tns:getVesselInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetAtSeaOperationUsers">
+    <wsdl:part name="parameters" element="tns:mGetAtSeaOperationUsers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRecordCoarReportDownloadResponse">
+    <wsdl:part name="parameters" element="tns:mRecordCoarReportDownloadResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mOverwriteOperationVesselDefaults">
+    <wsdl:part name="parameters" element="tns:mOverwriteOperationVesselDefaults">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendSeaLandingsReturnReceipt">
+    <wsdl:part name="parameters" element="tns:sendSeaLandingsReturnReceipt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyReportInfoResponse">
+    <wsdl:part name="parameters" element="tns:getDailyReportInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:mGetLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindUserLandingReports">
+    <wsdl:part name="parameters" element="tns:mFindUserLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    <wsdl:part name="parameters" element="tns:getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCoarReport">
+    <wsdl:part name="parameters" element="tns:findCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:findCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRunQueryResponse">
+    <wsdl:part name="parameters" element="tns:mRunQueryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mExtractProductionReportsResponse">
+    <wsdl:part name="parameters" element="tns:mExtractProductionReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookProfileInfo">
+    <wsdl:part name="parameters" element="tns:getLogbookProfileInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNmfsPersonInfo">
+    <wsdl:part name="parameters" element="tns:getNmfsPersonInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    <wsdl:part name="parameters" element="tns:mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveFishTicketNumbersResponse">
+    <wsdl:part name="parameters" element="tns:reserveFishTicketNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mApplyMixedSalmonPercentages">
+    <wsdl:part name="parameters" element="tns:mApplyMixedSalmonPercentages">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUserFullLandingReports">
+    <wsdl:part name="parameters" element="tns:findUserFullLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetNmfsPersonInfo">
+    <wsdl:part name="parameters" element="tns:mGetNmfsPersonInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUserInfoLiteResponse">
+    <wsdl:part name="parameters" element="tns:getUserInfoLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mGetLogbookInfo">
+    <wsdl:part name="parameters" element="tns:mGetLogbookInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    <wsdl:part name="parameters" element="tns:mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitLogbookForTrip">
+    <wsdl:part name="parameters" element="tns:submitLogbookForTrip">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredBuyerInfo">
+    <wsdl:part name="parameters" element="tns:getRegisteredBuyerInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitInitialLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:submitInitialLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mSaveCoarReport">
+    <wsdl:part name="parameters" element="tns:mSaveCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extractLandingReports">
+    <wsdl:part name="parameters" element="tns:extractLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mFindUserFullLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:mFindUserFullLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="undoMixedSalmonPercentages">
+    <wsdl:part name="parameters" element="tns:undoMixedSalmonPercentages">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addUserToOperation">
+    <wsdl:part name="parameters" element="tns:addUserToOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFinalLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:submitFinalLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="mRunTestResponse">
+    <wsdl:part name="parameters" element="tns:mRunTestResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extractLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:extractLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselDefaultsList">
+    <wsdl:part name="parameters" element="tns:getVesselDefaultsList">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveLandingReportNumbers">
+    <wsdl:part name="parameters" element="tns:reserveLandingReportNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProcessorReportManagement">
+    <wsdl:operation name="mGetRegisteredBuyerInfo">
+      <wsdl:input name="mGetRegisteredBuyerInfo" message="tns:mGetRegisteredBuyerInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetRegisteredBuyerInfoResponse" message="tns:mGetRegisteredBuyerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationLite">
+      <wsdl:input name="getOperationLite" message="tns:getOperationLite">
+    </wsdl:input>
+      <wsdl:output name="getOperationLiteResponse" message="tns:getOperationLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogger">
+      <wsdl:input name="getLogger" message="tns:getLogger">
+    </wsdl:input>
+      <wsdl:output name="getLoggerResponse" message="tns:getLoggerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfo">
+      <wsdl:input name="getOperationInfo" message="tns:getOperationInfo">
+    </wsdl:input>
+      <wsdl:output name="getOperationInfoResponse" message="tns:getOperationInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLandingReport">
+      <wsdl:input name="saveLandingReport" message="tns:saveLandingReport">
+    </wsdl:input>
+      <wsdl:output name="saveLandingReportResponse" message="tns:saveLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperations">
+      <wsdl:input name="updateOperations" message="tns:updateOperations">
+    </wsdl:input>
+      <wsdl:output name="updateOperationsResponse" message="tns:updateOperationsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLandingReport">
+      <wsdl:input name="mGetLandingReport" message="tns:mGetLandingReport">
+    </wsdl:input>
+      <wsdl:output name="mGetLandingReportResponse" message="tns:mGetLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auditAndReserveNumbers">
+      <wsdl:input name="auditAndReserveNumbers" message="tns:auditAndReserveNumbers">
+    </wsdl:input>
+      <wsdl:output name="auditAndReserveNumbersResponse" message="tns:auditAndReserveNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitLogbook">
+      <wsdl:input name="mSubmitLogbook" message="tns:mSubmitLogbook">
+    </wsdl:input>
+      <wsdl:output name="mSubmitLogbookResponse" message="tns:mSubmitLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="overwriteOperationVesselDefaults">
+      <wsdl:input name="overwriteOperationVesselDefaults" message="tns:overwriteOperationVesselDefaults">
+    </wsdl:input>
+      <wsdl:output name="overwriteOperationVesselDefaultsResponse" message="tns:overwriteOperationVesselDefaultsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compress">
+      <wsdl:input name="compress" message="tns:compress">
+    </wsdl:input>
+      <wsdl:output name="compressResponse" message="tns:compressResponse">
+    </wsdl:output>
+      <wsdl:fault name="IOException" message="tns:IOException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mUpdateOperationGradingAndPricing">
+      <wsdl:input name="mUpdateOperationGradingAndPricing" message="tns:mUpdateOperationGradingAndPricing">
+    </wsdl:input>
+      <wsdl:output name="mUpdateOperationGradingAndPricingResponse" message="tns:mUpdateOperationGradingAndPricingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserProductionReports">
+      <wsdl:input name="findUserProductionReports" message="tns:findUserProductionReports">
+    </wsdl:input>
+      <wsdl:output name="findUserProductionReportsResponse" message="tns:findUserProductionReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLogbook">
+      <wsdl:input name="mGetLogbook" message="tns:mGetLogbook">
+    </wsdl:input>
+      <wsdl:output name="mGetLogbookResponse" message="tns:mGetLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndSubmitLogbookProfile">
+      <wsdl:input name="validateAndSubmitLogbookProfile" message="tns:validateAndSubmitLogbookProfile">
+    </wsdl:input>
+      <wsdl:output name="validateAndSubmitLogbookProfileResponse" message="tns:validateAndSubmitLogbookProfileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetTenderBatchSummary">
+      <wsdl:input name="mGetTenderBatchSummary" message="tns:mGetTenderBatchSummary">
+    </wsdl:input>
+      <wsdl:output name="mGetTenderBatchSummaryResponse" message="tns:mGetTenderBatchSummaryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitInitialLandingReport">
+      <wsdl:input name="mSubmitInitialLandingReport" message="tns:mSubmitInitialLandingReport">
+    </wsdl:input>
+      <wsdl:output name="mSubmitInitialLandingReportResponse" message="tns:mSubmitInitialLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocationOfOffloads">
+      <wsdl:input name="getLocationOfOffloads" message="tns:getLocationOfOffloads">
+    </wsdl:input>
+      <wsdl:output name="getLocationOfOffloadsResponse" message="tns:getLocationOfOffloadsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObsfeeDetails">
+      <wsdl:input name="getObsfeeDetails" message="tns:getObsfeeDetails">
+    </wsdl:input>
+      <wsdl:output name="getObsfeeDetailsResponse" message="tns:getObsfeeDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRegisterOperation">
+      <wsdl:input name="mRegisterOperation" message="tns:mRegisterOperation">
+    </wsdl:input>
+      <wsdl:output name="mRegisterOperationResponse" message="tns:mRegisterOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitInitialLandingReportAndInsertNewVesselDefault">
+      <wsdl:input name="submitInitialLandingReportAndInsertNewVesselDefault" message="tns:submitInitialLandingReportAndInsertNewVesselDefault">
+    </wsdl:input>
+      <wsdl:output name="submitInitialLandingReportAndInsertNewVesselDefaultResponse" message="tns:submitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mExtractLandingReports">
+      <wsdl:input name="mExtractLandingReports" message="tns:mExtractLandingReports">
+    </wsdl:input>
+      <wsdl:output name="mExtractLandingReportsResponse" message="tns:mExtractLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <wsdl:input name="registerUser" message="tns:registerUser">
+    </wsdl:input>
+      <wsdl:output name="registerUserResponse" message="tns:registerUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetRegisteredCrabReceiverInfo">
+      <wsdl:input name="mGetRegisteredCrabReceiverInfo" message="tns:mGetRegisteredCrabReceiverInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetRegisteredCrabReceiverInfoResponse" message="tns:mGetRegisteredCrabReceiverInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetUserRegistration">
+      <wsdl:input name="mGetUserRegistration" message="tns:mGetUserRegistration">
+    </wsdl:input>
+      <wsdl:output name="mGetUserRegistrationResponse" message="tns:mGetUserRegistrationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetRegistrationForUser">
+      <wsdl:input name="mGetRegistrationForUser" message="tns:mGetRegistrationForUser">
+    </wsdl:input>
+      <wsdl:output name="mGetRegistrationForUserResponse" message="tns:mGetRegistrationForUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionReport">
+      <wsdl:input name="getProductionReport" message="tns:getProductionReport">
+    </wsdl:input>
+      <wsdl:output name="getProductionReportResponse" message="tns:getProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserLandingReports">
+      <wsdl:input name="findUserLandingReports" message="tns:findUserLandingReports">
+    </wsdl:input>
+      <wsdl:output name="findUserLandingReportsResponse" message="tns:findUserLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAtSeaOperationUsers">
+      <wsdl:input name="getAtSeaOperationUsers" message="tns:getAtSeaOperationUsers">
+    </wsdl:input>
+      <wsdl:output name="getAtSeaOperationUsersResponse" message="tns:getAtSeaOperationUsersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recordCoarReportDownload">
+      <wsdl:input name="recordCoarReportDownload" message="tns:recordCoarReportDownload">
+    </wsdl:input>
+      <wsdl:output name="recordCoarReportDownloadResponse" message="tns:recordCoarReportDownloadResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOperation">
+      <wsdl:input name="createOperation" message="tns:createOperation">
+    </wsdl:input>
+      <wsdl:output name="createOperationResponse" message="tns:createOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUpdateUser">
+      <wsdl:input name="mUpdateUser" message="tns:mUpdateUser">
+    </wsdl:input>
+      <wsdl:output name="mUpdateUserResponse" message="tns:mUpdateUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mChangePassword">
+      <wsdl:input name="mChangePassword" message="tns:mChangePassword">
+    </wsdl:input>
+      <wsdl:output name="mChangePasswordResponse" message="tns:mChangePasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="emailPassword">
+      <wsdl:input name="emailPassword" message="tns:emailPassword">
+    </wsdl:input>
+      <wsdl:output name="emailPasswordResponse" message="tns:emailPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfoForPTI">
+      <wsdl:input name="getOperationInfoForPTI" message="tns:getOperationInfoForPTI">
+    </wsdl:input>
+      <wsdl:output name="getOperationInfoForPTIResponse" message="tns:getOperationInfoForPTIResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFinalLandingReport">
+      <wsdl:input name="submitFinalLandingReport" message="tns:submitFinalLandingReport">
+    </wsdl:input>
+      <wsdl:output name="submitFinalLandingReportResponse" message="tns:submitFinalLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateCoarReport">
+      <wsdl:input name="mGenerateCoarReport" message="tns:mGenerateCoarReport">
+    </wsdl:input>
+      <wsdl:output name="mGenerateCoarReportResponse" message="tns:mGenerateCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveFishTicketNumbers">
+      <wsdl:input name="reserveFishTicketNumbers" message="tns:reserveFishTicketNumbers">
+    </wsdl:input>
+      <wsdl:output name="reserveFishTicketNumbersResponse" message="tns:reserveFishTicketNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLookupUser">
+      <wsdl:input name="mLookupUser" message="tns:mLookupUser">
+    </wsdl:input>
+      <wsdl:output name="mLookupUserResponse" message="tns:mLookupUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitCoarReport">
+      <wsdl:input name="submitCoarReport" message="tns:submitCoarReport">
+    </wsdl:input>
+      <wsdl:output name="submitCoarReportResponse" message="tns:submitCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCoarReport">
+      <wsdl:input name="generateCoarReport" message="tns:generateCoarReport">
+    </wsdl:input>
+      <wsdl:output name="generateCoarReportResponse" message="tns:generateCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredCrabReceiverInfo">
+      <wsdl:input name="getRegisteredCrabReceiverInfo" message="tns:getRegisteredCrabReceiverInfo">
+    </wsdl:input>
+      <wsdl:output name="getRegisteredCrabReceiverInfoResponse" message="tns:getRegisteredCrabReceiverInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateCoarReportDetails">
+      <wsdl:input name="mGenerateCoarReportDetails" message="tns:mGenerateCoarReportDetails">
+    </wsdl:input>
+      <wsdl:output name="mGenerateCoarReportDetailsResponse" message="tns:mGenerateCoarReportDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runQuery">
+      <wsdl:input name="runQuery" message="tns:runQuery">
+    </wsdl:input>
+      <wsdl:output name="runQueryResponse" message="tns:runQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTlandingsUserArray">
+      <wsdl:input name="getTlandingsUserArray" message="tns:getTlandingsUserArray">
+    </wsdl:input>
+      <wsdl:output name="getTlandingsUserArrayResponse" message="tns:getTlandingsUserArrayResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTlandingsUser">
+      <wsdl:input name="deleteTlandingsUser" message="tns:deleteTlandingsUser">
+    </wsdl:input>
+      <wsdl:output name="deleteTlandingsUserResponse" message="tns:deleteTlandingsUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfoLite">
+      <wsdl:input name="getUserInfoLite" message="tns:getUserInfoLite">
+    </wsdl:input>
+      <wsdl:output name="getUserInfoLiteResponse" message="tns:getUserInfoLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isUseridInUse">
+      <wsdl:input name="isUseridInUse" message="tns:isUseridInUse">
+    </wsdl:input>
+      <wsdl:output name="isUseridInUseResponse" message="tns:isUseridInUseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lookupUser">
+      <wsdl:input name="lookupUser" message="tns:lookupUser">
+    </wsdl:input>
+      <wsdl:output name="lookupUserResponse" message="tns:lookupUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateCoarReportForInactiveOperation">
+      <wsdl:input name="mGenerateCoarReportForInactiveOperation" message="tns:mGenerateCoarReportForInactiveOperation">
+    </wsdl:input>
+      <wsdl:output name="mGenerateCoarReportForInactiveOperationResponse" message="tns:mGenerateCoarReportForInactiveOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImportableFishTicketNumbers">
+      <wsdl:input name="getImportableFishTicketNumbers" message="tns:getImportableFishTicketNumbers">
+    </wsdl:input>
+      <wsdl:output name="getImportableFishTicketNumbersResponse" message="tns:getImportableFishTicketNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTenderBatchSummary">
+      <wsdl:input name="getTenderBatchSummary" message="tns:getTenderBatchSummary">
+    </wsdl:input>
+      <wsdl:output name="getTenderBatchSummaryResponse" message="tns:getTenderBatchSummaryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyReportInfo">
+      <wsdl:input name="getDailyReportInfo" message="tns:getDailyReportInfo">
+    </wsdl:input>
+      <wsdl:output name="getDailyReportInfoResponse" message="tns:getDailyReportInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFederalProcessorInfo">
+      <wsdl:input name="getFederalProcessorInfo" message="tns:getFederalProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="getFederalProcessorInfoResponse" message="tns:getFederalProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookInfo">
+      <wsdl:input name="getLogbookInfo" message="tns:getLogbookInfo">
+    </wsdl:input>
+      <wsdl:output name="getLogbookInfoResponse" message="tns:getLogbookInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitIfqReports">
+      <wsdl:input name="submitIfqReports" message="tns:submitIfqReports">
+    </wsdl:input>
+      <wsdl:output name="submitIfqReportsResponse" message="tns:submitIfqReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorInfo">
+      <wsdl:input name="getProcessorInfo" message="tns:getProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="getProcessorInfoResponse" message="tns:getProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripReport">
+      <wsdl:input name="getTripReport" message="tns:getTripReport">
+    </wsdl:input>
+      <wsdl:output name="getTripReportResponse" message="tns:getTripReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input name="updateUser" message="tns:updateUser">
+    </wsdl:input>
+      <wsdl:output name="updateUserResponse" message="tns:updateUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObsfeeEstimateReportsByProcessorDateRange">
+      <wsdl:input name="getObsfeeEstimateReportsByProcessorDateRange" message="tns:getObsfeeEstimateReportsByProcessorDateRange">
+    </wsdl:input>
+      <wsdl:output name="getObsfeeEstimateReportsByProcessorDateRangeResponse" message="tns:getObsfeeEstimateReportsByProcessorDateRangeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLandingReport">
+      <wsdl:input name="getLandingReport" message="tns:getLandingReport">
+    </wsdl:input>
+      <wsdl:output name="getLandingReportResponse" message="tns:getLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incrementOperationVesselDefaultsEdition">
+      <wsdl:input name="incrementOperationVesselDefaultsEdition" message="tns:incrementOperationVesselDefaultsEdition">
+    </wsdl:input>
+      <wsdl:output name="incrementOperationVesselDefaultsEditionResponse" message="tns:incrementOperationVesselDefaultsEditionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperationGradingAndPricing">
+      <wsdl:input name="updateOperationGradingAndPricing" message="tns:updateOperationGradingAndPricing">
+    </wsdl:input>
+      <wsdl:output name="updateOperationGradingAndPricingResponse" message="tns:updateOperationGradingAndPricingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitLogbook">
+      <wsdl:input name="submitLogbook" message="tns:submitLogbook">
+    </wsdl:input>
+      <wsdl:output name="submitLogbookResponse" message="tns:submitLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperations">
+      <wsdl:input name="getOperations" message="tns:getOperations">
+    </wsdl:input>
+      <wsdl:output name="getOperationsResponse" message="tns:getOperationsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetOperationInfo">
+      <wsdl:input name="mGetOperationInfo" message="tns:mGetOperationInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetOperationInfoResponse" message="tns:mGetOperationInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logIersMonitorClosingApplication">
+      <wsdl:input name="logIersMonitorClosingApplication" message="tns:logIersMonitorClosingApplication">
+    </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfo">
+      <wsdl:input name="getUserInfo" message="tns:getUserInfo">
+    </wsdl:input>
+      <wsdl:output name="getUserInfoResponse" message="tns:getUserInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetOperationVesselDefaults">
+      <wsdl:input name="mGetOperationVesselDefaults" message="tns:mGetOperationVesselDefaults">
+    </wsdl:input>
+      <wsdl:output name="mGetOperationVesselDefaultsResponse" message="tns:mGetOperationVesselDefaultsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mReserveFishTicketNumbers">
+      <wsdl:input name="mReserveFishTicketNumbers" message="tns:mReserveFishTicketNumbers">
+    </wsdl:input>
+      <wsdl:output name="mReserveFishTicketNumbersResponse" message="tns:mReserveFishTicketNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindCoarReport">
+      <wsdl:input name="mFindCoarReport" message="tns:mFindCoarReport">
+    </wsdl:input>
+      <wsdl:output name="mFindCoarReportResponse" message="tns:mFindCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetCfecPermitInfo">
+      <wsdl:input name="mGetCfecPermitInfo" message="tns:mGetCfecPermitInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetCfecPermitInfoResponse" message="tns:mGetCfecPermitInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegistrationForUser">
+      <wsdl:input name="getRegistrationForUser" message="tns:getRegistrationForUser">
+    </wsdl:input>
+      <wsdl:output name="getRegistrationForUserResponse" message="tns:getRegistrationForUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitCoarReport">
+      <wsdl:input name="mSubmitCoarReport" message="tns:mSubmitCoarReport">
+    </wsdl:input>
+      <wsdl:output name="mSubmitCoarReportResponse" message="tns:mSubmitCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetQueries">
+      <wsdl:input name="mGetQueries" message="tns:mGetQueries">
+    </wsdl:input>
+      <wsdl:output name="mGetQueriesResponse" message="tns:mGetQueriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTlandingsUserArray">
+      <wsdl:input name="saveTlandingsUserArray" message="tns:saveTlandingsUserArray">
+    </wsdl:input>
+      <wsdl:output name="saveTlandingsUserArrayResponse" message="tns:saveTlandingsUserArrayResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lookupOperationByCodes">
+      <wsdl:input name="lookupOperationByCodes" message="tns:lookupOperationByCodes">
+    </wsdl:input>
+      <wsdl:output name="lookupOperationByCodesResponse" message="tns:lookupOperationByCodesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLogbookTripInfo">
+      <wsdl:input name="mGetLogbookTripInfo" message="tns:mGetLogbookTripInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetLogbookTripInfoResponse" message="tns:mGetLogbookTripInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mReserveLandingReportNumbers">
+      <wsdl:input name="mReserveLandingReportNumbers" message="tns:mReserveLandingReportNumbers">
+    </wsdl:input>
+      <wsdl:output name="mReserveLandingReportNumbersResponse" message="tns:mReserveLandingReportNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUndoMixedSalmonPercentages">
+      <wsdl:input name="mUndoMixedSalmonPercentages" message="tns:mUndoMixedSalmonPercentages">
+    </wsdl:input>
+      <wsdl:output name="mUndoMixedSalmonPercentagesResponse" message="tns:mUndoMixedSalmonPercentagesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerOperation">
+      <wsdl:input name="registerOperation" message="tns:registerOperation">
+    </wsdl:input>
+      <wsdl:output name="registerOperationResponse" message="tns:registerOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lookupOperationById">
+      <wsdl:input name="lookupOperationById" message="tns:lookupOperationById">
+    </wsdl:input>
+      <wsdl:output name="lookupOperationByIdResponse" message="tns:lookupOperationByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCoarReport">
+      <wsdl:input name="saveCoarReport" message="tns:saveCoarReport">
+    </wsdl:input>
+      <wsdl:output name="saveCoarReportResponse" message="tns:saveCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mAuditAndReserveNumbers">
+      <wsdl:input name="mAuditAndReserveNumbers" message="tns:mAuditAndReserveNumbers">
+    </wsdl:input>
+      <wsdl:output name="mAuditAndReserveNumbersResponse" message="tns:mAuditAndReserveNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitFinalLandingReportAndInsertNewVesselDefault">
+      <wsdl:input name="mSubmitFinalLandingReportAndInsertNewVesselDefault" message="tns:mSubmitFinalLandingReportAndInsertNewVesselDefault">
+    </wsdl:input>
+      <wsdl:output name="mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse" message="tns:mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndSubmitDailyReport">
+      <wsdl:input name="validateAndSubmitDailyReport" message="tns:validateAndSubmitDailyReport">
+    </wsdl:input>
+      <wsdl:output name="validateAndSubmitDailyReportResponse" message="tns:validateAndSubmitDailyReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRunQuery">
+      <wsdl:input name="mRunQuery" message="tns:mRunQuery">
+    </wsdl:input>
+      <wsdl:output name="mRunQueryResponse" message="tns:mRunQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitInitialLandingReportAndInsertNewVesselDefault">
+      <wsdl:input name="mSubmitInitialLandingReportAndInsertNewVesselDefault" message="tns:mSubmitInitialLandingReportAndInsertNewVesselDefault">
+    </wsdl:input>
+      <wsdl:output name="mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse" message="tns:mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetImportableFishTicketNumbers">
+      <wsdl:input name="mGetImportableFishTicketNumbers" message="tns:mGetImportableFishTicketNumbers">
+    </wsdl:input>
+      <wsdl:output name="mGetImportableFishTicketNumbersResponse" message="tns:mGetImportableFishTicketNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitProductionReport">
+      <wsdl:input name="submitProductionReport" message="tns:submitProductionReport">
+    </wsdl:input>
+      <wsdl:output name="submitProductionReportResponse" message="tns:submitProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCoarReportDetails">
+      <wsdl:input name="generateCoarReportDetails" message="tns:generateCoarReportDetails">
+    </wsdl:input>
+      <wsdl:output name="generateCoarReportDetailsResponse" message="tns:generateCoarReportDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extractProductionReports">
+      <wsdl:input name="extractProductionReports" message="tns:extractProductionReports">
+    </wsdl:input>
+      <wsdl:output name="extractProductionReportsResponse" message="tns:extractProductionReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSaveLandingReport">
+      <wsdl:input name="mSaveLandingReport" message="tns:mSaveLandingReport">
+    </wsdl:input>
+      <wsdl:output name="mSaveLandingReportResponse" message="tns:mSaveLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetFederalProcessorInfo">
+      <wsdl:input name="mGetFederalProcessorInfo" message="tns:mGetFederalProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetFederalProcessorInfoResponse" message="tns:mGetFederalProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindUserFullLandingReports">
+      <wsdl:input name="mFindUserFullLandingReports" message="tns:mFindUserFullLandingReports">
+    </wsdl:input>
+      <wsdl:output name="mFindUserFullLandingReportsResponse" message="tns:mFindUserFullLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserRegistration">
+      <wsdl:input name="getUserRegistration" message="tns:getUserRegistration">
+    </wsdl:input>
+      <wsdl:output name="getUserRegistrationResponse" message="tns:getUserRegistrationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateReport">
+      <wsdl:input name="generateReport" message="tns:generateReport">
+    </wsdl:input>
+      <wsdl:output name="generateReportResponse" message="tns:generateReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetVesselInfo">
+      <wsdl:input name="mGetVesselInfo" message="tns:mGetVesselInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetVesselInfoResponse" message="tns:mGetVesselInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndSubmitTripReport">
+      <wsdl:input name="validateAndSubmitTripReport" message="tns:validateAndSubmitTripReport">
+    </wsdl:input>
+      <wsdl:output name="validateAndSubmitTripReportResponse" message="tns:validateAndSubmitTripReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mInsertIersMonitorArrayWrapper">
+      <wsdl:input name="mInsertIersMonitorArrayWrapper" message="tns:mInsertIersMonitorArrayWrapper">
+    </wsdl:input>
+      <wsdl:output name="mInsertIersMonitorArrayWrapperResponse" message="tns:mInsertIersMonitorArrayWrapperResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSaveProductionReport">
+      <wsdl:input name="mSaveProductionReport" message="tns:mSaveProductionReport">
+    </wsdl:input>
+      <wsdl:output name="mSaveProductionReportResponse" message="tns:mSaveProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFinalLandingReportAndInsertNewVesselDefault">
+      <wsdl:input name="submitFinalLandingReportAndInsertNewVesselDefault" message="tns:submitFinalLandingReportAndInsertNewVesselDefault">
+    </wsdl:input>
+      <wsdl:output name="submitFinalLandingReportAndInsertNewVesselDefaultResponse" message="tns:submitFinalLandingReportAndInsertNewVesselDefaultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTlandingsUser">
+      <wsdl:input name="saveTlandingsUser" message="tns:saveTlandingsUser">
+    </wsdl:input>
+      <wsdl:output name="saveTlandingsUserResponse" message="tns:saveTlandingsUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetVesselDefaults">
+      <wsdl:input name="mGetVesselDefaults" message="tns:mGetVesselDefaults">
+    </wsdl:input>
+      <wsdl:output name="mGetVesselDefaultsResponse" message="tns:mGetVesselDefaultsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselDefaults">
+      <wsdl:input name="getVesselDefaults" message="tns:getVesselDefaults">
+    </wsdl:input>
+      <wsdl:output name="getVesselDefaultsResponse" message="tns:getVesselDefaultsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyMixedSalmonPercentages">
+      <wsdl:input name="applyMixedSalmonPercentages" message="tns:applyMixedSalmonPercentages">
+    </wsdl:input>
+      <wsdl:output name="applyMixedSalmonPercentagesResponse" message="tns:applyMixedSalmonPercentagesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUnsubmittedProductionReport">
+      <wsdl:input name="deleteUnsubmittedProductionReport" message="tns:deleteUnsubmittedProductionReport">
+    </wsdl:input>
+      <wsdl:output name="deleteUnsubmittedProductionReportResponse" message="tns:deleteUnsubmittedProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerLogbook">
+      <wsdl:input name="registerLogbook" message="tns:registerLogbook">
+    </wsdl:input>
+      <wsdl:output name="registerLogbookResponse" message="tns:registerLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripReportInfo">
+      <wsdl:input name="getTripReportInfo" message="tns:getTripReportInfo">
+    </wsdl:input>
+      <wsdl:output name="getTripReportInfoResponse" message="tns:getTripReportInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindUserProductionReports">
+      <wsdl:input name="mFindUserProductionReports" message="tns:mFindUserProductionReports">
+    </wsdl:input>
+      <wsdl:output name="mFindUserProductionReportsResponse" message="tns:mFindUserProductionReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateReport">
+      <wsdl:input name="mGenerateReport" message="tns:mGenerateReport">
+    </wsdl:input>
+      <wsdl:output name="mGenerateReportResponse" message="tns:mGenerateReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mIsUseridInUse">
+      <wsdl:input name="mIsUseridInUse" message="tns:mIsUseridInUse">
+    </wsdl:input>
+      <wsdl:output name="mIsUseridInUseResponse" message="tns:mIsUseridInUseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteUnsubmittedLandingReport">
+      <wsdl:input name="mDeleteUnsubmittedLandingReport" message="tns:mDeleteUnsubmittedLandingReport">
+    </wsdl:input>
+      <wsdl:output name="mDeleteUnsubmittedLandingReportResponse" message="tns:mDeleteUnsubmittedLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserRegistrationLite">
+      <wsdl:input name="getUserRegistrationLite" message="tns:getUserRegistrationLite">
+    </wsdl:input>
+      <wsdl:output name="getUserRegistrationLiteResponse" message="tns:getUserRegistrationLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveProductionReport">
+      <wsdl:input name="saveProductionReport" message="tns:saveProductionReport">
+    </wsdl:input>
+      <wsdl:output name="saveProductionReportResponse" message="tns:saveProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetVesselDefaultsList">
+      <wsdl:input name="mGetVesselDefaultsList" message="tns:mGetVesselDefaultsList">
+    </wsdl:input>
+      <wsdl:output name="mGetVesselDefaultsListResponse" message="tns:mGetVesselDefaultsListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runReportExtract">
+      <wsdl:input name="runReportExtract" message="tns:runReportExtract">
+    </wsdl:input>
+      <wsdl:output name="runReportExtractResponse" message="tns:runReportExtractResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCfecPermitInfo">
+      <wsdl:input name="getCfecPermitInfo" message="tns:getCfecPermitInfo">
+    </wsdl:input>
+      <wsdl:output name="getCfecPermitInfoResponse" message="tns:getCfecPermitInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mEmailPassword">
+      <wsdl:input name="mEmailPassword" message="tns:mEmailPassword">
+    </wsdl:input>
+      <wsdl:output name="mEmailPasswordResponse" message="tns:mEmailPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRegisterLogbook">
+      <wsdl:input name="mRegisterLogbook" message="tns:mRegisterLogbook">
+    </wsdl:input>
+      <wsdl:output name="mRegisterLogbookResponse" message="tns:mRegisterLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLocationOfOffloads">
+      <wsdl:input name="mGetLocationOfOffloads" message="tns:mGetLocationOfOffloads">
+    </wsdl:input>
+      <wsdl:output name="mGetLocationOfOffloadsResponse" message="tns:mGetLocationOfOffloadsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetObsfeeDetails">
+      <wsdl:input name="mGetObsfeeDetails" message="tns:mGetObsfeeDetails">
+    </wsdl:input>
+      <wsdl:output name="mGetObsfeeDetailsResponse" message="tns:mGetObsfeeDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mExtractProductionReports">
+      <wsdl:input name="mExtractProductionReports" message="tns:mExtractProductionReports">
+    </wsdl:input>
+      <wsdl:output name="mExtractProductionReportsResponse" message="tns:mExtractProductionReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeUserFromCache">
+      <wsdl:input name="purgeUserFromCache" message="tns:purgeUserFromCache">
+    </wsdl:input>
+      <wsdl:output name="purgeUserFromCacheResponse" message="tns:purgeUserFromCacheResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationVesselDefaults">
+      <wsdl:input name="getOperationVesselDefaults" message="tns:getOperationVesselDefaults">
+    </wsdl:input>
+      <wsdl:output name="getOperationVesselDefaultsResponse" message="tns:getOperationVesselDefaultsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetProductionReport">
+      <wsdl:input name="mGetProductionReport" message="tns:mGetProductionReport">
+    </wsdl:input>
+      <wsdl:output name="mGetProductionReportResponse" message="tns:mGetProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSendSeaLandingsReturnReceipt">
+      <wsdl:input name="mSendSeaLandingsReturnReceipt" message="tns:mSendSeaLandingsReturnReceipt">
+    </wsdl:input>
+      <wsdl:output name="mSendSeaLandingsReturnReceiptResponse" message="tns:mSendSeaLandingsReturnReceiptResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetObsfeeEstimateReportsByProcessorDateRange">
+      <wsdl:input name="mGetObsfeeEstimateReportsByProcessorDateRange" message="tns:mGetObsfeeEstimateReportsByProcessorDateRange">
+    </wsdl:input>
+      <wsdl:output name="mGetObsfeeEstimateReportsByProcessorDateRangeResponse" message="tns:mGetObsfeeEstimateReportsByProcessorDateRangeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetOperationInfoForPTI">
+      <wsdl:input name="mGetOperationInfoForPTI" message="tns:mGetOperationInfoForPTI">
+    </wsdl:input>
+      <wsdl:output name="mGetOperationInfoForPTIResponse" message="tns:mGetOperationInfoForPTIResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+      <wsdl:input name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning" message="tns:getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    </wsdl:input>
+      <wsdl:output name="getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse" message="tns:getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRunReportExtract">
+      <wsdl:input name="mRunReportExtract" message="tns:mRunReportExtract">
+    </wsdl:input>
+      <wsdl:output name="mRunReportExtractResponse" message="tns:mRunReportExtractResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <wsdl:input name="changePassword" message="tns:changePassword">
+    </wsdl:input>
+      <wsdl:output name="changePasswordResponse" message="tns:changePasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQueries">
+      <wsdl:input name="getQueries" message="tns:getQueries">
+    </wsdl:input>
+      <wsdl:output name="getQueriesResponse" message="tns:getQueriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitInitialLandingReport">
+      <wsdl:input name="submitInitialLandingReport" message="tns:submitInitialLandingReport">
+    </wsdl:input>
+      <wsdl:output name="submitInitialLandingReportResponse" message="tns:submitInitialLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetProcessorInfo">
+      <wsdl:input name="mGetProcessorInfo" message="tns:mGetProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetProcessorInfoResponse" message="tns:mGetProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mIncrementOperationVesselDefaultsEdition">
+      <wsdl:input name="mIncrementOperationVesselDefaultsEdition" message="tns:mIncrementOperationVesselDefaultsEdition">
+    </wsdl:input>
+      <wsdl:output name="mIncrementOperationVesselDefaultsEditionResponse" message="tns:mIncrementOperationVesselDefaultsEditionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRunTest">
+      <wsdl:input name="mRunTest" message="tns:mRunTest">
+    </wsdl:input>
+      <wsdl:output name="mRunTestResponse" message="tns:mRunTestResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyReport">
+      <wsdl:input name="getDailyReport" message="tns:getDailyReport">
+    </wsdl:input>
+      <wsdl:output name="getDailyReportResponse" message="tns:getDailyReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselInfo">
+      <wsdl:input name="getVesselInfo" message="tns:getVesselInfo">
+    </wsdl:input>
+      <wsdl:output name="getVesselInfoResponse" message="tns:getVesselInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetAtSeaOperationUsers">
+      <wsdl:input name="mGetAtSeaOperationUsers" message="tns:mGetAtSeaOperationUsers">
+    </wsdl:input>
+      <wsdl:output name="mGetAtSeaOperationUsersResponse" message="tns:mGetAtSeaOperationUsersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitLogbookForTrip">
+      <wsdl:input name="mSubmitLogbookForTrip" message="tns:mSubmitLogbookForTrip">
+    </wsdl:input>
+      <wsdl:output name="mSubmitLogbookForTripResponse" message="tns:mSubmitLogbookForTripResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetUserInfo">
+      <wsdl:input name="mGetUserInfo" message="tns:mGetUserInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetUserInfoResponse" message="tns:mGetUserInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mOverwriteOperationVesselDefaults">
+      <wsdl:input name="mOverwriteOperationVesselDefaults" message="tns:mOverwriteOperationVesselDefaults">
+    </wsdl:input>
+      <wsdl:output name="mOverwriteOperationVesselDefaultsResponse" message="tns:mOverwriteOperationVesselDefaultsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSeaLandingsReturnReceipt">
+      <wsdl:input name="sendSeaLandingsReturnReceipt" message="tns:sendSeaLandingsReturnReceipt">
+    </wsdl:input>
+      <wsdl:output name="sendSeaLandingsReturnReceiptResponse" message="tns:sendSeaLandingsReturnReceiptResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindCurrentAnnouncements">
+      <wsdl:input name="mFindCurrentAnnouncements" message="tns:mFindCurrentAnnouncements">
+    </wsdl:input>
+      <wsdl:output name="mFindCurrentAnnouncementsResponse" message="tns:mFindCurrentAnnouncementsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitFinalLandingReport">
+      <wsdl:input name="mSubmitFinalLandingReport" message="tns:mSubmitFinalLandingReport">
+    </wsdl:input>
+      <wsdl:output name="mSubmitFinalLandingReportResponse" message="tns:mSubmitFinalLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindUserLandingReports">
+      <wsdl:input name="mFindUserLandingReports" message="tns:mFindUserLandingReports">
+    </wsdl:input>
+      <wsdl:output name="mFindUserLandingReportsResponse" message="tns:mFindUserLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCoarReport">
+      <wsdl:input name="findCoarReport" message="tns:findCoarReport">
+    </wsdl:input>
+      <wsdl:output name="findCoarReportResponse" message="tns:findCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookProfileInfo">
+      <wsdl:input name="getLogbookProfileInfo" message="tns:getLogbookProfileInfo">
+    </wsdl:input>
+      <wsdl:output name="getLogbookProfileInfoResponse" message="tns:getLogbookProfileInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNmfsPersonInfo">
+      <wsdl:input name="getNmfsPersonInfo" message="tns:getNmfsPersonInfo">
+    </wsdl:input>
+      <wsdl:output name="getNmfsPersonInfoResponse" message="tns:getNmfsPersonInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+      <wsdl:input name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning" message="tns:mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+    </wsdl:input>
+      <wsdl:output name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse" message="tns:mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUnsubmittedLandingReport">
+      <wsdl:input name="deleteUnsubmittedLandingReport" message="tns:deleteUnsubmittedLandingReport">
+    </wsdl:input>
+      <wsdl:output name="deleteUnsubmittedLandingReportResponse" message="tns:deleteUnsubmittedLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApplyMixedSalmonPercentages">
+      <wsdl:input name="mApplyMixedSalmonPercentages" message="tns:mApplyMixedSalmonPercentages">
+    </wsdl:input>
+      <wsdl:output name="mApplyMixedSalmonPercentagesResponse" message="tns:mApplyMixedSalmonPercentagesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserFullLandingReports">
+      <wsdl:input name="findUserFullLandingReports" message="tns:findUserFullLandingReports">
+    </wsdl:input>
+      <wsdl:output name="findUserFullLandingReportsResponse" message="tns:findUserFullLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRecordCoarReportDownload">
+      <wsdl:input name="mRecordCoarReportDownload" message="tns:mRecordCoarReportDownload">
+    </wsdl:input>
+      <wsdl:output name="mRecordCoarReportDownloadResponse" message="tns:mRecordCoarReportDownloadResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetNmfsPersonInfo">
+      <wsdl:input name="mGetNmfsPersonInfo" message="tns:mGetNmfsPersonInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetNmfsPersonInfoResponse" message="tns:mGetNmfsPersonInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLogbookInfo">
+      <wsdl:input name="mGetLogbookInfo" message="tns:mGetLogbookInfo">
+    </wsdl:input>
+      <wsdl:output name="mGetLogbookInfoResponse" message="tns:mGetLogbookInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCurrentAnnouncements">
+      <wsdl:input name="findCurrentAnnouncements" message="tns:findCurrentAnnouncements">
+    </wsdl:input>
+      <wsdl:output name="findCurrentAnnouncementsResponse" message="tns:findCurrentAnnouncementsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCoarReportForInactiveOperation">
+      <wsdl:input name="generateCoarReportForInactiveOperation" message="tns:generateCoarReportForInactiveOperation">
+    </wsdl:input>
+      <wsdl:output name="generateCoarReportForInactiveOperationResponse" message="tns:generateCoarReportForInactiveOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbook">
+      <wsdl:input name="getLogbook" message="tns:getLogbook">
+    </wsdl:input>
+      <wsdl:output name="getLogbookResponse" message="tns:getLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitLogbookForTrip">
+      <wsdl:input name="submitLogbookForTrip" message="tns:submitLogbookForTrip">
+    </wsdl:input>
+      <wsdl:output name="submitLogbookForTripResponse" message="tns:submitLogbookForTripResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredBuyerInfo">
+      <wsdl:input name="getRegisteredBuyerInfo" message="tns:getRegisteredBuyerInfo">
+    </wsdl:input>
+      <wsdl:output name="getRegisteredBuyerInfoResponse" message="tns:getRegisteredBuyerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitProductionReport">
+      <wsdl:input name="mSubmitProductionReport" message="tns:mSubmitProductionReport">
+    </wsdl:input>
+      <wsdl:output name="mSubmitProductionReportResponse" message="tns:mSubmitProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSaveCoarReport">
+      <wsdl:input name="mSaveCoarReport" message="tns:mSaveCoarReport">
+    </wsdl:input>
+      <wsdl:output name="mSaveCoarReportResponse" message="tns:mSaveCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookTripInfo">
+      <wsdl:input name="getLogbookTripInfo" message="tns:getLogbookTripInfo">
+    </wsdl:input>
+      <wsdl:output name="getLogbookTripInfoResponse" message="tns:getLogbookTripInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extractLandingReports">
+      <wsdl:input name="extractLandingReports" message="tns:extractLandingReports">
+    </wsdl:input>
+      <wsdl:output name="extractLandingReportsResponse" message="tns:extractLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteUnsubmittedProductionReport">
+      <wsdl:input name="mDeleteUnsubmittedProductionReport" message="tns:mDeleteUnsubmittedProductionReport">
+    </wsdl:input>
+      <wsdl:output name="mDeleteUnsubmittedProductionReportResponse" message="tns:mDeleteUnsubmittedProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="undoMixedSalmonPercentages">
+      <wsdl:input name="undoMixedSalmonPercentages" message="tns:undoMixedSalmonPercentages">
+    </wsdl:input>
+      <wsdl:output name="undoMixedSalmonPercentagesResponse" message="tns:undoMixedSalmonPercentagesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserToOperation">
+      <wsdl:input name="addUserToOperation" message="tns:addUserToOperation">
+    </wsdl:input>
+      <wsdl:output name="addUserToOperationResponse" message="tns:addUserToOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookProfile">
+      <wsdl:input name="getLogbookProfile" message="tns:getLogbookProfile">
+    </wsdl:input>
+      <wsdl:output name="getLogbookProfileResponse" message="tns:getLogbookProfileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitIfqReports">
+      <wsdl:input name="mSubmitIfqReports" message="tns:mSubmitIfqReports">
+    </wsdl:input>
+      <wsdl:output name="mSubmitIfqReportsResponse" message="tns:mSubmitIfqReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRegisterUser">
+      <wsdl:input name="mRegisterUser" message="tns:mRegisterUser">
+    </wsdl:input>
+      <wsdl:output name="mRegisterUserResponse" message="tns:mRegisterUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselDefaultsList">
+      <wsdl:input name="getVesselDefaultsList" message="tns:getVesselDefaultsList">
+    </wsdl:input>
+      <wsdl:output name="getVesselDefaultsListResponse" message="tns:getVesselDefaultsListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveLandingReportNumbers">
+      <wsdl:input name="reserveLandingReportNumbers" message="tns:reserveLandingReportNumbers">
+    </wsdl:input>
+      <wsdl:output name="reserveLandingReportNumbersResponse" message="tns:reserveLandingReportNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessorReportManagementServiceSoapBinding" type="tns:ProcessorReportManagement">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mGetRegisteredBuyerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetRegisteredBuyerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetRegisteredBuyerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperations">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateOperations">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateOperationsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogger">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogger">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLoggerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="auditAndReserveNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="auditAndReserveNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="auditAndReserveNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="overwriteOperationVesselDefaults">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="overwriteOperationVesselDefaults">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="overwriteOperationVesselDefaultsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compress">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="compress">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="compressResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="IOException">
+        <soap:fault name="IOException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mUpdateOperationGradingAndPricing">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mUpdateOperationGradingAndPricing">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mUpdateOperationGradingAndPricingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserProductionReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUserProductionReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUserProductionReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndSubmitLogbookProfile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="validateAndSubmitLogbookProfile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAndSubmitLogbookProfileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetTenderBatchSummary">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetTenderBatchSummary">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetTenderBatchSummaryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitInitialLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitInitialLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitInitialLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocationOfOffloads">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLocationOfOffloads">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLocationOfOffloadsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObsfeeDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getObsfeeDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getObsfeeDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRegisterOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRegisterOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRegisterOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitInitialLandingReportAndInsertNewVesselDefault">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitInitialLandingReportAndInsertNewVesselDefault">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitInitialLandingReportAndInsertNewVesselDefaultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mExtractLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mExtractLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mExtractLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registerUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registerUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetRegisteredCrabReceiverInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetRegisteredCrabReceiverInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetRegisteredCrabReceiverInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetUserRegistration">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetUserRegistration">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetUserRegistrationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetRegistrationForUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetRegistrationForUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetRegistrationForUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUserLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUserLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAtSeaOperationUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAtSeaOperationUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAtSeaOperationUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recordCoarReportDownload">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="recordCoarReportDownload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="recordCoarReportDownloadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUpdateUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mUpdateUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mUpdateUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mChangePassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mChangePassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mChangePasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="emailPassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="emailPassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="emailPasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfoForPTI">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationInfoForPTI">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationInfoForPTIResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFinalLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitFinalLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitFinalLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGenerateCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGenerateCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveFishTicketNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reserveFishTicketNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reserveFishTicketNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLookupUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mLookupUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mLookupUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredCrabReceiverInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRegisteredCrabReceiverInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRegisteredCrabReceiverInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateCoarReportDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGenerateCoarReportDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGenerateCoarReportDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="runQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="runQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTlandingsUserArray">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTlandingsUserArray">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTlandingsUserArrayResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTlandingsUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteTlandingsUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteTlandingsUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfoLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUserInfoLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUserInfoLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isUseridInUse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isUseridInUse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isUseridInUseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lookupUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="lookupUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lookupUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateCoarReportForInactiveOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGenerateCoarReportForInactiveOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGenerateCoarReportForInactiveOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImportableFishTicketNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getImportableFishTicketNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getImportableFishTicketNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTenderBatchSummary">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTenderBatchSummary">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTenderBatchSummaryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyReportInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDailyReportInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDailyReportInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFederalProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFederalProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFederalProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitIfqReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitIfqReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitIfqReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTripReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTripReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObsfeeEstimateReportsByProcessorDateRange">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getObsfeeEstimateReportsByProcessorDateRange">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getObsfeeEstimateReportsByProcessorDateRangeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="incrementOperationVesselDefaultsEdition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="incrementOperationVesselDefaultsEdition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="incrementOperationVesselDefaultsEditionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperationGradingAndPricing">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateOperationGradingAndPricing">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateOperationGradingAndPricingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperations">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperations">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetOperationInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetOperationInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetOperationInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logIersMonitorClosingApplication">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="logIersMonitorClosingApplication">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUserInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUserInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetOperationVesselDefaults">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetOperationVesselDefaults">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetOperationVesselDefaultsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mReserveFishTicketNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mReserveFishTicketNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mReserveFishTicketNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mFindCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mFindCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetCfecPermitInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetCfecPermitInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetCfecPermitInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegistrationForUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRegistrationForUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRegistrationForUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetQueries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetQueries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetQueriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTlandingsUserArray">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveTlandingsUserArray">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveTlandingsUserArrayResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lookupOperationByCodes">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="lookupOperationByCodes">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lookupOperationByCodesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLogbookTripInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetLogbookTripInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetLogbookTripInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mReserveLandingReportNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mReserveLandingReportNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mReserveLandingReportNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUndoMixedSalmonPercentages">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mUndoMixedSalmonPercentages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mUndoMixedSalmonPercentagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registerOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registerOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lookupOperationById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="lookupOperationById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lookupOperationByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mAuditAndReserveNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mAuditAndReserveNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mAuditAndReserveNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitFinalLandingReportAndInsertNewVesselDefault">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitFinalLandingReportAndInsertNewVesselDefault">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitFinalLandingReportAndInsertNewVesselDefaultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndSubmitDailyReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="validateAndSubmitDailyReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAndSubmitDailyReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRunQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRunQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRunQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitInitialLandingReportAndInsertNewVesselDefault">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitInitialLandingReportAndInsertNewVesselDefault">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitInitialLandingReportAndInsertNewVesselDefaultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetImportableFishTicketNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetImportableFishTicketNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetImportableFishTicketNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCoarReportDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateCoarReportDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateCoarReportDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extractProductionReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="extractProductionReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="extractProductionReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSaveLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSaveLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSaveLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetFederalProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetFederalProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetFederalProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindUserFullLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mFindUserFullLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mFindUserFullLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserRegistration">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUserRegistration">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUserRegistrationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetVesselInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetVesselInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetVesselInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndSubmitTripReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="validateAndSubmitTripReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAndSubmitTripReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mInsertIersMonitorArrayWrapper">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mInsertIersMonitorArrayWrapper">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mInsertIersMonitorArrayWrapperResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSaveProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSaveProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSaveProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFinalLandingReportAndInsertNewVesselDefault">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitFinalLandingReportAndInsertNewVesselDefault">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitFinalLandingReportAndInsertNewVesselDefaultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveTlandingsUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveTlandingsUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveTlandingsUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetVesselDefaults">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetVesselDefaults">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetVesselDefaultsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselDefaults">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVesselDefaults">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVesselDefaultsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyMixedSalmonPercentages">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="applyMixedSalmonPercentages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="applyMixedSalmonPercentagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUnsubmittedProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteUnsubmittedProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteUnsubmittedProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registerLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registerLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripReportInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTripReportInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTripReportInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindUserProductionReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mFindUserProductionReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mFindUserProductionReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGenerateReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGenerateReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mIsUseridInUse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mIsUseridInUse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mIsUseridInUseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteUnsubmittedLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mDeleteUnsubmittedLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mDeleteUnsubmittedLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserRegistrationLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUserRegistrationLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUserRegistrationLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetVesselDefaultsList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetVesselDefaultsList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetVesselDefaultsListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runReportExtract">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="runReportExtract">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="runReportExtractResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCfecPermitInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCfecPermitInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCfecPermitInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mEmailPassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mEmailPassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mEmailPasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRegisterLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRegisterLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRegisterLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLocationOfOffloads">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetLocationOfOffloads">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetLocationOfOffloadsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetObsfeeDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetObsfeeDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetObsfeeDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mExtractProductionReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mExtractProductionReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mExtractProductionReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeUserFromCache">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="purgeUserFromCache">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="purgeUserFromCacheResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationVesselDefaults">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationVesselDefaults">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationVesselDefaultsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSendSeaLandingsReturnReceipt">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSendSeaLandingsReturnReceipt">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSendSeaLandingsReturnReceiptResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetObsfeeEstimateReportsByProcessorDateRange">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetObsfeeEstimateReportsByProcessorDateRange">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetObsfeeEstimateReportsByProcessorDateRangeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetOperationInfoForPTI">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetOperationInfoForPTI">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetOperationInfoForPTIResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRunReportExtract">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRunReportExtract">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRunReportExtractResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="changePassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="changePasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQueries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getQueries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getQueriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitInitialLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitInitialLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitInitialLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mIncrementOperationVesselDefaultsEdition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mIncrementOperationVesselDefaultsEdition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mIncrementOperationVesselDefaultsEditionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRunTest">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRunTest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRunTestResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDailyReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDailyReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVesselInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVesselInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetAtSeaOperationUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetAtSeaOperationUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetAtSeaOperationUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitLogbookForTrip">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitLogbookForTrip">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitLogbookForTripResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetUserInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetUserInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetUserInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mOverwriteOperationVesselDefaults">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mOverwriteOperationVesselDefaults">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mOverwriteOperationVesselDefaultsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSeaLandingsReturnReceipt">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendSeaLandingsReturnReceipt">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendSeaLandingsReturnReceiptResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindCurrentAnnouncements">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mFindCurrentAnnouncements">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mFindCurrentAnnouncementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitFinalLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitFinalLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitFinalLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFindUserLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mFindUserLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mFindUserLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookProfileInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookProfileInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookProfileInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNmfsPersonInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getNmfsPersonInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getNmfsPersonInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarning">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetTenderBatchPreviouslyUsedForProcessorThisYearWarningResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUnsubmittedLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteUnsubmittedLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteUnsubmittedLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApplyMixedSalmonPercentages">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mApplyMixedSalmonPercentages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mApplyMixedSalmonPercentagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUserFullLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUserFullLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUserFullLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRecordCoarReportDownload">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRecordCoarReportDownload">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRecordCoarReportDownloadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetNmfsPersonInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetNmfsPersonInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetNmfsPersonInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetLogbookInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mGetLogbookInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mGetLogbookInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCurrentAnnouncements">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCurrentAnnouncements">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCurrentAnnouncementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCoarReportForInactiveOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateCoarReportForInactiveOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateCoarReportForInactiveOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitLogbookForTrip">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="submitLogbookForTrip">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="submitLogbookForTripResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredBuyerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRegisteredBuyerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRegisteredBuyerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSaveCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSaveCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSaveCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookTripInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookTripInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookTripInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extractLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="extractLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="extractLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteUnsubmittedProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mDeleteUnsubmittedProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mDeleteUnsubmittedProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="undoMixedSalmonPercentages">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="undoMixedSalmonPercentages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="undoMixedSalmonPercentagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserToOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addUserToOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addUserToOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookProfile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookProfile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookProfileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSubmitIfqReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mSubmitIfqReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mSubmitIfqReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRegisterUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="mRegisterUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="mRegisterUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselDefaultsList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVesselDefaultsList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVesselDefaultsListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveLandingReportNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reserveLandingReportNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reserveLandingReportNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcessorReportManagementService">
+    <wsdl:port name="ProcessorReportManagementPort" binding="tns:ProcessorReportManagementServiceSoapBinding">
+      <soap:address location="http://localhost:9090/ProcessorReportManagementPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
