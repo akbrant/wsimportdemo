@@ -1,0 +1,3036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AgencyReportManagementService" targetNamespace="http://webservices.er.psmfc.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.er.psmfc.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://webservices.er.psmfc.org/" schemaLocation="AgencyReportManagementService_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="findLandingReports">
+    <wsdl:part name="parameters" element="tns:findLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findOperationsLiteResponse">
+    <wsdl:part name="parameters" element="tns:findOperationsLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogger">
+    <wsdl:part name="parameters" element="tns:getLogger">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cacheStatus">
+    <wsdl:part name="parameters" element="tns:cacheStatus">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTripNumbers">
+    <wsdl:part name="parameters" element="tns:updateTripNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRegisteredBuyerInfo">
+    <wsdl:part name="parameters" element="tns:setRegisteredBuyerInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findVesselsForOfficeResponse">
+    <wsdl:part name="parameters" element="tns:findVesselsForOfficeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorUserInfoResponse">
+    <wsdl:part name="parameters" element="tns:getProcessorUserInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setDiagnosticEvent">
+    <wsdl:part name="parameters" element="tns:setDiagnosticEvent">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processNULLSTBTicketsResponse">
+    <wsdl:part name="parameters" element="tns:processNULLSTBTicketsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:removeCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfoResponse">
+    <wsdl:part name="parameters" element="tns:getOperationInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveAutoArchiveBatchTickets">
+    <wsdl:part name="parameters" element="tns:saveAutoArchiveBatchTickets">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCoarReportStatus">
+    <wsdl:part name="parameters" element="tns:updateCoarReportStatus">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeUserResponse">
+    <wsdl:part name="parameters" element="tns:removeUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateFishTicketUserResponse">
+    <wsdl:part name="parameters" element="tns:updateFishTicketUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runQuery">
+    <wsdl:part name="parameters" element="tns:runQuery">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMessageInfoResponse">
+    <wsdl:part name="parameters" element="tns:getMessageInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookProfileResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookProfileResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeUser">
+    <wsdl:part name="parameters" element="tns:removeUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearExpiredCacheEntriesResponse">
+    <wsdl:part name="parameters" element="tns:clearExpiredCacheEntriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteProductionReportsForOperation">
+    <wsdl:part name="parameters" element="tns:deleteProductionReportsForOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processNULLFLDTicketsResponse">
+    <wsdl:part name="parameters" element="tns:processNULLFLDTicketsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntriesByEntryTimeOrDatabaseEntryTimeResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookEntriesByEntryTimeOrDatabaseEntryTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReportIdsResponse">
+    <wsdl:part name="parameters" element="tns:getReportIdsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRegisteredCrabReceiverInfoResponse">
+    <wsdl:part name="parameters" element="tns:setRegisteredCrabReceiverInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductionReportHistory">
+    <wsdl:part name="parameters" element="tns:getProductionReportHistory">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorInfo">
+    <wsdl:part name="parameters" element="tns:getProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runTestResponse">
+    <wsdl:part name="parameters" element="tns:runTestResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:findLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredCrabReceiverInfoResponse">
+    <wsdl:part name="parameters" element="tns:getRegisteredCrabReceiverInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="propagateDataResponse">
+    <wsdl:part name="parameters" element="tns:propagateDataResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLandingReport">
+    <wsdl:part name="parameters" element="tns:getLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntries">
+    <wsdl:part name="parameters" element="tns:getLogbookEntries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntry">
+    <wsdl:part name="parameters" element="tns:getLogbookEntry">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateFishTicketUser">
+    <wsdl:part name="parameters" element="tns:updateFishTicketUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:saveProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setDiagnosticEventResponse">
+    <wsdl:part name="parameters" element="tns:setDiagnosticEventResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProcessors">
+    <wsdl:part name="parameters" element="tns:findProcessors">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findRegisteredBuyersResponse">
+    <wsdl:part name="parameters" element="tns:findRegisteredBuyersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorHistory">
+    <wsdl:part name="parameters" element="tns:getProcessorHistory">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearAllCacheEntriesResponse">
+    <wsdl:part name="parameters" element="tns:clearAllCacheEntriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findDiagnosticEvents">
+    <wsdl:part name="parameters" element="tns:findDiagnosticEvents">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeUserFromCacheResponse">
+    <wsdl:part name="parameters" element="tns:purgeUserFromCacheResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorInfoHistoryResponse">
+    <wsdl:part name="parameters" element="tns:getProcessorInfoHistoryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUnsubmittedLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:findUnsubmittedLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAsyncGenerationFilesResponse">
+    <wsdl:part name="parameters" element="tns:findAsyncGenerationFilesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLocationOfOffloadsResponse">
+    <wsdl:part name="parameters" element="tns:getLocationOfOffloadsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setCfecVesselInfoResponse">
+    <wsdl:part name="parameters" element="tns:setCfecVesselInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselHistoryResponse">
+    <wsdl:part name="parameters" element="tns:getVesselHistoryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripInformationResponse">
+    <wsdl:part name="parameters" element="tns:getTripInformationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processNULLSTBTickets">
+    <wsdl:part name="parameters" element="tns:processNULLSTBTickets">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripInformation">
+    <wsdl:part name="parameters" element="tns:getTripInformation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProcessorUsersResponse">
+    <wsdl:part name="parameters" element="tns:findProcessorUsersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAgencyUsers">
+    <wsdl:part name="parameters" element="tns:findAgencyUsers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAgencyUserInfo">
+    <wsdl:part name="parameters" element="tns:getAgencyUserInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLandingReportHistory">
+    <wsdl:part name="parameters" element="tns:getLandingReportHistory">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTripNumbersResponse">
+    <wsdl:part name="parameters" element="tns:updateTripNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperationResponse">
+    <wsdl:part name="parameters" element="tns:updateOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMassUpdateChangeResult">
+    <wsdl:part name="parameters" element="tns:getMassUpdateChangeResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredBuyerInfoResponse">
+    <wsdl:part name="parameters" element="tns:getRegisteredBuyerInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateReportResponse">
+    <wsdl:part name="parameters" element="tns:generateReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findIphcLandingReports">
+    <wsdl:part name="parameters" element="tns:findIphcLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="voidLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:voidLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedProductionReportsResponse">
+    <wsdl:part name="parameters" element="tns:findUpdatedProductionReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedProductionReportsByTimeResponse">
+    <wsdl:part name="parameters" element="tns:findUpdatedProductionReportsByTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setLandingReportProcessorEditStopDate">
+    <wsdl:part name="parameters" element="tns:setLandingReportProcessorEditStopDate">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendUnfinalizedReportNotficationsResponse">
+    <wsdl:part name="parameters" element="tns:sendUnfinalizedReportNotficationsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:getProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setMessageInfo">
+    <wsdl:part name="parameters" element="tns:setMessageInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndStoreLocationOfOffloadsResponse">
+    <wsdl:part name="parameters" element="tns:validateAndStoreLocationOfOffloadsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRegisteredBuyerInfoResponse">
+    <wsdl:part name="parameters" element="tns:setRegisteredBuyerInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeOperation">
+    <wsdl:part name="parameters" element="tns:removeOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedVesselsByTime">
+    <wsdl:part name="parameters" element="tns:findUpdatedVesselsByTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorInfoHistory">
+    <wsdl:part name="parameters" element="tns:getProcessorInfoHistory">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselInfoResponse">
+    <wsdl:part name="parameters" element="tns:getVesselInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFishTicketUserInfoResponse">
+    <wsdl:part name="parameters" element="tns:getFishTicketUserInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteTlandingsUserResponse">
+    <wsdl:part name="parameters" element="tns:deleteTlandingsUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runReportExtract">
+    <wsdl:part name="parameters" element="tns:runReportExtract">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="voidProductionReport">
+    <wsdl:part name="parameters" element="tns:voidProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="voidLandingReport">
+    <wsdl:part name="parameters" element="tns:voidLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setProcessorInfo">
+    <wsdl:part name="parameters" element="tns:setProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findRegisteredBuyers">
+    <wsdl:part name="parameters" element="tns:findRegisteredBuyers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findTripReports">
+    <wsdl:part name="parameters" element="tns:findTripReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:findUpdatedLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProductionReports">
+    <wsdl:part name="parameters" element="tns:findProductionReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeUserFromCache">
+    <wsdl:part name="parameters" element="tns:purgeUserFromCache">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAnnouncementsResponse">
+    <wsdl:part name="parameters" element="tns:findAnnouncementsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findDailyReports">
+    <wsdl:part name="parameters" element="tns:findDailyReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQueriesResponse">
+    <wsdl:part name="parameters" element="tns:getQueriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMassUpdateChangeResultResponse">
+    <wsdl:part name="parameters" element="tns:getMassUpdateChangeResultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeLandingReports">
+    <wsdl:part name="parameters" element="tns:purgeLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getQueries">
+    <wsdl:part name="parameters" element="tns:getQueries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeJobQueueJobs">
+    <wsdl:part name="parameters" element="tns:purgeJobQueueJobs">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyReport">
+    <wsdl:part name="parameters" element="tns:getDailyReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findNmfsPersons">
+    <wsdl:part name="parameters" element="tns:findNmfsPersons">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAsyncGenerationFileResponse">
+    <wsdl:part name="parameters" element="tns:getAsyncGenerationFileResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedProductionReports">
+    <wsdl:part name="parameters" element="tns:findUpdatedProductionReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntriesByEntryTime">
+    <wsdl:part name="parameters" element="tns:getLogbookEntriesByEntryTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendLogbookReturnReceiptResponse">
+    <wsdl:part name="parameters" element="tns:sendLogbookReturnReceiptResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAsyncGenerationFiles">
+    <wsdl:part name="parameters" element="tns:findAsyncGenerationFiles">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoarReport">
+    <wsdl:part name="parameters" element="tns:getCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorUserInfo">
+    <wsdl:part name="parameters" element="tns:getProcessorUserInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLogbookProfilesResponse">
+    <wsdl:part name="parameters" element="tns:findLogbookProfilesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveLandingReportNumbersResponse">
+    <wsdl:part name="parameters" element="tns:reserveLandingReportNumbersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findFederalPermitsResponse">
+    <wsdl:part name="parameters" element="tns:findFederalPermitsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIersMonitorsResponse">
+    <wsdl:part name="parameters" element="tns:getIersMonitorsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAnnouncementResponse">
+    <wsdl:part name="parameters" element="tns:updateAnnouncementResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAgencyUserInfoFromCache">
+    <wsdl:part name="parameters" element="tns:getAgencyUserInfoFromCache">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripReportResponse">
+    <wsdl:part name="parameters" element="tns:getTripReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setFederalProcessorInfo">
+    <wsdl:part name="parameters" element="tns:setFederalProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedVesselsByTimeResponse">
+    <wsdl:part name="parameters" element="tns:findUpdatedVesselsByTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbook">
+    <wsdl:part name="parameters" element="tns:getLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:purgeLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findVesselsForOffice">
+    <wsdl:part name="parameters" element="tns:findVesselsForOffice">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeOperationLiteResponse">
+    <wsdl:part name="parameters" element="tns:removeOperationLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeLogbookEntries">
+    <wsdl:part name="parameters" element="tns:removeLogbookEntries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIphcLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:getIphcLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProcessorUsers">
+    <wsdl:part name="parameters" element="tns:findProcessorUsers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUnsubmittedLandingReports">
+    <wsdl:part name="parameters" element="tns:findUnsubmittedLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getJobQueueMonitorArrayWrapperResponse">
+    <wsdl:part name="parameters" element="tns:getJobQueueMonitorArrayWrapperResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runTest">
+    <wsdl:part name="parameters" element="tns:runTest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedLandingReports">
+    <wsdl:part name="parameters" element="tns:findUpdatedLandingReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAnnouncement">
+    <wsdl:part name="parameters" element="tns:updateAnnouncement">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findRegisteredCrabReceiversResponse">
+    <wsdl:part name="parameters" element="tns:findRegisteredCrabReceiversResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIphcLandingReport">
+    <wsdl:part name="parameters" element="tns:getIphcLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMessageInfo">
+    <wsdl:part name="parameters" element="tns:getMessageInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setCfecPermitInfoResponse">
+    <wsdl:part name="parameters" element="tns:setCfecPermitInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookProfile">
+    <wsdl:part name="parameters" element="tns:getLogbookProfile">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findVessels">
+    <wsdl:part name="parameters" element="tns:findVessels">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMassUpdateSearchResult">
+    <wsdl:part name="parameters" element="tns:getMassUpdateSearchResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runReportExtractResponse">
+    <wsdl:part name="parameters" element="tns:runReportExtractResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfo">
+    <wsdl:part name="parameters" element="tns:getOperationInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveLandingReport">
+    <wsdl:part name="parameters" element="tns:saveLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeOperationLite">
+    <wsdl:part name="parameters" element="tns:removeOperationLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedLandingReportsByTime">
+    <wsdl:part name="parameters" element="tns:findUpdatedLandingReportsByTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFishTicketUserInfo">
+    <wsdl:part name="parameters" element="tns:getFishTicketUserInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setProductionReportProcessorEditStopDateResponse">
+    <wsdl:part name="parameters" element="tns:setProductionReportProcessorEditStopDateResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="assignTripNumbers">
+    <wsdl:part name="parameters" element="tns:assignTripNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLocationOfOffloads">
+    <wsdl:part name="parameters" element="tns:getLocationOfOffloads">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearCacheEntryResponse">
+    <wsdl:part name="parameters" element="tns:clearCacheEntryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperationLite">
+    <wsdl:part name="parameters" element="tns:updateOperationLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntriesResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookEntriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCfecPermitsResponse">
+    <wsdl:part name="parameters" element="tns:findCfecPermitsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLandingReportHistoryResponse">
+    <wsdl:part name="parameters" element="tns:getLandingReportHistoryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeOperationResponse">
+    <wsdl:part name="parameters" element="tns:removeOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorHistoryResponse">
+    <wsdl:part name="parameters" element="tns:getProcessorHistoryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductionReport">
+    <wsdl:part name="parameters" element="tns:getProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findNmfsPersonsResponse">
+    <wsdl:part name="parameters" element="tns:findNmfsPersonsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendUnfinalizedReportNotfications">
+    <wsdl:part name="parameters" element="tns:sendUnfinalizedReportNotfications">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyReportResponse">
+    <wsdl:part name="parameters" element="tns:getDailyReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendLogbookReturnReceipt">
+    <wsdl:part name="parameters" element="tns:sendLogbookReturnReceipt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:getProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedProductionReportsByTime">
+    <wsdl:part name="parameters" element="tns:findUpdatedProductionReportsByTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCoarReportsResponse">
+    <wsdl:part name="parameters" element="tns:findCoarReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredCrabReceiverInfo">
+    <wsdl:part name="parameters" element="tns:getRegisteredCrabReceiverInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setQuery">
+    <wsdl:part name="parameters" element="tns:setQuery">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unVoidProductionReport">
+    <wsdl:part name="parameters" element="tns:unVoidProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteTlandingsUser">
+    <wsdl:part name="parameters" element="tns:deleteTlandingsUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCfecPermitInfoResponse">
+    <wsdl:part name="parameters" element="tns:getCfecPermitInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setMessageInfoResponse">
+    <wsdl:part name="parameters" element="tns:setMessageInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFederalProcessorInfo">
+    <wsdl:part name="parameters" element="tns:getFederalProcessorInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processNULLFLDTickets">
+    <wsdl:part name="parameters" element="tns:processNULLFLDTickets">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookInfo">
+    <wsdl:part name="parameters" element="tns:getLogbookInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:setProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="propagateData">
+    <wsdl:part name="parameters" element="tns:propagateData">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAnnouncements">
+    <wsdl:part name="parameters" element="tns:findAnnouncements">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findIphcLandingReportsResponse">
+    <wsdl:part name="parameters" element="tns:findIphcLandingReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTripReport">
+    <wsdl:part name="parameters" element="tns:getTripReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateUser">
+    <wsdl:part name="parameters" element="tns:updateUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteLandingReportsForOperationResponse">
+    <wsdl:part name="parameters" element="tns:deleteLandingReportsForOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getJobQueueMonitorArrayWrapper">
+    <wsdl:part name="parameters" element="tns:getJobQueueMonitorArrayWrapper">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperation">
+    <wsdl:part name="parameters" element="tns:updateOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findRegisteredCrabReceivers">
+    <wsdl:part name="parameters" element="tns:findRegisteredCrabReceivers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unVoidProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:unVoidProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logIersMonitorClosingApplication">
+    <wsdl:part name="parameters" element="tns:logIersMonitorClosingApplication">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteLandingReportsForOperation">
+    <wsdl:part name="parameters" element="tns:deleteLandingReportsForOperation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toString">
+    <wsdl:part name="parameters" element="tns:toString">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findVesselsResponse">
+    <wsdl:part name="parameters" element="tns:findVesselsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntriesByEntryTimeResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookEntriesByEntryTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReportIds">
+    <wsdl:part name="parameters" element="tns:getReportIds">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLogbookProfiles">
+    <wsdl:part name="parameters" element="tns:findLogbookProfiles">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLogbooksResponse">
+    <wsdl:part name="parameters" element="tns:findLogbooksResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRegisteredCrabReceiverInfo">
+    <wsdl:part name="parameters" element="tns:setRegisteredCrabReceiverInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAgencyUser">
+    <wsdl:part name="parameters" element="tns:updateAgencyUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setNmfsPersonInfoResponse">
+    <wsdl:part name="parameters" element="tns:setNmfsPersonInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findOperations">
+    <wsdl:part name="parameters" element="tns:findOperations">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearCacheEntry">
+    <wsdl:part name="parameters" element="tns:clearCacheEntry">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="runQueryResponse">
+    <wsdl:part name="parameters" element="tns:runQueryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertIersMonitorArrayWrapperResponse">
+    <wsdl:part name="parameters" element="tns:insertIersMonitorArrayWrapperResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearExpiredCacheEntries">
+    <wsdl:part name="parameters" element="tns:clearExpiredCacheEntries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendReturnReceiptResponse">
+    <wsdl:part name="parameters" element="tns:sendReturnReceiptResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLogbooks">
+    <wsdl:part name="parameters" element="tns:findLogbooks">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProductionReportsResponse">
+    <wsdl:part name="parameters" element="tns:findProductionReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:saveLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setLandingReportProcessorEditStopDateResponse">
+    <wsdl:part name="parameters" element="tns:setLandingReportProcessorEditStopDateResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntriesByEntryTimeOrDatabaseEntryTime">
+    <wsdl:part name="parameters" element="tns:getLogbookEntriesByEntryTimeOrDatabaseEntryTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findIphcUpdatedLandingReportsByTimeResponse">
+    <wsdl:part name="parameters" element="tns:findIphcUpdatedLandingReportsByTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeLogbook">
+    <wsdl:part name="parameters" element="tns:removeLogbook">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookInfoResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateReport">
+    <wsdl:part name="parameters" element="tns:generateReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findDiagnosticEventsResponse">
+    <wsdl:part name="parameters" element="tns:findDiagnosticEventsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setProductionReportProcessorEditStopDate">
+    <wsdl:part name="parameters" element="tns:setProductionReportProcessorEditStopDate">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="voidProductionReportResponse">
+    <wsdl:part name="parameters" element="tns:voidProductionReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setFederalProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:setFederalProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findTripReportsResponse">
+    <wsdl:part name="parameters" element="tns:findTripReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeLogbookEntriesResponse">
+    <wsdl:part name="parameters" element="tns:removeLogbookEntriesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLogbookEntryResponse">
+    <wsdl:part name="parameters" element="tns:getLogbookEntryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeLogbookResponse">
+    <wsdl:part name="parameters" element="tns:removeLogbookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendReturnReceipt">
+    <wsdl:part name="parameters" element="tns:sendReturnReceipt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCoarReportStatusResponse">
+    <wsdl:part name="parameters" element="tns:updateCoarReportStatusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFederalProcessorInfoResponse">
+    <wsdl:part name="parameters" element="tns:getFederalProcessorInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAgencyUserResponse">
+    <wsdl:part name="parameters" element="tns:updateAgencyUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validateAndStoreLocationOfOffloads">
+    <wsdl:part name="parameters" element="tns:validateAndStoreLocationOfOffloads">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfoLiteResponse">
+    <wsdl:part name="parameters" element="tns:getOperationInfoLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cacheStatusResponse">
+    <wsdl:part name="parameters" element="tns:cacheStatusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCfecPermits">
+    <wsdl:part name="parameters" element="tns:findCfecPermits">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setCfecPermitInfo">
+    <wsdl:part name="parameters" element="tns:setCfecPermitInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveProductionReport">
+    <wsdl:part name="parameters" element="tns:saveProductionReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveManualLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:saveManualLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCfecPermitInfo">
+    <wsdl:part name="parameters" element="tns:getCfecPermitInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findAgencyUsersResponse">
+    <wsdl:part name="parameters" element="tns:findAgencyUsersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOperationLiteResponse">
+    <wsdl:part name="parameters" element="tns:updateOperationLiteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateUserResponse">
+    <wsdl:part name="parameters" element="tns:updateUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLoggerResponse">
+    <wsdl:part name="parameters" element="tns:getLoggerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertIersMonitorArrayWrapper">
+    <wsdl:part name="parameters" element="tns:insertIersMonitorArrayWrapper">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAgencyUserInfoResponse">
+    <wsdl:part name="parameters" element="tns:getAgencyUserInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCoarReports">
+    <wsdl:part name="parameters" element="tns:findCoarReports">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCoarReport">
+    <wsdl:part name="parameters" element="tns:removeCoarReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findDailyReportsResponse">
+    <wsdl:part name="parameters" element="tns:findDailyReportsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setCfecVesselInfo">
+    <wsdl:part name="parameters" element="tns:setCfecVesselInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAsyncGenerationFile">
+    <wsdl:part name="parameters" element="tns:getAsyncGenerationFile">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNmfsPersonInfoResponse">
+    <wsdl:part name="parameters" element="tns:getNmfsPersonInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unVoidLandingReport">
+    <wsdl:part name="parameters" element="tns:unVoidLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="clearAllCacheEntries">
+    <wsdl:part name="parameters" element="tns:clearAllCacheEntries">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:getLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperationInfoLite">
+    <wsdl:part name="parameters" element="tns:getOperationInfoLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselInfo">
+    <wsdl:part name="parameters" element="tns:getVesselInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findOperationsResponse">
+    <wsdl:part name="parameters" element="tns:findOperationsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unVoidLandingReportResponse">
+    <wsdl:part name="parameters" element="tns:unVoidLandingReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveAutoArchiveBatchTicketsResponse">
+    <wsdl:part name="parameters" element="tns:saveAutoArchiveBatchTicketsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findFederalPermits">
+    <wsdl:part name="parameters" element="tns:findFederalPermits">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setNmfsPersonInfo">
+    <wsdl:part name="parameters" element="tns:setNmfsPersonInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMassUpdateSearchResultResponse">
+    <wsdl:part name="parameters" element="tns:getMassUpdateSearchResultResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="purgeJobQueueJobsResponse">
+    <wsdl:part name="parameters" element="tns:purgeJobQueueJobsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getNmfsPersonInfo">
+    <wsdl:part name="parameters" element="tns:getNmfsPersonInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIersMonitors">
+    <wsdl:part name="parameters" element="tns:getIersMonitors">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setQueryResponse">
+    <wsdl:part name="parameters" element="tns:setQueryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveManualLandingReport">
+    <wsdl:part name="parameters" element="tns:saveManualLandingReport">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findIphcUpdatedLandingReportsByTime">
+    <wsdl:part name="parameters" element="tns:findIphcUpdatedLandingReportsByTime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getVesselHistory">
+    <wsdl:part name="parameters" element="tns:getVesselHistory">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductionReportHistoryResponse">
+    <wsdl:part name="parameters" element="tns:getProductionReportHistoryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteProductionReportsForOperationResponse">
+    <wsdl:part name="parameters" element="tns:deleteProductionReportsForOperationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCoarReportResponse">
+    <wsdl:part name="parameters" element="tns:getCoarReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findOperationsLite">
+    <wsdl:part name="parameters" element="tns:findOperationsLite">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRegisteredBuyerInfo">
+    <wsdl:part name="parameters" element="tns:getRegisteredBuyerInfo">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findUpdatedLandingReportsByTimeResponse">
+    <wsdl:part name="parameters" element="tns:findUpdatedLandingReportsByTimeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="toStringResponse">
+    <wsdl:part name="parameters" element="tns:toStringResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAgencyUserInfoFromCacheResponse">
+    <wsdl:part name="parameters" element="tns:getAgencyUserInfoFromCacheResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProcessorsResponse">
+    <wsdl:part name="parameters" element="tns:findProcessorsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveLandingReportNumbers">
+    <wsdl:part name="parameters" element="tns:reserveLandingReportNumbers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AgencyReportManagement">
+    <wsdl:operation name="findLandingReports">
+      <wsdl:input name="findLandingReports" message="tns:findLandingReports">
+    </wsdl:input>
+      <wsdl:output name="findLandingReportsResponse" message="tns:findLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMassUpdateSearchResult">
+      <wsdl:input name="getMassUpdateSearchResult" message="tns:getMassUpdateSearchResult">
+    </wsdl:input>
+      <wsdl:output name="getMassUpdateSearchResultResponse" message="tns:getMassUpdateSearchResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogger">
+      <wsdl:input name="getLogger" message="tns:getLogger">
+    </wsdl:input>
+      <wsdl:output name="getLoggerResponse" message="tns:getLoggerResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfo">
+      <wsdl:input name="getOperationInfo" message="tns:getOperationInfo">
+    </wsdl:input>
+      <wsdl:output name="getOperationInfoResponse" message="tns:getOperationInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLandingReport">
+      <wsdl:input name="saveLandingReport" message="tns:saveLandingReport">
+    </wsdl:input>
+      <wsdl:output name="saveLandingReportResponse" message="tns:saveLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cacheStatus">
+      <wsdl:input name="cacheStatus" message="tns:cacheStatus">
+    </wsdl:input>
+      <wsdl:output name="cacheStatusResponse" message="tns:cacheStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeOperationLite">
+      <wsdl:input name="removeOperationLite" message="tns:removeOperationLite">
+    </wsdl:input>
+      <wsdl:output name="removeOperationLiteResponse" message="tns:removeOperationLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTripNumbers">
+      <wsdl:input name="updateTripNumbers" message="tns:updateTripNumbers">
+    </wsdl:input>
+      <wsdl:output name="updateTripNumbersResponse" message="tns:updateTripNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRegisteredBuyerInfo">
+      <wsdl:input name="setRegisteredBuyerInfo" message="tns:setRegisteredBuyerInfo">
+    </wsdl:input>
+      <wsdl:output name="setRegisteredBuyerInfoResponse" message="tns:setRegisteredBuyerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedLandingReportsByTime">
+      <wsdl:input name="findUpdatedLandingReportsByTime" message="tns:findUpdatedLandingReportsByTime">
+    </wsdl:input>
+      <wsdl:output name="findUpdatedLandingReportsByTimeResponse" message="tns:findUpdatedLandingReportsByTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFishTicketUserInfo">
+      <wsdl:input name="getFishTicketUserInfo" message="tns:getFishTicketUserInfo">
+    </wsdl:input>
+      <wsdl:output name="getFishTicketUserInfoResponse" message="tns:getFishTicketUserInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignTripNumbers">
+      <wsdl:input name="assignTripNumbers" message="tns:assignTripNumbers">
+    </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLocationOfOffloads">
+      <wsdl:input name="getLocationOfOffloads" message="tns:getLocationOfOffloads">
+    </wsdl:input>
+      <wsdl:output name="getLocationOfOffloadsResponse" message="tns:getLocationOfOffloadsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDiagnosticEvent">
+      <wsdl:input name="setDiagnosticEvent" message="tns:setDiagnosticEvent">
+    </wsdl:input>
+      <wsdl:output name="setDiagnosticEventResponse" message="tns:setDiagnosticEventResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperationLite">
+      <wsdl:input name="updateOperationLite" message="tns:updateOperationLite">
+    </wsdl:input>
+      <wsdl:output name="updateOperationLiteResponse" message="tns:updateOperationLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveAutoArchiveBatchTickets">
+      <wsdl:input name="saveAutoArchiveBatchTickets" message="tns:saveAutoArchiveBatchTickets">
+    </wsdl:input>
+      <wsdl:output name="saveAutoArchiveBatchTicketsResponse" message="tns:saveAutoArchiveBatchTicketsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionReport">
+      <wsdl:input name="getProductionReport" message="tns:getProductionReport">
+    </wsdl:input>
+      <wsdl:output name="getProductionReportResponse" message="tns:getProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCoarReportStatus">
+      <wsdl:input name="updateCoarReportStatus" message="tns:updateCoarReportStatus">
+    </wsdl:input>
+      <wsdl:output name="updateCoarReportStatusResponse" message="tns:updateCoarReportStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendUnfinalizedReportNotfications">
+      <wsdl:input name="sendUnfinalizedReportNotfications" message="tns:sendUnfinalizedReportNotfications">
+    </wsdl:input>
+      <wsdl:output name="sendUnfinalizedReportNotficationsResponse" message="tns:sendUnfinalizedReportNotficationsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendLogbookReturnReceipt">
+      <wsdl:input name="sendLogbookReturnReceipt" message="tns:sendLogbookReturnReceipt">
+    </wsdl:input>
+      <wsdl:output name="sendLogbookReturnReceiptResponse" message="tns:sendLogbookReturnReceiptResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedProductionReportsByTime">
+      <wsdl:input name="findUpdatedProductionReportsByTime" message="tns:findUpdatedProductionReportsByTime">
+    </wsdl:input>
+      <wsdl:output name="findUpdatedProductionReportsByTimeResponse" message="tns:findUpdatedProductionReportsByTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredCrabReceiverInfo">
+      <wsdl:input name="getRegisteredCrabReceiverInfo" message="tns:getRegisteredCrabReceiverInfo">
+    </wsdl:input>
+      <wsdl:output name="getRegisteredCrabReceiverInfoResponse" message="tns:getRegisteredCrabReceiverInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setQuery">
+      <wsdl:input name="setQuery" message="tns:setQuery">
+    </wsdl:input>
+      <wsdl:output name="setQueryResponse" message="tns:setQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runQuery">
+      <wsdl:input name="runQuery" message="tns:runQuery">
+    </wsdl:input>
+      <wsdl:output name="runQueryResponse" message="tns:runQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unVoidProductionReport">
+      <wsdl:input name="unVoidProductionReport" message="tns:unVoidProductionReport">
+    </wsdl:input>
+      <wsdl:output name="unVoidProductionReportResponse" message="tns:unVoidProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTlandingsUser">
+      <wsdl:input name="deleteTlandingsUser" message="tns:deleteTlandingsUser">
+    </wsdl:input>
+      <wsdl:output name="deleteTlandingsUserResponse" message="tns:deleteTlandingsUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeUser">
+      <wsdl:input name="removeUser" message="tns:removeUser">
+    </wsdl:input>
+      <wsdl:output name="removeUserResponse" message="tns:removeUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProductionReportsForOperation">
+      <wsdl:input name="deleteProductionReportsForOperation" message="tns:deleteProductionReportsForOperation">
+    </wsdl:input>
+      <wsdl:output name="deleteProductionReportsForOperationResponse" message="tns:deleteProductionReportsForOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFederalProcessorInfo">
+      <wsdl:input name="getFederalProcessorInfo" message="tns:getFederalProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="getFederalProcessorInfoResponse" message="tns:getFederalProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processNULLFLDTickets">
+      <wsdl:input name="processNULLFLDTickets" message="tns:processNULLFLDTickets">
+    </wsdl:input>
+      <wsdl:output name="processNULLFLDTicketsResponse" message="tns:processNULLFLDTicketsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookInfo">
+      <wsdl:input name="getLogbookInfo" message="tns:getLogbookInfo">
+    </wsdl:input>
+      <wsdl:output name="getLogbookInfoResponse" message="tns:getLogbookInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="propagateData">
+      <wsdl:input name="propagateData" message="tns:propagateData">
+    </wsdl:input>
+      <wsdl:output name="propagateDataResponse" message="tns:propagateDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAnnouncements">
+      <wsdl:input name="findAnnouncements" message="tns:findAnnouncements">
+    </wsdl:input>
+      <wsdl:output name="findAnnouncementsResponse" message="tns:findAnnouncementsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionReportHistory">
+      <wsdl:input name="getProductionReportHistory" message="tns:getProductionReportHistory">
+    </wsdl:input>
+      <wsdl:output name="getProductionReportHistoryResponse" message="tns:getProductionReportHistoryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorInfo">
+      <wsdl:input name="getProcessorInfo" message="tns:getProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="getProcessorInfoResponse" message="tns:getProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripReport">
+      <wsdl:input name="getTripReport" message="tns:getTripReport">
+    </wsdl:input>
+      <wsdl:output name="getTripReportResponse" message="tns:getTripReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input name="updateUser" message="tns:updateUser">
+    </wsdl:input>
+      <wsdl:output name="updateUserResponse" message="tns:updateUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJobQueueMonitorArrayWrapper">
+      <wsdl:input name="getJobQueueMonitorArrayWrapper" message="tns:getJobQueueMonitorArrayWrapper">
+    </wsdl:input>
+      <wsdl:output name="getJobQueueMonitorArrayWrapperResponse" message="tns:getJobQueueMonitorArrayWrapperResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperation">
+      <wsdl:input name="updateOperation" message="tns:updateOperation">
+    </wsdl:input>
+      <wsdl:output name="updateOperationResponse" message="tns:updateOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLandingReport">
+      <wsdl:input name="getLandingReport" message="tns:getLandingReport">
+    </wsdl:input>
+      <wsdl:output name="getLandingReportResponse" message="tns:getLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRegisteredCrabReceivers">
+      <wsdl:input name="findRegisteredCrabReceivers" message="tns:findRegisteredCrabReceivers">
+    </wsdl:input>
+      <wsdl:output name="findRegisteredCrabReceiversResponse" message="tns:findRegisteredCrabReceiversResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntries">
+      <wsdl:input name="getLogbookEntries" message="tns:getLogbookEntries">
+    </wsdl:input>
+      <wsdl:output name="getLogbookEntriesResponse" message="tns:getLogbookEntriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntry">
+      <wsdl:input name="getLogbookEntry" message="tns:getLogbookEntry">
+    </wsdl:input>
+      <wsdl:output name="getLogbookEntryResponse" message="tns:getLogbookEntryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateFishTicketUser">
+      <wsdl:input name="updateFishTicketUser" message="tns:updateFishTicketUser">
+    </wsdl:input>
+      <wsdl:output name="updateFishTicketUserResponse" message="tns:updateFishTicketUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logIersMonitorClosingApplication">
+      <wsdl:input name="logIersMonitorClosingApplication" message="tns:logIersMonitorClosingApplication">
+    </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLandingReportsForOperation">
+      <wsdl:input name="deleteLandingReportsForOperation" message="tns:deleteLandingReportsForOperation">
+    </wsdl:input>
+      <wsdl:output name="deleteLandingReportsForOperationResponse" message="tns:deleteLandingReportsForOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProcessors">
+      <wsdl:input name="findProcessors" message="tns:findProcessors">
+    </wsdl:input>
+      <wsdl:output name="findProcessorsResponse" message="tns:findProcessorsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toString">
+      <wsdl:input name="toString" message="tns:toString">
+    </wsdl:input>
+      <wsdl:output name="toStringResponse" message="tns:toStringResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorHistory">
+      <wsdl:input name="getProcessorHistory" message="tns:getProcessorHistory">
+    </wsdl:input>
+      <wsdl:output name="getProcessorHistoryResponse" message="tns:getProcessorHistoryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportIds">
+      <wsdl:input name="getReportIds" message="tns:getReportIds">
+    </wsdl:input>
+      <wsdl:output name="getReportIdsResponse" message="tns:getReportIdsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDiagnosticEvents">
+      <wsdl:input name="findDiagnosticEvents" message="tns:findDiagnosticEvents">
+    </wsdl:input>
+      <wsdl:output name="findDiagnosticEventsResponse" message="tns:findDiagnosticEventsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLogbookProfiles">
+      <wsdl:input name="findLogbookProfiles" message="tns:findLogbookProfiles">
+    </wsdl:input>
+      <wsdl:output name="findLogbookProfilesResponse" message="tns:findLogbookProfilesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRegisteredCrabReceiverInfo">
+      <wsdl:input name="setRegisteredCrabReceiverInfo" message="tns:setRegisteredCrabReceiverInfo">
+    </wsdl:input>
+      <wsdl:output name="setRegisteredCrabReceiverInfoResponse" message="tns:setRegisteredCrabReceiverInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAgencyUser">
+      <wsdl:input name="updateAgencyUser" message="tns:updateAgencyUser">
+    </wsdl:input>
+      <wsdl:output name="updateAgencyUserResponse" message="tns:updateAgencyUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOperations">
+      <wsdl:input name="findOperations" message="tns:findOperations">
+    </wsdl:input>
+      <wsdl:output name="findOperationsResponse" message="tns:findOperationsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearCacheEntry">
+      <wsdl:input name="clearCacheEntry" message="tns:clearCacheEntry">
+    </wsdl:input>
+      <wsdl:output name="clearCacheEntryResponse" message="tns:clearCacheEntryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearExpiredCacheEntries">
+      <wsdl:input name="clearExpiredCacheEntries" message="tns:clearExpiredCacheEntries">
+    </wsdl:input>
+      <wsdl:output name="clearExpiredCacheEntriesResponse" message="tns:clearExpiredCacheEntriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processNULLSTBTickets">
+      <wsdl:input name="processNULLSTBTickets" message="tns:processNULLSTBTickets">
+    </wsdl:input>
+      <wsdl:output name="processNULLSTBTicketsResponse" message="tns:processNULLSTBTicketsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripInformation">
+      <wsdl:input name="getTripInformation" message="tns:getTripInformation">
+    </wsdl:input>
+      <wsdl:output name="getTripInformationResponse" message="tns:getTripInformationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLogbooks">
+      <wsdl:input name="findLogbooks" message="tns:findLogbooks">
+    </wsdl:input>
+      <wsdl:output name="findLogbooksResponse" message="tns:findLogbooksResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAgencyUsers">
+      <wsdl:input name="findAgencyUsers" message="tns:findAgencyUsers">
+    </wsdl:input>
+      <wsdl:output name="findAgencyUsersResponse" message="tns:findAgencyUsersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyUserInfo">
+      <wsdl:input name="getAgencyUserInfo" message="tns:getAgencyUserInfo">
+    </wsdl:input>
+      <wsdl:output name="getAgencyUserInfoResponse" message="tns:getAgencyUserInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntriesByEntryTimeOrDatabaseEntryTime">
+      <wsdl:input name="getLogbookEntriesByEntryTimeOrDatabaseEntryTime" message="tns:getLogbookEntriesByEntryTimeOrDatabaseEntryTime">
+    </wsdl:input>
+      <wsdl:output name="getLogbookEntriesByEntryTimeOrDatabaseEntryTimeResponse" message="tns:getLogbookEntriesByEntryTimeOrDatabaseEntryTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLandingReportHistory">
+      <wsdl:input name="getLandingReportHistory" message="tns:getLandingReportHistory">
+    </wsdl:input>
+      <wsdl:output name="getLandingReportHistoryResponse" message="tns:getLandingReportHistoryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeLogbook">
+      <wsdl:input name="removeLogbook" message="tns:removeLogbook">
+    </wsdl:input>
+      <wsdl:output name="removeLogbookResponse" message="tns:removeLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMassUpdateChangeResult">
+      <wsdl:input name="getMassUpdateChangeResult" message="tns:getMassUpdateChangeResult">
+    </wsdl:input>
+      <wsdl:output name="getMassUpdateChangeResultResponse" message="tns:getMassUpdateChangeResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateReport">
+      <wsdl:input name="generateReport" message="tns:generateReport">
+    </wsdl:input>
+      <wsdl:output name="generateReportResponse" message="tns:generateReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findIphcLandingReports">
+      <wsdl:input name="findIphcLandingReports" message="tns:findIphcLandingReports">
+    </wsdl:input>
+      <wsdl:output name="findIphcLandingReportsResponse" message="tns:findIphcLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLandingReportProcessorEditStopDate">
+      <wsdl:input name="setLandingReportProcessorEditStopDate" message="tns:setLandingReportProcessorEditStopDate">
+    </wsdl:input>
+      <wsdl:output name="setLandingReportProcessorEditStopDateResponse" message="tns:setLandingReportProcessorEditStopDateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setProductionReportProcessorEditStopDate">
+      <wsdl:input name="setProductionReportProcessorEditStopDate" message="tns:setProductionReportProcessorEditStopDate">
+    </wsdl:input>
+      <wsdl:output name="setProductionReportProcessorEditStopDateResponse" message="tns:setProductionReportProcessorEditStopDateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMessageInfo">
+      <wsdl:input name="setMessageInfo" message="tns:setMessageInfo">
+    </wsdl:input>
+      <wsdl:output name="setMessageInfoResponse" message="tns:setMessageInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReturnReceipt">
+      <wsdl:input name="sendReturnReceipt" message="tns:sendReturnReceipt">
+    </wsdl:input>
+      <wsdl:output name="sendReturnReceiptResponse" message="tns:sendReturnReceiptResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeOperation">
+      <wsdl:input name="removeOperation" message="tns:removeOperation">
+    </wsdl:input>
+      <wsdl:output name="removeOperationResponse" message="tns:removeOperationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedVesselsByTime">
+      <wsdl:input name="findUpdatedVesselsByTime" message="tns:findUpdatedVesselsByTime">
+    </wsdl:input>
+      <wsdl:output name="findUpdatedVesselsByTimeResponse" message="tns:findUpdatedVesselsByTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndStoreLocationOfOffloads">
+      <wsdl:input name="validateAndStoreLocationOfOffloads" message="tns:validateAndStoreLocationOfOffloads">
+    </wsdl:input>
+      <wsdl:output name="validateAndStoreLocationOfOffloadsResponse" message="tns:validateAndStoreLocationOfOffloadsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorInfoHistory">
+      <wsdl:input name="getProcessorInfoHistory" message="tns:getProcessorInfoHistory">
+    </wsdl:input>
+      <wsdl:output name="getProcessorInfoHistoryResponse" message="tns:getProcessorInfoHistoryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCfecPermits">
+      <wsdl:input name="findCfecPermits" message="tns:findCfecPermits">
+    </wsdl:input>
+      <wsdl:output name="findCfecPermitsResponse" message="tns:findCfecPermitsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCfecPermitInfo">
+      <wsdl:input name="setCfecPermitInfo" message="tns:setCfecPermitInfo">
+    </wsdl:input>
+      <wsdl:output name="setCfecPermitInfoResponse" message="tns:setCfecPermitInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveProductionReport">
+      <wsdl:input name="saveProductionReport" message="tns:saveProductionReport">
+    </wsdl:input>
+      <wsdl:output name="saveProductionReportResponse" message="tns:saveProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runReportExtract">
+      <wsdl:input name="runReportExtract" message="tns:runReportExtract">
+    </wsdl:input>
+      <wsdl:output name="runReportExtractResponse" message="tns:runReportExtractResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="voidProductionReport">
+      <wsdl:input name="voidProductionReport" message="tns:voidProductionReport">
+    </wsdl:input>
+      <wsdl:output name="voidProductionReportResponse" message="tns:voidProductionReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="voidLandingReport">
+      <wsdl:input name="voidLandingReport" message="tns:voidLandingReport">
+    </wsdl:input>
+      <wsdl:output name="voidLandingReportResponse" message="tns:voidLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCfecPermitInfo">
+      <wsdl:input name="getCfecPermitInfo" message="tns:getCfecPermitInfo">
+    </wsdl:input>
+      <wsdl:output name="getCfecPermitInfoResponse" message="tns:getCfecPermitInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setProcessorInfo">
+      <wsdl:input name="setProcessorInfo" message="tns:setProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="setProcessorInfoResponse" message="tns:setProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRegisteredBuyers">
+      <wsdl:input name="findRegisteredBuyers" message="tns:findRegisteredBuyers">
+    </wsdl:input>
+      <wsdl:output name="findRegisteredBuyersResponse" message="tns:findRegisteredBuyersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTripReports">
+      <wsdl:input name="findTripReports" message="tns:findTripReports">
+    </wsdl:input>
+      <wsdl:output name="findTripReportsResponse" message="tns:findTripReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProductionReports">
+      <wsdl:input name="findProductionReports" message="tns:findProductionReports">
+    </wsdl:input>
+      <wsdl:output name="findProductionReportsResponse" message="tns:findProductionReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIersMonitorArrayWrapper">
+      <wsdl:input name="insertIersMonitorArrayWrapper" message="tns:insertIersMonitorArrayWrapper">
+    </wsdl:input>
+      <wsdl:output name="insertIersMonitorArrayWrapperResponse" message="tns:insertIersMonitorArrayWrapperResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeUserFromCache">
+      <wsdl:input name="purgeUserFromCache" message="tns:purgeUserFromCache">
+    </wsdl:input>
+      <wsdl:output name="purgeUserFromCacheResponse" message="tns:purgeUserFromCacheResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCoarReports">
+      <wsdl:input name="findCoarReports" message="tns:findCoarReports">
+    </wsdl:input>
+      <wsdl:output name="findCoarReportsResponse" message="tns:findCoarReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCoarReport">
+      <wsdl:input name="removeCoarReport" message="tns:removeCoarReport">
+    </wsdl:input>
+      <wsdl:output name="removeCoarReportResponse" message="tns:removeCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCfecVesselInfo">
+      <wsdl:input name="setCfecVesselInfo" message="tns:setCfecVesselInfo">
+    </wsdl:input>
+      <wsdl:output name="setCfecVesselInfoResponse" message="tns:setCfecVesselInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAsyncGenerationFile">
+      <wsdl:input name="getAsyncGenerationFile" message="tns:getAsyncGenerationFile">
+    </wsdl:input>
+      <wsdl:output name="getAsyncGenerationFileResponse" message="tns:getAsyncGenerationFileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unVoidLandingReport">
+      <wsdl:input name="unVoidLandingReport" message="tns:unVoidLandingReport">
+    </wsdl:input>
+      <wsdl:output name="unVoidLandingReportResponse" message="tns:unVoidLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearAllCacheEntries">
+      <wsdl:input name="clearAllCacheEntries" message="tns:clearAllCacheEntries">
+    </wsdl:input>
+      <wsdl:output name="clearAllCacheEntriesResponse" message="tns:clearAllCacheEntriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDailyReports">
+      <wsdl:input name="findDailyReports" message="tns:findDailyReports">
+    </wsdl:input>
+      <wsdl:output name="findDailyReportsResponse" message="tns:findDailyReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeLandingReports">
+      <wsdl:input name="purgeLandingReports" message="tns:purgeLandingReports">
+    </wsdl:input>
+      <wsdl:output name="purgeLandingReportsResponse" message="tns:purgeLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfoLite">
+      <wsdl:input name="getOperationInfoLite" message="tns:getOperationInfoLite">
+    </wsdl:input>
+      <wsdl:output name="getOperationInfoLiteResponse" message="tns:getOperationInfoLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQueries">
+      <wsdl:input name="getQueries" message="tns:getQueries">
+    </wsdl:input>
+      <wsdl:output name="getQueriesResponse" message="tns:getQueriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeJobQueueJobs">
+      <wsdl:input name="purgeJobQueueJobs" message="tns:purgeJobQueueJobs">
+    </wsdl:input>
+      <wsdl:output name="purgeJobQueueJobsResponse" message="tns:purgeJobQueueJobsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyReport">
+      <wsdl:input name="getDailyReport" message="tns:getDailyReport">
+    </wsdl:input>
+      <wsdl:output name="getDailyReportResponse" message="tns:getDailyReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findNmfsPersons">
+      <wsdl:input name="findNmfsPersons" message="tns:findNmfsPersons">
+    </wsdl:input>
+      <wsdl:output name="findNmfsPersonsResponse" message="tns:findNmfsPersonsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselInfo">
+      <wsdl:input name="getVesselInfo" message="tns:getVesselInfo">
+    </wsdl:input>
+      <wsdl:output name="getVesselInfoResponse" message="tns:getVesselInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedProductionReports">
+      <wsdl:input name="findUpdatedProductionReports" message="tns:findUpdatedProductionReports">
+    </wsdl:input>
+      <wsdl:output name="findUpdatedProductionReportsResponse" message="tns:findUpdatedProductionReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntriesByEntryTime">
+      <wsdl:input name="getLogbookEntriesByEntryTime" message="tns:getLogbookEntriesByEntryTime">
+    </wsdl:input>
+      <wsdl:output name="getLogbookEntriesByEntryTimeResponse" message="tns:getLogbookEntriesByEntryTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findFederalPermits">
+      <wsdl:input name="findFederalPermits" message="tns:findFederalPermits">
+    </wsdl:input>
+      <wsdl:output name="findFederalPermitsResponse" message="tns:findFederalPermitsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAsyncGenerationFiles">
+      <wsdl:input name="findAsyncGenerationFiles" message="tns:findAsyncGenerationFiles">
+    </wsdl:input>
+      <wsdl:output name="findAsyncGenerationFilesResponse" message="tns:findAsyncGenerationFilesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNmfsPersonInfo">
+      <wsdl:input name="setNmfsPersonInfo" message="tns:setNmfsPersonInfo">
+    </wsdl:input>
+      <wsdl:output name="setNmfsPersonInfoResponse" message="tns:setNmfsPersonInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoarReport">
+      <wsdl:input name="getCoarReport" message="tns:getCoarReport">
+    </wsdl:input>
+      <wsdl:output name="getCoarReportResponse" message="tns:getCoarReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNmfsPersonInfo">
+      <wsdl:input name="getNmfsPersonInfo" message="tns:getNmfsPersonInfo">
+    </wsdl:input>
+      <wsdl:output name="getNmfsPersonInfoResponse" message="tns:getNmfsPersonInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorUserInfo">
+      <wsdl:input name="getProcessorUserInfo" message="tns:getProcessorUserInfo">
+    </wsdl:input>
+      <wsdl:output name="getProcessorUserInfoResponse" message="tns:getProcessorUserInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIersMonitors">
+      <wsdl:input name="getIersMonitors" message="tns:getIersMonitors">
+    </wsdl:input>
+      <wsdl:output name="getIersMonitorsResponse" message="tns:getIersMonitorsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveManualLandingReport">
+      <wsdl:input name="saveManualLandingReport" message="tns:saveManualLandingReport">
+    </wsdl:input>
+      <wsdl:output name="saveManualLandingReportResponse" message="tns:saveManualLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyUserInfoFromCache">
+      <wsdl:input name="getAgencyUserInfoFromCache" message="tns:getAgencyUserInfoFromCache">
+    </wsdl:input>
+      <wsdl:output name="getAgencyUserInfoFromCacheResponse" message="tns:getAgencyUserInfoFromCacheResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findIphcUpdatedLandingReportsByTime">
+      <wsdl:input name="findIphcUpdatedLandingReportsByTime" message="tns:findIphcUpdatedLandingReportsByTime">
+    </wsdl:input>
+      <wsdl:output name="findIphcUpdatedLandingReportsByTimeResponse" message="tns:findIphcUpdatedLandingReportsByTimeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselHistory">
+      <wsdl:input name="getVesselHistory" message="tns:getVesselHistory">
+    </wsdl:input>
+      <wsdl:output name="getVesselHistoryResponse" message="tns:getVesselHistoryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setFederalProcessorInfo">
+      <wsdl:input name="setFederalProcessorInfo" message="tns:setFederalProcessorInfo">
+    </wsdl:input>
+      <wsdl:output name="setFederalProcessorInfoResponse" message="tns:setFederalProcessorInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbook">
+      <wsdl:input name="getLogbook" message="tns:getLogbook">
+    </wsdl:input>
+      <wsdl:output name="getLogbookResponse" message="tns:getLogbookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOperationsLite">
+      <wsdl:input name="findOperationsLite" message="tns:findOperationsLite">
+    </wsdl:input>
+      <wsdl:output name="findOperationsLiteResponse" message="tns:findOperationsLiteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVesselsForOffice">
+      <wsdl:input name="findVesselsForOffice" message="tns:findVesselsForOffice">
+    </wsdl:input>
+      <wsdl:output name="findVesselsForOfficeResponse" message="tns:findVesselsForOfficeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeLogbookEntries">
+      <wsdl:input name="removeLogbookEntries" message="tns:removeLogbookEntries">
+    </wsdl:input>
+      <wsdl:output name="removeLogbookEntriesResponse" message="tns:removeLogbookEntriesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProcessorUsers">
+      <wsdl:input name="findProcessorUsers" message="tns:findProcessorUsers">
+    </wsdl:input>
+      <wsdl:output name="findProcessorUsersResponse" message="tns:findProcessorUsersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUnsubmittedLandingReports">
+      <wsdl:input name="findUnsubmittedLandingReports" message="tns:findUnsubmittedLandingReports">
+    </wsdl:input>
+      <wsdl:output name="findUnsubmittedLandingReportsResponse" message="tns:findUnsubmittedLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredBuyerInfo">
+      <wsdl:input name="getRegisteredBuyerInfo" message="tns:getRegisteredBuyerInfo">
+    </wsdl:input>
+      <wsdl:output name="getRegisteredBuyerInfoResponse" message="tns:getRegisteredBuyerInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runTest">
+      <wsdl:input name="runTest" message="tns:runTest">
+    </wsdl:input>
+      <wsdl:output name="runTestResponse" message="tns:runTestResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedLandingReports">
+      <wsdl:input name="findUpdatedLandingReports" message="tns:findUpdatedLandingReports">
+    </wsdl:input>
+      <wsdl:output name="findUpdatedLandingReportsResponse" message="tns:findUpdatedLandingReportsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAnnouncement">
+      <wsdl:input name="updateAnnouncement" message="tns:updateAnnouncement">
+    </wsdl:input>
+      <wsdl:output name="updateAnnouncementResponse" message="tns:updateAnnouncementResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIphcLandingReport">
+      <wsdl:input name="getIphcLandingReport" message="tns:getIphcLandingReport">
+    </wsdl:input>
+      <wsdl:output name="getIphcLandingReportResponse" message="tns:getIphcLandingReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageInfo">
+      <wsdl:input name="getMessageInfo" message="tns:getMessageInfo">
+    </wsdl:input>
+      <wsdl:output name="getMessageInfoResponse" message="tns:getMessageInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookProfile">
+      <wsdl:input name="getLogbookProfile" message="tns:getLogbookProfile">
+    </wsdl:input>
+      <wsdl:output name="getLogbookProfileResponse" message="tns:getLogbookProfileResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVessels">
+      <wsdl:input name="findVessels" message="tns:findVessels">
+    </wsdl:input>
+      <wsdl:output name="findVesselsResponse" message="tns:findVesselsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveLandingReportNumbers">
+      <wsdl:input name="reserveLandingReportNumbers" message="tns:reserveLandingReportNumbers">
+    </wsdl:input>
+      <wsdl:output name="reserveLandingReportNumbersResponse" message="tns:reserveLandingReportNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AgencyReportManagementServiceSoapBinding" type="tns:AgencyReportManagement">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="findLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMassUpdateSearchResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMassUpdateSearchResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMassUpdateSearchResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogger">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogger">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLoggerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cacheStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cacheStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cacheStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeOperationLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeOperationLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeOperationLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTripNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateTripNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateTripNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRegisteredBuyerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setRegisteredBuyerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setRegisteredBuyerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedLandingReportsByTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUpdatedLandingReportsByTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUpdatedLandingReportsByTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFishTicketUserInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFishTicketUserInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFishTicketUserInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="assignTripNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="assignTripNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLocationOfOffloads">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLocationOfOffloads">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLocationOfOffloadsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setDiagnosticEvent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setDiagnosticEvent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setDiagnosticEventResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperationLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateOperationLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateOperationLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveAutoArchiveBatchTickets">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveAutoArchiveBatchTickets">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveAutoArchiveBatchTicketsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCoarReportStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCoarReportStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCoarReportStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendUnfinalizedReportNotfications">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendUnfinalizedReportNotfications">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendUnfinalizedReportNotficationsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendLogbookReturnReceipt">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendLogbookReturnReceipt">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendLogbookReturnReceiptResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedProductionReportsByTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUpdatedProductionReportsByTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUpdatedProductionReportsByTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredCrabReceiverInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRegisteredCrabReceiverInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRegisteredCrabReceiverInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="runQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="runQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unVoidProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="unVoidProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="unVoidProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTlandingsUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteTlandingsUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteTlandingsUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProductionReportsForOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteProductionReportsForOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteProductionReportsForOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFederalProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFederalProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFederalProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processNULLFLDTickets">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="processNULLFLDTickets">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="processNULLFLDTicketsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="propagateData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="propagateData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="propagateDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAnnouncements">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findAnnouncements">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findAnnouncementsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductionReportHistory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProductionReportHistory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductionReportHistoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTripReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTripReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJobQueueMonitorArrayWrapper">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getJobQueueMonitorArrayWrapper">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getJobQueueMonitorArrayWrapperResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRegisteredCrabReceivers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findRegisteredCrabReceivers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findRegisteredCrabReceiversResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookEntries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookEntriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookEntry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookEntryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateFishTicketUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateFishTicketUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateFishTicketUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logIersMonitorClosingApplication">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="logIersMonitorClosingApplication">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="deleteLandingReportsForOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteLandingReportsForOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteLandingReportsForOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProcessors">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findProcessors">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findProcessorsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toString">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="toString">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="toStringResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorHistory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProcessorHistory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProcessorHistoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportIds">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getReportIds">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReportIdsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDiagnosticEvents">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findDiagnosticEvents">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findDiagnosticEventsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLogbookProfiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findLogbookProfiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findLogbookProfilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRegisteredCrabReceiverInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setRegisteredCrabReceiverInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setRegisteredCrabReceiverInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAgencyUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateAgencyUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateAgencyUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOperations">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findOperations">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findOperationsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearCacheEntry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="clearCacheEntry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="clearCacheEntryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearExpiredCacheEntries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="clearExpiredCacheEntries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="clearExpiredCacheEntriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processNULLSTBTickets">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="processNULLSTBTickets">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="processNULLSTBTicketsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTripInformation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTripInformation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTripInformationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLogbooks">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findLogbooks">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findLogbooksResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAgencyUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findAgencyUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findAgencyUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyUserInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAgencyUserInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAgencyUserInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntriesByEntryTimeOrDatabaseEntryTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookEntriesByEntryTimeOrDatabaseEntryTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookEntriesByEntryTimeOrDatabaseEntryTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLandingReportHistory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLandingReportHistory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLandingReportHistoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMassUpdateChangeResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMassUpdateChangeResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMassUpdateChangeResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findIphcLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findIphcLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findIphcLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLandingReportProcessorEditStopDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setLandingReportProcessorEditStopDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setLandingReportProcessorEditStopDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setProductionReportProcessorEditStopDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setProductionReportProcessorEditStopDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setProductionReportProcessorEditStopDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMessageInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setMessageInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setMessageInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendReturnReceipt">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendReturnReceipt">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendReturnReceiptResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeOperation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeOperation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeOperationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedVesselsByTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUpdatedVesselsByTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUpdatedVesselsByTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateAndStoreLocationOfOffloads">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="validateAndStoreLocationOfOffloads">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validateAndStoreLocationOfOffloadsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorInfoHistory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProcessorInfoHistory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProcessorInfoHistoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCfecPermits">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCfecPermits">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCfecPermitsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCfecPermitInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setCfecPermitInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setCfecPermitInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runReportExtract">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="runReportExtract">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="runReportExtractResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="voidProductionReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="voidProductionReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="voidProductionReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="voidLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="voidLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="voidLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCfecPermitInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCfecPermitInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCfecPermitInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRegisteredBuyers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findRegisteredBuyers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findRegisteredBuyersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findTripReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findTripReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findTripReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProductionReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findProductionReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findProductionReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIersMonitorArrayWrapper">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="insertIersMonitorArrayWrapper">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="insertIersMonitorArrayWrapperResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeUserFromCache">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="purgeUserFromCache">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="purgeUserFromCacheResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCoarReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCoarReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCoarReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setCfecVesselInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setCfecVesselInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setCfecVesselInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAsyncGenerationFile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAsyncGenerationFile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAsyncGenerationFileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unVoidLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="unVoidLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="unVoidLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearAllCacheEntries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="clearAllCacheEntries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="clearAllCacheEntriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findDailyReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findDailyReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findDailyReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="purgeLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="purgeLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationInfoLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperationInfoLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperationInfoLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQueries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getQueries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getQueriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purgeJobQueueJobs">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="purgeJobQueueJobs">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="purgeJobQueueJobsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDailyReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDailyReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findNmfsPersons">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findNmfsPersons">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findNmfsPersonsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVesselInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVesselInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedProductionReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUpdatedProductionReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUpdatedProductionReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookEntriesByEntryTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookEntriesByEntryTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookEntriesByEntryTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findFederalPermits">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findFederalPermits">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findFederalPermitsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findAsyncGenerationFiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findAsyncGenerationFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findAsyncGenerationFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setNmfsPersonInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setNmfsPersonInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setNmfsPersonInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoarReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCoarReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCoarReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNmfsPersonInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getNmfsPersonInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getNmfsPersonInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProcessorUserInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProcessorUserInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProcessorUserInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIersMonitors">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getIersMonitors">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIersMonitorsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveManualLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveManualLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveManualLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgencyUserInfoFromCache">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAgencyUserInfoFromCache">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAgencyUserInfoFromCacheResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findIphcUpdatedLandingReportsByTime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findIphcUpdatedLandingReportsByTime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findIphcUpdatedLandingReportsByTimeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVesselHistory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getVesselHistory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getVesselHistoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setFederalProcessorInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setFederalProcessorInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setFederalProcessorInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbook">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbook">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findOperationsLite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findOperationsLite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findOperationsLiteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVesselsForOffice">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findVesselsForOffice">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findVesselsForOfficeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeLogbookEntries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeLogbookEntries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeLogbookEntriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProcessorUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findProcessorUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findProcessorUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUnsubmittedLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUnsubmittedLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUnsubmittedLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRegisteredBuyerInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRegisteredBuyerInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRegisteredBuyerInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="runTest">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="runTest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="runTestResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUpdatedLandingReports">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findUpdatedLandingReports">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findUpdatedLandingReportsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAnnouncement">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateAnnouncement">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateAnnouncementResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIphcLandingReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getIphcLandingReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIphcLandingReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMessageInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMessageInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLogbookProfile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getLogbookProfile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLogbookProfileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVessels">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findVessels">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findVesselsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveLandingReportNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reserveLandingReportNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reserveLandingReportNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgencyReportManagementService">
+    <wsdl:port name="AgencyReportManagementPort" binding="tns:AgencyReportManagementServiceSoapBinding">
+      <soap:address location="http://localhost:9090/AgencyReportManagementPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
