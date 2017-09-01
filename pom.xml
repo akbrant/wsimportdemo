@@ -13,50 +13,6 @@
 	</repositories>
 
 
-	<dependencies>
-
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>gnu-regexp</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>jtidy</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>xmlc-all-runtime</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>xmlc-base</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>xmlc-chtml</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>xmlc-wml</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>xmlc</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>xmlc</groupId>
-			<artifactId>xmlc-taskdef</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-
-	</dependencies>
 
 	<build>
 		<pluginManagement>
@@ -81,10 +37,18 @@
 									<echo message="test classpath:    ${test_classpath}" />
 									<echo message="plugin classpath:  ${plugin_classpath}" />
 
-									<ant antfile="${basedir}/build.xml">
-										<target name="xmlc" />
+                 <ftp action="send" server="myhost" remotedir="/home/test" userid="x" password="y" depends="yes" verbose="yes">
+                   <fileset dir="${project.build.directory}">
+                     <include name="*.jar" />
+                   </fileset>
+                 </ftp>
 
-									</ant>
+                 <taskdef name="myTask" classname="com.acme.MyTask" classpathref="maven.plugin.classpath"/>
+                 <myTask a="b"/>
+
+          
+
+							
 								</target>
 							</configuration>
 							<goals>
@@ -92,6 +56,64 @@
 							</goals>
 						</execution>
 					</executions>
+					<dependencies>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>gnu-regexp</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>jtidy</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>xmlc-all-runtime</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>xmlc-base</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>xmlc-chtml</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>xmlc-wml</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>xmlc</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>xmlc</groupId>
+							<artifactId>xmlc-taskdef</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>commons-net</groupId>
+							<artifactId>commons-net</artifactId>
+							<version>1.4.1</version>
+						</dependency>
+						<dependency>
+							<groupId>ant</groupId>
+							<artifactId>ant-commons-net</artifactId>
+							<version>1.6.5</version>
+						</dependency>
+						<dependency>
+							<groupId>ant</groupId>
+							<artifactId>ant-nodeps</artifactId>
+							<version>1.6.5</version>
+						</dependency>
+					</dependencies>
+
 				</plugin>
 
 
