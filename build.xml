@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project name="elandings" default="xmlc" basedir=".">
+
+	
+	
+	
+	
+	<!--Generate Java code from HTML templates -->
+	<target name="xmlc">
+		<echo message="compile classpath: ${compile_classpath}"/>
+		
+		<path id="project.class.path">
+			<fileset refid="compile_classpath"/>
+			<pathelement location="${outputPath}"/>
+		</path>
+
+		<taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="project.class.path" />
+		<taskdef name="xmlc" classname="org.enhydra.xml.xmlc.taskdef.Xmlc" classpathref="project.class.path" />
+		<property name="xmlc.options.path" value="xmlcOptions.xmlc" />
+		
+		<echo message="compile classpath: ${compile_classpath}"/>
+		<echo>antfile=${ant.file} target=xmlc ${basedir} </echo>
+		<echo>srcdir=${sourcePath} sourceout=${sourcePath} options =${xmlc.options.path}  </echo>
+		
+		<!-- compile HTML into Java -->
+		<xmlc srcdir="${sourcePath}" sourceout="${sourcePath}" packagename="org.psmfc.er.elandings.servlet.page" includes="**/*.html" verbose="off" force="false" keep="yes" options="${xmlc.options.path}" markup="HTML" />
+	</target>
+
+	
+
+    <target name="test">
+
+      <echo message="compile classpath: ${compile_classpath}"/>
+      <echo message="runtime classpath: ${runtime_classpath}"/>
+      <echo message="test classpath:    ${test_classpath}"/>
+      <echo message="plugin classpath:  ${plugin_classpath}"/>
+
+      <echo message="sourcePath:  ${sourcePath}"/>
+      <echo message="xmlc.options.path: ${xmlc.options.path} "/>
+    	    	
+    </target>
+	
+	
+</project>
+

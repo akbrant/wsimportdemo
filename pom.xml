@@ -5,9 +5,96 @@
 	<artifactId>wsimportdemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<repositories>
+		<repository>
+			<id>noaa-dev</id>
+			<url>https://noaa-dev.state.ak.us/nexus/content/repositories/thirdparty/</url>
+		</repository>
+	</repositories>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>gnu-regexp</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>jtidy</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>xmlc-all-runtime</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>xmlc-base</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>xmlc-chtml</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>xmlc-wml</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>xmlc</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlc</groupId>
+			<artifactId>xmlc-taskdef</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+
+	</dependencies>
+
 	<build>
 		<pluginManagement>
 			<plugins>
+				<!-- usage of antrun maven plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.8</version>
+					<executions>
+						<execution>
+							<id>default-cli</id>
+							<configuration>
+								<target>
+									<property name="compile_classpath" refid="maven.compile.classpath" />
+									<property name="runtime_classpath" refid="maven.runtime.classpath" />
+									<property name="test_classpath" refid="maven.test.classpath" />
+									<property name="plugin_classpath" refid="maven.plugin.classpath" />
+
+									<echo message="compile classpath: ${compile_classpath}" />
+									<echo message="runtime classpath: ${runtime_classpath}" />
+									<echo message="test classpath:    ${test_classpath}" />
+									<echo message="plugin classpath:  ${plugin_classpath}" />
+
+									<ant antfile="${basedir}/build.xml">
+										<target name="xmlc" />
+
+									</ant>
+								</target>
+							</configuration>
+							<goals>
+								<goal>run</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+
 				<!-- usage of jax-ws maven plugin -->
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
