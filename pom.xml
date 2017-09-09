@@ -96,8 +96,8 @@
 									
 									<!-- compile HTML into Java -->
 									<xmlc 
-										srcdir="project.build.sourceDirectory" 
-										sourceout="project.build.outputDirectory" 
+										srcdir="src/main/java" 
+										sourceout="target/out" 
 										packagename="org.psmfc.er.elandings.servlet.page" 
 										includes="**/*.html" 
 										verbose="on" 
