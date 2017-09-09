@@ -10,7 +10,7 @@
 		<echo message="compile classpath: ${compile_classpath}"/>
 		
 		<path id="project.class.path">
-			<fileset refid="compile_classpath"/>
+			<fileset refid="maven.compile.classpath"/>
 			<pathelement location="${outputPath}"/>
 		</path>
 
