@@ -6,59 +6,22 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<!-- <repositories> <repository> <id>noaa-dev</id> <url>https://noaa-dev.state.ak.us/nexus/content/repositories/thirdparty/</url> 
-		</repository> </repositories>  -->
+		</repository> -->
 
-
-					
+	<pluginRepositories>
+		<pluginRepository>
+			<id>akr.central.plugins</id>
+			<url>https://akr-internal.alaskafisheries.noaa.gov/nexus/content/repositories/maven-releases/ </url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>gnu-regexp</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>jtidy</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-all-runtime</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-base</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-chtml</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-wml</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-taskdef</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-net</groupId>
-			<artifactId>commons-net</artifactId>
-			<version>1.4.1</version>
-		</dependency>
-
-
 
 	</dependencies>
 
@@ -70,8 +33,7 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>1.8</version>
-					
-					
+
 					<executions>
 						<execution>
 							<id>default-cli</id>
@@ -87,26 +49,23 @@
 									<echo message="test classpath:    ${test_classpath}" />
 									<echo message="plugin classpath:  ${plugin_classpath}" />
 
-									<taskdef name="xmlc" classname="org.enhydra.xml.xmlc.taskdef.Xmlc" classpathref="maven.plugin.classpath" />
-								
-									
-									<echo message="compile classpath: ${maven.compile.classpath}"/>
+									<taskdef name="xmlc" classname="org.enhydra.xml.xmlc.taskdef.Xmlc"
+										classpathref="maven.plugin.classpath" />
+
+
+									<echo message="compile classpath: ${maven.compile.classpath}" />
 									<echo>antfile=${ant.file} target=xmlc ${basedir} </echo>
-									<echo>srcdir=${project.build.sourceDirectory} sourceout=${project.build.outputDirectory}   </echo>
-									
+									<echo>srcdir=${project.build.sourceDirectory}
+										sourceout=${project.build.outputDirectory}
+									</echo>
+
 									<!-- compile HTML into Java -->
-									<xmlc 
-										srcdir="src/main/java" 
-										sourceout="target/out" 
-										packagename="org.psmfc.er.elandings.servlet.page" 
-										includes="**/*.html" 
-										verbose="on" 
-										force="true" 
-										keep="yes" 
-										markup="HTML">
-										<arg value="-ssi"/>
+									<xmlc srcdir="src/main/resources/html" sourceout="target"
+										packagename="org.psmfc.er.elandings.servlet.page" includes="**/*.html"
+										verbose="off" force="true" keep="yes" markup="HTML">
+										<arg value="-ssi" />
 									</xmlc>
-																	
+
 								</target>
 							</configuration>
 							<goals>
@@ -114,71 +73,54 @@
 							</goals>
 						</execution>
 					</executions>
-					
-					
-									
-					<dependencies>
-							
-							
-									<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>gnu-regexp</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>jtidy</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-all-runtime</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-base</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-chtml</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-wml</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.enhydra.xml.xmlc</groupId>
-			<artifactId>xmlc-taskdef</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-net</groupId>
-			<artifactId>commons-net</artifactId>
-			<version>1.4.1</version>
-		</dependency>
-<!-- 		<dependency>
-			<groupId>ant</groupId>
-			<artifactId>ant-commons-net</artifactId>
-			<version>1.6.5</version>
-		</dependency>
-		<dependency>
-			<groupId>ant</groupId>
-			<artifactId>ant-nodeps</artifactId>
-			<version>1.6.5</version>
-		</dependency>
-							 -->	
-									
-					</dependencies>
 
+					<dependencies>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>gnu-regexp</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>jtidy</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>xmlc-all-runtime</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>xmlc-base</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>xmlc-chtml</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>xmlc-wml</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>xmlc</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>org.enhydra.xml.xmlc</groupId>
+							<artifactId>xmlc-taskdef</artifactId>
+							<version>2.2.12</version>
+						</dependency>
+						<dependency>
+							<groupId>commons-net</groupId>
+							<artifactId>commons-net</artifactId>
+							<version>1.4.1</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 
 
@@ -194,7 +136,7 @@
 								<goal>wsimport</goal>
 							</goals>
 							<configuration>
-								<wsdlDirectory>src/wsdl</wsdlDirectory>
+								<wsdlDirectory>src/main/resources/wsdl</wsdlDirectory>
 								<!-- which wsdl file -->
 								<wsdlFiles>
 									<wsdlFile>AgencyReportManagementService.wsdl</wsdlFile>
@@ -213,7 +155,7 @@
 								<goal>wsimport</goal>
 							</goals>
 							<configuration>
-								<wsdlDirectory>src/wsdl</wsdlDirectory>
+								<wsdlDirectory>src/main/resources/wsdl</wsdlDirectory>
 								<!-- which wsdl file -->
 								<wsdlFiles>
 									<wsdlFile>ProcessorReportManagementService.wsdl</wsdlFile>
@@ -232,7 +174,7 @@
 								<goal>wsimport</goal>
 							</goals>
 							<configuration>
-								<wsdlDirectory>src/wsdl</wsdlDirectory>
+								<wsdlDirectory>src/main/resources/wsdl</wsdlDirectory>
 								<!-- which wsdl file -->
 								<wsdlFiles>
 									<wsdlFile>ReportManagementService.wsdll</wsdlFile>
@@ -245,14 +187,9 @@
 								<sourceDestDir>target/generatedclasses</sourceDestDir>
 							</configuration>
 						</execution>
-
 					</executions>
-
-
 				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
-
-
 </project>
